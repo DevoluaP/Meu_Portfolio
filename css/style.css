@@ -6,6 +6,8 @@
 
     --color-green-50: #07393CE6;
     --color-green-100: #07393C;
+
+    --color-gradient: linear-gradient(90deg, #0A090C, #07393c, #0A090C);
 }
 
 
@@ -208,6 +210,11 @@ header {
     background-image: url("../imagens/cep.png");
 }
 
+#projects p {
+    color: var(--color-light-100);;
+    font-size: 1.3em;
+}
+
 
 #knowledge {
     display: flex;
@@ -254,7 +261,7 @@ footer {
     }
 
     body, .menu, .menu.scrolled {
-        background: linear-gradient(90deg, #0A090C, #07393c, #0A090C);
+        background: var(--color-gradient);
     }
 
     header {
