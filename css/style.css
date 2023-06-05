@@ -11,6 +11,7 @@
 }
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +26,7 @@ a {
 body {
     background-color: var(--color-green-100);
 }
+
 
 
 header {
@@ -66,6 +68,7 @@ header {
 }
 
 
+
 .contentTitle {
     margin-bottom: 1vh;
 }
@@ -105,6 +108,7 @@ header {
 #about section {
     padding: 1vh 0 0 0;
 }
+
 
 
 #projects {
@@ -216,6 +220,7 @@ header {
 }
 
 
+
 #knowledge {
     display: flex;
     justify-content: space-evenly;
@@ -223,6 +228,7 @@ header {
     flex-direction: column;
     text-align: center;
 }
+
 
 
 #contact, #contact section, #contact section div {
@@ -245,6 +251,7 @@ header {
 }
 
 
+
 footer {
     display: flex;
     justify-content: center;
@@ -253,6 +260,7 @@ footer {
     margin: 2vh 0 1vh 0;
     font-size: 0.7em;
 }
+
 
 
 @media (min-width: 768px) {
@@ -364,6 +372,7 @@ footer {
 }
 
 
+
 @-webkit-keyframes scale-up-center {
    0% {
        -webkit-transform: scale(0.5);
@@ -389,6 +398,7 @@ footer {
 }
 
 
+
 @keyframes appear {
    0% {
        opacity: 0;
@@ -398,6 +408,7 @@ footer {
        opacity: 100;
    }
 }
+
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -411,27 +422,29 @@ footer {
 }
 
 
-a::selection, img::selection, h2::selection, h1::selection, button::selection, p::selection {
-   color: var(--color-light-50);
-   background-color: var(--color-dark-800);
-}
-
 
 *::-webkit-scrollbar {
-   width: 20px;
-   width: 20px;
-   background-color: var(--color-dark-800);
+    width: 20px;
+    width: 20px;
+    background-color: var(--color-dark-800);
 }
 
 *::-webkit-scrollbar-thumb {
-   border-radius: 20px;
-   background-color: var(--color-light-50);
+    border-radius: 20px;
+    background-color: var(--color-light-50);
 }
- 
+
 *::-webkit-scrollbar-thumb:hover {
-   background-color: var(--color-light-100);
+    background-color: var(--color-light-100);
 }
- 
+
 *::-webkit-scrollbar-thumb:active {
-   background-color: var(--color-light-100);
+    background-color: var(--color-light-100);
+}
+
+
+
+a::selection, img::selection, h2::selection, h1::selection, button::selection, p::selection {
+   color: var(--color-light-50);
+   background-color: var(--color-dark-800);
 }
