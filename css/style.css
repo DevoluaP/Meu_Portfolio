@@ -239,13 +239,6 @@ header {
     text-align: center;
 }
 
-#contact img {
-    width: 47vw;
-    min-height: 20vh;
-    margin-top: -4px;
-    border-radius: 50%;
-}
-
 #contact p {
     font-size: 1.5em;
 }
@@ -358,12 +351,6 @@ footer {
 
     #contact section {
         flex-direction: row;
-    }
-       
-    #contact section img {
-        width: 20vw;
-        min-height: 10vh;
-        border-radius: 50%;
     }
     
     #contact section div {
