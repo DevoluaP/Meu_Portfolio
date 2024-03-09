@@ -1,16 +1,11 @@
 :root {
     --color-light-50: #F0EDEE;
     --color-light-100: #F0EDEE98;
-
     --color-dark-800: #0A090C;
-
     --color-green-50: #07393CE6;
     --color-green-100: #07393C;
-
     --color-gradient: linear-gradient(90deg, #0A090C, #07393c, #0A090C);
 }
-
-
 
 * {
     margin: 0;
@@ -19,17 +14,41 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+*::-webkit-scrollbar {
+    width: 20px;
+    width: 20px;
+    background-color: var(--color-dark-800);
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: var(--color-light-50);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-light-100);
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: var(--color-light-100);
+}
+
 a {
     text-decoration: none;
 }
+
+a::selection, img::selection, h2::selection, h1::selection, button::selection, p::selection {
+    color: var(--color-light-50);
+    background-color: var(--color-dark-800);
+ }
+
+
 
 body {
     background-color: var(--color-green-100);
 }
 
-
-
-header {
+body header {
     background-color: var(--color-green-50);
     position: fixed;
     display: flex;
@@ -40,11 +59,12 @@ header {
     padding: 20px;
     z-index: 10;
 }
-#btn-close, .menu {
+
+body header nav #btn-close, body header nav .menu {
     display: none;
 }
 
-.menu {
+body header nav .menu {
     background-color: var(--color-green-50);
     position: fixed;
     justify-content: space-around;
@@ -57,23 +77,17 @@ header {
     right: 0;
 }
 
-.menu li {
+body header nav .menu li {
     list-style: none;
     max-width: 60vw;
     font-size: 1.3em;
 }
 
-.menu a, #about h1, .contentTitle, #projects button, #contact a, .back a, footer h2, footer a {
+body header nav .menu li a, body main #about div h1, body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a button, body main #contact section div a, body footer section .back a, .contentTitle {
     color: var(--color-light-50);
 }
 
-
-
-.contentTitle {
-    margin-bottom: 1vh;
-}
-
-#about {
+body main #about {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,60 +95,62 @@ header {
     text-align: justify;
 }
 
-.aboutImg {
+body main #about .aboutImg {
     width: 100vw;
     height: 48vh;
     margin-top: 12vh;
     animation: scale-up-center 2s;
 }
 
-#about div {
+body main #about div {
     width: 60vw;
 }
 
-#about h2 {
+body main #about div h2 {
     color: var(--color-light-100);
 }
 
-#about h1, #about h2 {
+body main #about div h1, body main #about div h2 {
     animation: appear 2s;
     font-size: 1.5em;
 }
 
-#about h1 {
+body main #about div h1 {
     text-align: center;
 }
 
-#about section {
+body main #about section {
     padding: 1vh 0 0 0;
 }
 
-
-
-#projects {
+body main #projects {
     z-index: auto;
 }
 
-#projects, #knowledge, #contact {
+body main #projects, body main #knowledge, body main #contact {
     margin-top: 16vh;
 }
 
-#projects, .btns-projects {
+.contentTitle {
+    margin-bottom: 1vh;
+}
+
+body main #projects, body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.btns-projects {
+body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects {
     flex-direction: row;
 }
 
-#projects a {
+body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a {
     margin-top: 20vh;
 }
 
-#projects button, #contact button {
+body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a button, body main #contact section div a button {
     background-color: var(--color-dark-800);
     color: var(--color-light-50);
     width: 40vw;
@@ -145,12 +161,12 @@ header {
     transition: 0.3s;
 }
 
-#projects button {
+body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a button {
     width: 25vw;
     margin: 0 1vw;
 }
 
-#projects button:hover, #contact button:hover {
+body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a button:hover, body main #contact section div a button:hover {
     background-color: var(--color-light-100);
     color: var(--color-dark-800);
     cursor: pointer;
@@ -158,11 +174,11 @@ header {
     box-shadow: 3px 3px 3px;
 }
 
-.galery-container, .galery-filho {
+body main #projects .galery-pai, body main #projects .galery-pai .galery-filho {
     width: 100%;
 }
 
-.galery-neto {
+body main #projects .galery-pai .galery-filho .galery-neto {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,7 +186,7 @@ header {
     flex-wrap: wrap;
 }
 
-.galery-image {
+body main #projects .galery-pai .galery-filho .galery-neto .galery-image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,7 +199,7 @@ header {
     transition: 0.4s;
 }
 
-.galery-image:hover {
+body main #projects .galery-pai .galery-filho .galery-neto .galery-image:hover {
     border-radius: 15px;
     transform: scale(1.1);
 }
@@ -214,14 +230,12 @@ header {
     background-image: url("../imagens/cep.png");
 }
 
-#projects p {
+body main #projects div p {
     color: var(--color-light-100);;
     font-size: 1.3em;
 }
 
-
-
-#knowledge {
+body main #knowledge {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -229,9 +243,7 @@ header {
     text-align: center;
 }
 
-
-
-#contact, #contact section, #contact section div {
+body main #contact, body main #contact section, body main #contact section div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,20 +251,11 @@ header {
     text-align: center;
 }
 
-#contact img {
-    width: 47vw;
-    min-height: 20vh;
-    margin-top: -4px;
-    border-radius: 50%;
-}
-
-#contact p {
+body main #contact section div a button p {
     font-size: 1.5em;
 }
 
-
-
-footer {
+body footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -268,15 +271,15 @@ footer {
         display: none;
     }
 
-    body, .menu, .menu.scrolled {
+    body, body header nav .menu {
         background: var(--color-gradient);
     }
 
-    header {
+    body header {
         background-color: inherit;
     }
 
-    .menu {
+    body header nav .menu {
         position: fixed;
         display: flex;
         justify-content: space-evenly;
@@ -288,20 +291,20 @@ footer {
         transition: 0.4s;
     }
 
-    .menu.ativo {
+    body header nav .menu.ativo {
         height: 5vh;
     }
 
-    .menu li a, .back a, #about section svg {
+    body header nav .menu li a, body footer section .back a, body main #about section a svg {
         transition: 0.3s;
     }
 
-    .menu li a:hover, .back a:hover {
+    body header nav .menu li a:hover, body footer section .back a:hover {
         color: var(--color-light-100);
         box-shadow: 0 2px var(--color-light-100);
     }
 
-    #about {
+    body main #about {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -309,69 +312,71 @@ footer {
         flex-direction: column;
     }
     
-    .aboutImg {
+    body main #about .aboutImg {
         width: 98vw;
     }
 
-    #about section {
+    body main #about section {
         margin-top: 4vh;
     }
 
-    #about section a {
+    body main #about section a {
         padding: 0 2vw;
     }
     
-    #about section svg {
+    body main #about section a svg {
         width: 60px;
         height: 60px;
     }
 
-    #about section svg:hover {
+    body main #about section a svg:hover {
         fill: var(--color-light-100);
         transform: scale(1.2);
     }
 
-    #projects button {
+    body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a button {
         width: 10vw;
     }
 
-    .galery-container, .galery-filho {
+    body main #projects .galery-pai, body main #projects .galery-pai .galery-filho {
         width: 100%;
     }
 
-    .galery-neto {
+    body main #projects .galery-pai .galery-filho .galery-neto {
         flex-direction: row;
     }
 
-    .galery-image {
+    body main #projects .galery-pai .galery-filho .galery-neto .galery-image {
         flex: 25%;
         width: 20vw;
         min-height: 40vh;
         margin: 3vh 3vw 3vh 3vw;
     }
 
-    #knowledge section {
+    body main #knowledge section {
         max-width: 85vw;
         flex-direction: row;
         flex-wrap: wrap;
     }
 
-    #contact section {
+    body main #contact section {
         flex-direction: row;
     }
-       
-    #contact section img {
-        width: 20vw;
-        min-height: 10vh;
-        border-radius: 50%;
-    }
     
-    #contact section div {
+    body main #contact section div {
        margin-left: 2vw;
     }
 }
 
-
+@media (prefers-reduced-motion: no-preference) {
+   html {
+       scroll-behavior: smooth;
+   }
+   
+   :target {
+       scroll-margin-top: .8em;
+   }
+}
 
 @-webkit-keyframes scale-up-center {
    0% {
@@ -397,8 +402,6 @@ footer {
    }
 }
 
-
-
 @keyframes appear {
    0% {
        opacity: 0;
@@ -407,44 +410,4 @@ footer {
    100% {
        opacity: 100;
    }
-}
-
-
-
-@media (prefers-reduced-motion: no-preference) {
-   html {
-       scroll-behavior: smooth;
-   }
-   
-   :target {
-       scroll-margin-top: .8em;
-   }
-}
-
-
-
-*::-webkit-scrollbar {
-    width: 20px;
-    width: 20px;
-    background-color: var(--color-dark-800);
-}
-
-*::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background-color: var(--color-light-50);
-}
-
-*::-webkit-scrollbar-thumb:hover {
-    background-color: var(--color-light-100);
-}
-
-*::-webkit-scrollbar-thumb:active {
-    background-color: var(--color-light-100);
-}
-
-
-
-a::selection, img::selection, h2::selection, h1::selection, button::selection, p::selection {
-   color: var(--color-light-50);
-   background-color: var(--color-dark-800);
 }
