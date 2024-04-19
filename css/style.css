@@ -16,7 +16,6 @@
 
 *::-webkit-scrollbar {
     width: 20px;
-    width: 20px;
     background-color: var(--color-dark-800);
 }
 
