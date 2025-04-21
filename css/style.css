@@ -36,14 +36,12 @@ a {
     text-decoration: none;
 }
 
-a::selection, img::selection, h2::selection, h1::selection, button::selection, p::selection {
+a::selection, img::selection, h2::selection, h1::selection, button::selection, p::selection, h3::selection {
     color: var(--color-light-50);
     background-color: var(--color-dark-800);
- }
+}
 
-
-
-body, body header {
+body, body header, body header nav .menu {
     background: var(--color-gradient);
 }
 
@@ -58,21 +56,23 @@ body header {
     z-index: 10;
 }
 
-body header nav #btn-close, body header nav .menu {
+body header nav #btn-close {
     display: none;
 }
 
 body header nav .menu {
-    backdrop-filter: blur(10px);
     position: fixed;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    width: 60vw;
-    height: 85vh;
+    width: 100vw;
+    height: 0;
+    overflow: hidden;
     top: 15vh;
     right: 0;
+    margin-top: -50px;
+    transition: height 0.4s ease;
 }
 
 body header nav .menu li {
@@ -81,7 +81,7 @@ body header nav .menu li {
     font-size: 1.3em;
 }
 
-body header nav .menu li a, body main #about div h1, body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a button, body main #contact section div a, body footer section .back a, .contentTitle {
+body header nav .menu li a, body main #about div h1, body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a button, body main #contact section div a, body footer section .back a, .content-title {
     color: var(--color-light-50);
 }
 
@@ -93,7 +93,7 @@ body main #about {
     text-align: justify;
 }
 
-body main #about .aboutImg {
+body main #about .about-img {
     width: 100vw;
     height: 48vh;
     margin-top: 12vh;
@@ -129,7 +129,7 @@ body main #projects, body main #knowledge, body main #contact {
     margin-top: 16vh;
 }
 
-.contentTitle {
+.content-title {
     margin-bottom: 1vh;
 }
 
@@ -202,29 +202,29 @@ body main #projects .galery-pai .galery-filho .galery-neto .galery-image:hover {
     transform: scale(1.1);
 }
 
-#projectOne, #projectTwo, #projectThree, #projectFour, #projectFive, #projectSix {
+#project-one, #project-two, #project-three, #project-four, #project-five, #project-six {
     background-image: url("../imagens/oishi.png");
     background-repeat: no-repeat;
     background-position: top, center;
 }
 
-#projectTwo {
+#project-two {
     background-image: url("../imagens/mario.png");
 }
 
-#projectThree {
+#project-three {
     background-image: url("../imagens/lampada.png");
 }
 
-#projectFour {
+#project-four {
     background-image: url("../imagens/calculadora.png");
 }
 
-#projectFive {
+#project-five {
     background-image: url("../imagens/super-pizza.png");
 }
 
-#projectSix {
+#project-six {
     background-image: url("../imagens/cep.png");
 }
 
@@ -239,6 +239,51 @@ body main #knowledge {
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+
+body main #knowledge .knowledge-title {
+    width: 250px;
+    margin: auto;
+    color: var(--color-light-50);
+    font-weight: lighter;
+    letter-spacing: 5px;
+    padding: 5px 0;
+    border-radius: 20px;
+    background-color: var(--color-dark-800);
+}
+
+body main #knowledge .knowledge-item {
+    margin-bottom: 50px;
+}
+
+body main #knowledge .knowledge-item p {
+    text-align: center;
+    color: var(--color-light-50);
+}
+
+body main #knowledge .knowledge-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+body main #knowledge .description {
+    font-size: 0.9em;
+    color: var(--color-light-100) !important;
+    margin: 5px 0;
+}
+
+body main #knowledge .progress-bar {
+    background: var(--color-light-50);
+    border-radius: 5px;
+    height: 10px;
+    margin-top: 10px;
+}
+
+body main #knowledge .progress {
+    background: var(--color-dark-800);
+    height: 100%;
+    border-radius: 5px;
 }
 
 body main #contact, body main #contact section, body main #contact section div {
@@ -262,8 +307,6 @@ body footer {
     font-size: 0.7em;
 }
 
-
-
 @media only screen and (min-width: 768px) {
     #btn-menu, #btn-close, #btns-pjctOne, #btns-pjctTwo, #btns-pjctThree, #btns-pjctFour, #btns-pjctFive, #btns-pjctSix {
         display: none;
@@ -274,7 +317,12 @@ body footer {
     }
 
     body header {
+        height: 15vh;
         background-color: inherit;
+    }
+
+    body header.ativo, body header nav .menu.ativo {
+        height: 5vh !important;
     }
 
     body header nav .menu {
@@ -286,11 +334,8 @@ body footer {
         width: 100vw;
         height: 15vh;
         top: 0;
+        margin-top: 0;
         transition: 0.4s;
-    }
-
-    body header nav .menu.ativo {
-        height: 5vh;
     }
 
     body header nav .menu li a, body footer section .back a, body main #about section a svg {
@@ -310,7 +355,7 @@ body footer {
         flex-direction: column;
     }
     
-    body main #about .aboutImg {
+    body main #about .about-img {
         width: 98vw;
     }
 
@@ -357,11 +402,25 @@ body footer {
         flex-wrap: wrap;
     }
 
+    body main #knowledge .knowledge-title {
+        margin-bottom: 20px;
+    }
+
+    body main #knowledge .knowledge-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 70vw;
+        gap: 60px;
+        margin-bottom: 80px;
+    }
+
+    body main #knowledge .knowledge-item {
+        margin-bottom: 0;
+    }
+
     body main #contact section {
         flex-direction: row;
-    }
-    body main #contact section div {
-       margin-left: 2vw;
     }
 }
 
@@ -383,25 +442,25 @@ body footer {
 
 @-webkit-keyframes scale-up-center {
    0% {
-       -webkit-transform: scale(0.5);
-               transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
    }
        
    100% {
-         -webkit-transform: scale(1);
-                 transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
    }
 }
 
 @keyframes scale-up-center {
    0% {
-       -webkit-transform: scale(0.5);
-               transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
    }
        
    100% {
-       -webkit-transform: scale(1);
-               transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
    }
 }
 
