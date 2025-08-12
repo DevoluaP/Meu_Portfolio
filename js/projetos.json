@@ -1,0 +1,109 @@
+[
+  {
+    "id": "project1",
+    "titulo": "InvestCalcula",
+    "descricao": "Calculadora de investimentos com foco em simulações financeiras.",
+    "imagem": "../imagens/investcalcula.jpg",
+    "github": "https://github.com/DevoluaP/Projeto_InvestCalcula",
+    "site": "https://devoluap.github.io/Projeto_InvestCalcula/",
+    "linguagens": ["HTML, CSS e JavaScript."]
+  },
+  {
+    "id": "project2",
+    "titulo": "Lista de Tarefas",
+    "descricao": "Aplicação simples para gerenciar tarefas diárias.",
+    "imagem": "../imagens/lista-tarefas.jpg",
+    "github": "https://github.com/DevoluaP/ListaDeTarefas",
+    "site": "#",
+    "linguagens": ["Angular e TypeScript."]
+  },
+  {
+    "id": "project3",
+    "titulo": "Galleria",
+    "descricao": "Galeria de imagens responsiva com layout moderno.",
+    "imagem": "../imagens/galleria.jpg",
+    "github": "https://github.com/DevoluaP/Projeto_Galleria",
+    "site": "https://devoluap.github.io/Projeto_Galleria/",
+    "linguagens": ["HTML, CSS e Sass."]
+  },
+  {
+    "id": "project4",
+    "titulo": "ERP Soul",
+    "descricao": "Software de ERP corporativo para gerir e automatizar processos.",
+    "imagem": "../imagens/erpsoul.jpg",
+    "github": "https://github.com/DevoluaP/Projeto_ERPSoul",
+    "site": "#",
+    "linguagens": ["HTML, CSS, JavaScript, React e Node.js."]
+  },{
+    "id": "project5",
+    "titulo": "Seven Plus",
+    "descricao": "Site para exibição de conteúdos inspirado na Netflix.",
+    "imagem": "../imagens/seven-plus.jpg",
+    "github": "https://github.com/DevoluaP/Projeto_SevenPlus",
+    "site": "#",
+    "linguagens": ["HTML, CSS, JavaScript e PHP."]
+  },
+  {
+    "id": "project6",
+    "titulo": "Seven Plus (Mobile)",
+    "descricao": "Aplicativo para exibição de conteúdos inspirado na Netflix.",
+    "imagem": "../imagens/seven-plus-mobile.png",
+    "github": "https://github.com/DevoluaP/Projeto_AppSevenPlus",
+    "site": "#",
+    "linguagens": ["React Native e TypeScript."]
+  },
+  {
+    "id": "project7",
+    "titulo": "Viajados",
+    "descricao": "Aplicativo para registrar viagens e compartilhar experiências.",
+    "imagem": "../imagens/viajados.png",
+    "github": "https://github.com/DevoluaP/Projeto_Viajados",
+    "site": "#",
+    "linguagens": ["React Native, TypeScript, JavaScript e Node.js."]
+  },
+  {
+    "id": "project8",
+    "titulo": "Oishi",
+    "descricao": "Cardápio digital para restaurante japonês.",
+    "imagem": "../imagens/oishi.jpg",
+    "github": "https://github.com/DevoluaP/Projeto_Oishi",
+    "site": "https://devoluap.github.io/Projeto_Oishi/",
+    "linguagens": ["HTML, CSS, JavaScript e jQuery."]
+  },
+  {
+    "id": "project9",
+    "titulo": "Mario Runs",
+    "descricao": "Jogo interativo inspirado no clássico Mario.",
+    "imagem": "../imagens/mario.jpg",
+    "github": "https://github.com/DevoluaP/Projeto_MarioRuns",
+    "site": "https://devoluap.github.io/Projeto_MarioRuns/",
+    "linguagens": ["HTML, CSS e JavaScript."]
+  },
+  {
+    "id": "project10",
+    "titulo": "Super Pizza",
+    "descricao": "Sistema de pedidos online para pizzaria (apenas o front-end).",
+    "imagem": "../imagens/super-pizza.jpg",
+    "github": "https://github.com/DevoluaP/Projeto_SuperPizza",
+    "site": "https://devoluap.github.io/Projeto_SuperPizza/",
+    "linguagens": ["HTML e CSS."]
+  },
+  {
+    "id": "project11",
+    "titulo": "Calculadora",
+    "descricao": "Calculadora simples.",
+    "imagem": "../imagens/calculadora.jpg",
+    "github": "https://github.com/DevoluaP/Projeto_Calculadora",
+    "site": "https://devoluap.github.io/Projeto_Calculadora/",
+    "linguagens": ["HTML, CSS e JavaScript."]
+  },
+  {
+    "id": "project12",
+    "titulo": "Encontre Seu CEP",
+    "descricao": "Busca de endereços pelo CEP usando API pública.",
+    "imagem": "../imagens/cep.jpg",
+    "github": "https://github.com/DevoluaP/Projeto_EncontreSeuCEP",
+    "site": "https://devoluap.github.io/Projeto_EncontreSeuCEP/",
+    "linguagens": ["HTML, CSS e JavaScript."]
+  }
+]

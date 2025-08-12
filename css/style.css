@@ -4,7 +4,7 @@
     --color-dark-800: #0A090C;
     --color-green-50: #07393CE6;
     --color-green-100: #07393C;
-    --color-gradient: linear-gradient(90deg, #0A090C, #07393c, #0A090C);
+    --color-gradient: linear-gradient(90deg, #0A090C, #07393C, #0A090C);
 }
 
 * {
@@ -41,7 +41,7 @@ a::selection, img::selection, h2::selection, h1::selection, button::selection, p
     background-color: var(--color-dark-800);
 }
 
-body, body header, body header nav .menu {
+body {
     background: var(--color-gradient);
 }
 
@@ -51,9 +51,10 @@ body header {
     justify-content: flex-end;
     align-items: center;
     width: 100vw;
-    height: 15vh;
+    height: 10vh;
     padding: 20px;
     z-index: 10;
+    background-color: var(--color-dark-800);
 }
 
 body header nav #btn-close {
@@ -73,6 +74,7 @@ body header nav .menu {
     right: 0;
     margin-top: -50px;
     transition: height 0.4s ease;
+    background-color: var(--color-dark-800);
 }
 
 body header nav .menu li {
@@ -81,11 +83,11 @@ body header nav .menu li {
     font-size: 1.3em;
 }
 
-body header nav .menu li a, body main #about div h1, body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a button, body main #contact section div a, body footer section .back a, .content-title {
+body header nav .menu li a, body main #home div h1, body main #contact section div a, body main #contact .back a, body footer p, .content-title {
     color: var(--color-light-50);
 }
 
-body main #about {
+body main #home {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,39 +95,35 @@ body main #about {
     text-align: justify;
 }
 
-body main #about .about-img {
+body main #home .home-img {
     width: 100vw;
     height: 48vh;
     margin-top: 12vh;
     animation: scale-up-center 2s;
 }
 
-body main #about div {
+body main #home div {
     width: 60vw;
 }
 
-body main #about div h2 {
+body main #home div h2 {
     color: var(--color-light-100);
 }
 
-body main #about div h1, body main #about div h2 {
+body main #home div h1, body main #home div h2 {
     animation: appear 2s;
     font-size: 1.5em;
 }
 
-body main #about div h1 {
+body main #home div h1 {
     text-align: center;
 }
 
-body main #about section {
+body main #home section {
     padding: 1vh 0 0 0;
 }
 
-body main #projects {
-    z-index: auto;
-}
-
-body main #projects, body main #knowledge, body main #contact {
+body main #about, body main #knowledge, body main #contact {
     margin-top: 16vh;
 }
 
@@ -133,104 +131,38 @@ body main #projects, body main #knowledge, body main #contact {
     margin-bottom: 1vh;
 }
 
-body main #projects, body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects {
+body main #about, body main #about section {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
     flex-direction: column;
+    text-align: center;
 }
 
-body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects {
-    flex-direction: row;
-}
-
-body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a {
-    margin-top: 20vh;
-}
-
-body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a button, body main #contact section div a button {
-    background-color: var(--color-dark-800);
+body main #about section p {
+    width: 80%;
+    font-size: 1em;
+    font-weight: lighter;
+    text-align: center;
     color: var(--color-light-50);
-    width: 40vw;
-    height: 8vh;
-    margin-top: 1vh;
-    border: 2px solid var(--color-dark-800);
-    border-radius: 15px;
-    transition: 0.3s;
 }
 
-body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a button {
-    width: 25vw;
-    margin: 0 1vw;
-}
-
-body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a button:hover, body main #contact section div a button:hover {
-    background-color: var(--color-light-100);
-    color: var(--color-dark-800);
-    cursor: pointer;
-    border: none;
-    box-shadow: 3px 3px 3px;
-}
-
-body main #projects .galery-pai, body main #projects .galery-pai .galery-filho {
-    width: 100%;
-}
-
-body main #projects .galery-pai .galery-filho .galery-neto {
+body main #about section div {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
-body main #projects .galery-pai .galery-filho .galery-neto .galery-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 50%;
-    width: 60vw;
-    min-height: 40vh;
-    padding: 20px;
-    margin-top: 4vh;
-    border-radius: 15px;
-    transition: 0.4s;
+body main #about section a  {
+    font-weight: normal;
+    text-decoration: underline;
+    color: var(--color-light-50);
 }
 
-body main #projects .galery-pai .galery-filho .galery-neto .galery-image:hover {
-    border-radius: 15px;
-    transform: scale(1.1);
-}
-
-#project-one, #project-two, #project-three, #project-four, #project-five, #project-six {
-    background-image: url("../imagens/oishi.png");
-    background-repeat: no-repeat;
-    background-position: top, center;
-}
-
-#project-two {
-    background-image: url("../imagens/mario.png");
-}
-
-#project-three {
-    background-image: url("../imagens/lampada.png");
-}
-
-#project-four {
-    background-image: url("../imagens/calculadora.png");
-}
-
-#project-five {
-    background-image: url("../imagens/super-pizza.png");
-}
-
-#project-six {
-    background-image: url("../imagens/cep.png");
-}
-
-body main #projects div p {
-    color: var(--color-light-100);;
-    font-size: 1.3em;
+body main #about section a:active {
+    color: var(--color-dark-800);
+    background-color: var(--color-light-100);
 }
 
 body main #knowledge {
@@ -248,6 +180,7 @@ body main #knowledge .knowledge-title {
     font-weight: lighter;
     letter-spacing: 5px;
     padding: 5px 0;
+    margin-bottom: 10px;
     border-radius: 20px;
     background-color: var(--color-dark-800);
 }
@@ -262,8 +195,8 @@ body main #knowledge .knowledge-item p {
 }
 
 body main #knowledge .knowledge-item img {
-    width: 200px;
-    height: 200px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
 }
 
@@ -273,17 +206,219 @@ body main #knowledge .description {
     margin: 5px 0;
 }
 
-body main #knowledge .progress-bar {
-    background: var(--color-light-50);
-    border-radius: 5px;
-    height: 10px;
-    margin-top: 10px;
+body main #projects .content-title {
+    text-align: center;
 }
 
-body main #knowledge .progress {
-    background: var(--color-dark-800);
-    height: 100%;
+body main #projects .galery-pai {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+body main #projects .galery-pai .galery-filho {
+    width: 80%;
+    max-width: 700px;
+}
+
+body main #projects .galery-pai .galery-filho .galery-neto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+body main #projects .galery-pai .galery-filho .galery-neto .galery-image {
+    position: relative;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+body main #projects .galery-pai .galery-filho .galery-neto .galery-image:hover {
+    transform: scale(1.05);
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-light-50);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(7, 57, 60, 0.85);
+    padding: 8px 12px;
     border-radius: 5px;
+    opacity: 1;
+}
+
+body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body main #projects .galery-pai .galery-filho .galery-neto .galery-image:hover .btns-projects {
+    opacity: 1;
+}
+
+body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects button {
+    background-color: var(--color-dark-800);
+    color: var(--color-light-50);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects button:hover {
+    color: var(--color-dark-800);
+    background-color: var(--color-light-100);
+}
+
+body main .modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 9, 12, 0.9);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
+}
+
+body main .modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+body main .modal .modal-content {
+    background-color: var(--color-green-100);
+    padding: 35px;
+    border-radius: 10px;
+    max-width: 90%;
+    text-align: center;
+    color: var(--color-light-50);
+    position: relative;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+body main .modal.active .modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+body main .modal .modal-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid var(--color-dark-800);
+}
+
+body main .modal .modal-content h2 {
+    margin: 10px 0;
+}
+
+body main .modal .modal-content p {
+    font-size: 1rem;
+    color: var(--color-light-100);
+}
+
+#modal-languages {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: var(--color-light-100);
+}
+
+.alert-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 9, 12, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-content {
+    background-color: var(--color-green-100);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 300px;
+    color: var(--color-light-50);
+}
+
+.alert-content button {
+    margin-top: 10px;
+    background-color: var(--color-green-50);
+    border: none;
+    color: var(--color-light-50);
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.alert-content button:hover {
+    background-color: var(--color-green-100);
+}
+
+body main .modal .modal-content .modal-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+body main .modal .modal-content .modal-links a {
+    background-color: var(--color-dark-800);
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: var(--color-light-50);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+body main .modal .modal-content .modal-links a:hover {
+    color: var(--color-dark-800);
+    background-color: var(--color-light-100);
+}
+
+body main .modal .modal-content .close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-light-50);
+    cursor: pointer;
 }
 
 body main #contact, body main #contact section, body main #contact section div {
@@ -294,8 +429,38 @@ body main #contact, body main #contact section, body main #contact section div {
     text-align: center;
 }
 
+body main #contact {
+    padding: 20px;
+    background-color: var(--color-dark-800);
+}
+
+body main #contact section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+body main #contact section p a {
+    color: #00ACFF;
+}
+
+body main #contact section div {
+    gap: 30px;
+    padding: 20px;
+    flex-direction: row;
+}
+
 body main #contact p {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    color: var(--color-light-50);
+}
+
+body main #contact .back a {
+    font-size: 0.9em;
+    font-style: italic;
+    box-shadow: 0 2px var(--color-light-100);
 }
 
 body footer {
@@ -303,22 +468,23 @@ body footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 2vh 0 1vh 0;
+    padding-bottom: 1vh;
     font-size: 0.7em;
+    background-color: var(--color-dark-800);
 }
 
 @media only screen and (min-width: 768px) {
-    #btn-menu, #btn-close, #btns-pjctOne, #btns-pjctTwo, #btns-pjctThree, #btns-pjctFour, #btns-pjctFive, #btns-pjctSix {
+    #btn-menu, #btn-close {
         display: none;
     }
 
-    body, body header nav .menu {
+    body {
         background: var(--color-gradient);
     }
 
     body header {
-        height: 15vh;
-        background-color: inherit;
+        height: 10vh !important;
+        background-color: var(--color-dark-800);
     }
 
     body header.ativo, body header nav .menu.ativo {
@@ -326,28 +492,27 @@ body footer {
     }
 
     body header nav .menu {
-        position: fixed;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: row;
         width: 100vw;
-        height: 15vh;
+        height: 10vh !important;
         top: 0;
         margin-top: 0;
         transition: 0.4s;
     }
 
-    body header nav .menu li a, body footer section .back a, body main #about section a svg {
+    body header nav .menu li a, body main #home section a svg, body main #contact .back a {
         transition: 0.3s;
     }
 
-    body header nav .menu li a:hover, body footer section .back a:hover {
+    body header nav .menu li a:hover, body main #contact .back a:hover {
         color: var(--color-light-100);
         box-shadow: 0 2px var(--color-light-100);
     }
 
-    body main #about {
+    body main #home {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -355,45 +520,42 @@ body footer {
         flex-direction: column;
     }
     
-    body main #about .about-img {
+    body main #home .home-img {
         width: 98vw;
+        margin-top: 16vh;
     }
 
-    body main #about section {
+    body main #home section {
         margin-top: 4vh;
     }
 
-    body main #about section a {
+    body main #home section a {
         padding: 0 2vw;
     }
     
-    body main #about section a svg {
+    body main #home section a svg {
         width: 60px;
         height: 60px;
     }
 
-    body main #about section a svg:hover {
+    body main #home section a svg:hover {
         fill: var(--color-light-100);
         transform: scale(1.2);
     }
 
-    body main #projects .galery-pai .galery-filho .galery-neto .galery-image .btns-projects a button {
-        width: 10vw;
+    body main #about section p {
+        width: 60%;
+        font-size: 1.4em;
     }
 
-    body main #projects .galery-pai, body main #projects .galery-pai .galery-filho {
-        width: 100%;
+    body main #about section a {
+        transition: 0.3s;
     }
 
-    body main #projects .galery-pai .galery-filho .galery-neto {
-        flex-direction: row;
-    }
-
-    body main #projects .galery-pai .galery-filho .galery-neto .galery-image {
-        flex: 25%;
-        width: 20vw;
-        min-height: 40vh;
-        margin: 3vh 3vw 3vh 3vw;
+    body main #about section a:hover {
+        cursor: pointer;
+        color: var(--color-dark-800);
+        background-color: var(--color-light-100);
     }
 
     body main #knowledge section {
@@ -410,7 +572,7 @@ body footer {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        max-width: 70vw;
+        max-width: 60vw;
         gap: 60px;
         margin-bottom: 80px;
     }
@@ -419,14 +581,28 @@ body footer {
         margin-bottom: 0;
     }
 
-    body main #contact section {
-        flex-direction: row;
+    body main .modal .modal-content {
+        max-width: 1000px;
+        width: 100%;
+        padding: 40px;
     }
 }
 
-@media only screen and (max-width: 291.99px) {
-    body {
-        display: none;
+@media only screen and (min-width: 1300px) {
+    body main #projects .galery-pai .galery-filho {
+        width: 100%;
+        max-width: 900px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    body main #knowledge .knowledge-grid {
+        max-width: 50vw;
+    }
+
+    body main #projects .galery-pai .galery-filho {
+        width: 100%;
+        max-width: 1200px;
     }
 }
 
