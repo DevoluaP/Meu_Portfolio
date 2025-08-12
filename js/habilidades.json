@@ -3,93 +3,93 @@
       {
         "nome": "JavaScript",
         "descricao": "Interatividade em aplicações.",
-        "imagem": "../imagens/javascript.png"
+        "imagem": "/imagens/javascript.png"
       },
       {
         "nome": "jQuery",
         "descricao": "Manipulação de DOM.",
-        "imagem": "../imagens/jquery.png"
+        "imagem": "/imagens/jquery.png"
       },
       {
         "nome": "React",
         "descricao": "Construção de interfaces.",
-        "imagem": "../imagens/react.png"
+        "imagem": "/imagens/react.png"
       },
       {
         "nome": "TypeScript",
         "descricao": "Tipagem para JavaScript.",
-        "imagem": "../imagens/typescript.png"
+        "imagem": "/imagens/typescript.png"
       },
       {
         "nome": "Angular",
         "descricao": "Framework para SPAs.",
-        "imagem": "../imagens/angular.png"
+        "imagem": "/imagens/angular.png"
       },
       {
         "nome": "HTML",
         "descricao": "Estrutura de páginas.",
-        "imagem": "../imagens/html.png"
+        "imagem": "/imagens/html.png"
       },
       {
         "nome": "CSS",
         "descricao": "Estilo e layout.",
-        "imagem": "../imagens/css.png"
+        "imagem": "/imagens/css.png"
       }
     ],
     "Back-end": [
       {
         "nome": "PHP",
         "descricao": "Desenvolvimento de APIs.",
-        "imagem": "../imagens/php.png"
+        "imagem": "/imagens/php.png"
       },
       {
         "nome": "Node.js",
         "descricao": "Execução de JS no servidor.",
-        "imagem": "../imagens/nodejs.png"
+        "imagem": "/imagens/nodejs.png"
       },
       {
         "nome": "Python",
         "descricao": "APIs escaláveis e performáticas.",
-        "imagem": "../imagens/python.png"
+        "imagem": "/imagens/python.png"
       },
       {
         "nome": "Java",
         "descricao": "Desenvolvimento de APIs.",
-        "imagem": "../imagens/java.png"
+        "imagem": "/imagens/java.png"
       }
     ],
     "Mobile": [
       {
         "nome": "React Native",
         "descricao": "Aplicações móveis nativas.",
-        "imagem": "../imagens/react.png"
+        "imagem": "/imagens/react.png"
       },
       {
         "nome": "Flutter",
         "descricao": "Aplicações móveis nativas.",
-        "imagem": "../imagens/flutter.png"
+        "imagem": "/imagens/flutter.png"
       },
       {
         "nome": "Android Studio",
         "descricao": "Desenvolvimento Android.",
-        "imagem": "../imagens/android-studio.png"
+        "imagem": "/imagens/android-studio.png"
       },
       {
         "nome": "Expo",
         "descricao": "Desenvolvimento rápido com React Native.",
-        "imagem": "../imagens/expo.png"
+        "imagem": "/imagens/expo.png"
       }
     ],
     "Banco de Dados": [
       {
         "nome": "MySQL",
         "descricao": "Banco de dados relacional.",
-        "imagem": "../imagens/mysql.png"
+        "imagem": "/imagens/mysql.png"
       },
       {
         "nome": "PostgreSQL",
         "descricao": "Banco de dados relacional.",
-        "imagem": "../imagens/postgresql.png"
+        "imagem": "/imagens/postgresql.png"
       }
     ]
 }
