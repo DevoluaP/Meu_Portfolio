@@ -56,6 +56,16 @@
         "nome": "Java",
         "descricao": "Desenvolvimento de APIs.",
         "imagem": "imagens/java.png"
+      },
+      {
+        "nome": "Docker",
+        "descricao": "Containerização e automação de ambientes.",
+        "imagem": "imagens/docker.png"
+      },
+      {
+        "nome": "Postman",
+        "descricao": "Teste e documentação de APIs.",
+        "imagem": "imagens/postman.png"
       }
     ],
     "Mobile": [
@@ -68,6 +78,11 @@
         "nome": "Flutter",
         "descricao": "Aplicações móveis nativas.",
         "imagem": "imagens/flutter.png"
+      },
+      {
+        "nome": "Kotlin",
+        "descricao": "Aplicações móveis para Android.",
+        "imagem": "imagens/kotlin.png"
       },
       {
         "nome": "Android Studio",
@@ -90,6 +105,11 @@
         "nome": "PostgreSQL",
         "descricao": "Banco de dados relacional.",
         "imagem": "imagens/postgresql.png"
+      },
+      {
+        "nome": "MongoDB",
+        "descricao": "Banco de dados não relacional.",
+        "imagem": "imagens/mongodb.png"
       }
     ]
 }
