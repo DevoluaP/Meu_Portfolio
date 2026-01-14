@@ -1,9 +1,24 @@
 {
     "Front-end": [
       {
+        "nome": "HTML",
+        "descricao": "Estrutura de páginas.",
+        "imagem": "imagens/html.png"
+      },
+      {
+        "nome": "CSS",
+        "descricao": "Estilo e layout.",
+        "imagem": "imagens/css.png"
+      },
+      {
         "nome": "JavaScript",
         "descricao": "Interatividade em aplicações.",
         "imagem": "imagens/javascript.png"
+      },
+      {
+        "nome": "TypeScript",
+        "descricao": "Tipagem para JavaScript.",
+        "imagem": "imagens/typescript.png"
       },
       {
         "nome": "jQuery",
@@ -16,36 +31,21 @@
         "imagem": "imagens/react.png"
       },
       {
-        "nome": "TypeScript",
-        "descricao": "Tipagem para JavaScript.",
-        "imagem": "imagens/typescript.png"
-      },
-      {
         "nome": "Angular",
         "descricao": "Framework para SPAs.",
         "imagem": "imagens/angular.png"
-      },
-      {
-        "nome": "HTML",
-        "descricao": "Estrutura de páginas.",
-        "imagem": "imagens/html.png"
-      },
-      {
-        "nome": "CSS",
-        "descricao": "Estilo e layout.",
-        "imagem": "imagens/css.png"
       }
     ],
     "Back-end": [
       {
-        "nome": "PHP",
-        "descricao": "Desenvolvimento de APIs.",
-        "imagem": "imagens/php.png"
-      },
-      {
         "nome": "Node.js",
         "descricao": "Execução de JS no servidor.",
         "imagem": "imagens/nodejs.png"
+      },
+      {
+        "nome": "PHP",
+        "descricao": "Desenvolvimento de APIs.",
+        "imagem": "imagens/php.png"
       },
       {
         "nome": "Python",
@@ -53,19 +53,9 @@
         "imagem": "imagens/python.png"
       },
       {
-        "nome": "Java",
-        "descricao": "Desenvolvimento de APIs.",
-        "imagem": "imagens/java.png"
-      },
-      {
         "nome": "Docker",
-        "descricao": "Containerização e automação de ambientes.",
+        "descricao": "Conteinerização de ambientes.",
         "imagem": "imagens/docker.png"
-      },
-      {
-        "nome": "Postman",
-        "descricao": "Teste e documentação de APIs.",
-        "imagem": "imagens/postman.png"
       }
     ],
     "Mobile": [
@@ -75,24 +65,14 @@
         "imagem": "imagens/react.png"
       },
       {
-        "nome": "Flutter",
-        "descricao": "Aplicações móveis nativas.",
-        "imagem": "imagens/flutter.png"
-      },
-      {
-        "nome": "Kotlin",
-        "descricao": "Aplicações móveis para Android.",
-        "imagem": "imagens/kotlin.png"
+        "nome": "Expo",
+        "descricao": "Desenvolvimento com React Native.",
+        "imagem": "imagens/expo.png"
       },
       {
         "nome": "Android Studio",
         "descricao": "Desenvolvimento Android.",
         "imagem": "imagens/android-studio.png"
-      },
-      {
-        "nome": "Expo",
-        "descricao": "Desenvolvimento rápido com React Native.",
-        "imagem": "imagens/expo.png"
       }
     ],
     "Banco de Dados": [

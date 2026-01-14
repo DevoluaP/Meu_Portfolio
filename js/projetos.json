@@ -2,7 +2,7 @@
   {
     "id": "project1",
     "titulo": "InvestCalcula",
-    "descricao": "Calculadora de investimentos com foco em simulações financeiras.",
+    "descricao": "Calculadora de juros compostos.",
     "imagem": "imagens/investcalcula.jpg",
     "github": "https://github.com/DevoluaP/Projeto_InvestCalcula",
     "site": "https://devoluap.github.io/Projeto_InvestCalcula/",
@@ -20,7 +20,7 @@
   {
     "id": "project3",
     "titulo": "Galleria",
-    "descricao": "Galeria de imagens responsiva com layout moderno.",
+    "descricao": "Galeria de imagens online com layout moderno.",
     "imagem": "imagens/galleria.jpg",
     "github": "https://github.com/DevoluaP/Projeto_Galleria",
     "site": "https://devoluap.github.io/Projeto_Galleria/",
@@ -29,7 +29,7 @@
   {
     "id": "project4",
     "titulo": "ERP Soul",
-    "descricao": "Software de ERP corporativo para gerir e automatizar processos.",
+    "descricao": "Software de ERP corporativo.",
     "imagem": "imagens/erpsoul.jpg",
     "github": "https://github.com/DevoluaP/Projeto_ERPSoul",
     "site": "#",
@@ -37,7 +37,7 @@
   },{
     "id": "project5",
     "titulo": "Seven Plus",
-    "descricao": "Site para exibição de conteúdos inspirado na Netflix.",
+    "descricao": "Site para exibição de conteúdos.",
     "imagem": "imagens/seven-plus.jpg",
     "github": "https://github.com/DevoluaP/Projeto_SevenPlus",
     "site": "#",
@@ -46,7 +46,7 @@
   {
     "id": "project6",
     "titulo": "Seven Plus (Mobile)",
-    "descricao": "Aplicativo para exibição de conteúdos inspirado na Netflix.",
+    "descricao": "Aplicativo para exibição de conteúdos.",
     "imagem": "imagens/seven-plus-mobile.png",
     "github": "https://github.com/DevoluaP/Projeto_AppSevenPlus",
     "site": "#",
@@ -55,7 +55,7 @@
   {
     "id": "project7",
     "titulo": "Viajados",
-    "descricao": "Aplicativo para registrar viagens e compartilhar experiências.",
+    "descricao": "Aplicativo de viagens.",
     "imagem": "imagens/viajados.png",
     "github": "https://github.com/DevoluaP/Projeto_Viajados",
     "site": "#",
@@ -64,7 +64,7 @@
   {
     "id": "project8",
     "titulo": "Oishi",
-    "descricao": "Cardápio digital para restaurante japonês.",
+    "descricao": "Site de restaurante japonês.",
     "imagem": "imagens/oishi.jpg",
     "github": "https://github.com/DevoluaP/Projeto_Oishi",
     "site": "https://devoluap.github.io/Projeto_Oishi/",
@@ -73,7 +73,7 @@
   {
     "id": "project9",
     "titulo": "Mario Runs",
-    "descricao": "Jogo interativo inspirado no clássico Mario.",
+    "descricao": "Jogo de navegador do Mario.",
     "imagem": "imagens/mario.jpg",
     "github": "https://github.com/DevoluaP/Projeto_MarioRuns",
     "site": "https://devoluap.github.io/Projeto_MarioRuns/",
@@ -82,7 +82,7 @@
   {
     "id": "project10",
     "titulo": "Super Pizza",
-    "descricao": "Sistema de pedidos online para pizzaria (apenas o front-end).",
+    "descricao": "Site para pizzaria.",
     "imagem": "imagens/super-pizza.jpg",
     "github": "https://github.com/DevoluaP/Projeto_SuperPizza",
     "site": "https://devoluap.github.io/Projeto_SuperPizza/",
