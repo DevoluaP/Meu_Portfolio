@@ -470,13 +470,13 @@ body main .modal .modal-content h2 {
 }
 
 body main .modal .modal-content p,
-#modal-languages {
+#modal-technologies {
   font-size: 1rem;
   color: var(--color-light-100);
   transition: color 0.3s ease;
 }
 
-#modal-languages {
+#modal-technologies {
   margin-top: 10px;
   font-size: 0.95rem;
 }

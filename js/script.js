@@ -9,7 +9,7 @@ const DOM = {
   modalImg: el("modal-img"),
   modalTitle: el("modal-title"),
   modalDesc: el("modal-desc"),
-  modalLanguages: el("modal-languages"),
+  modalTechnologies: el("modal-technologies"),
   modalGithub: el("modal-github"),
   modalSite: el("modal-site"),
   closeBtn: qs(".close"),
@@ -83,7 +83,7 @@ const translations = {
     projects: { 
       title: "Projetos", 
       clickToSee: "Clique para ver mais", 
-      languages: "Linguagens: ",
+      technologies: "Tecnologias: ",
       items: {
         project1: { titulo: "InvestCalcula", descricao: "Calculadora de juros compostos." },
         project2: { titulo: "Lista de Tarefas", descricao: "Aplicação simples para gerenciar tarefas diárias." },
@@ -150,7 +150,7 @@ const translations = {
     projects: { 
       title: "Projects", 
       clickToSee: "Click to see more", 
-      languages: "Languages: ",
+      technologies: "Technologies: ",
       items: {
         project1: { titulo: "InvestCalcula", descricao: "Compound interest calculator." },
         project2: { titulo: "To-Do List", descricao: "Simple application to manage daily tasks." },
@@ -292,7 +292,7 @@ const Modal = {
     DOM.modalImg.src = project.imagem;
     DOM.modalTitle.textContent = projectTrans.titulo;
     DOM.modalDesc.textContent = projectTrans.descricao;
-    DOM.modalLanguages.textContent = translations[state.lang].projects.languages + project.linguagens[0];
+    DOM.modalTechnologies.textContent = translations[state.lang].projects.technologies + project.tecnologias[0];
 
     this.configureLink(
       DOM.modalGithub, 
