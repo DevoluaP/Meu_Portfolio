@@ -43,23 +43,23 @@ const CONFIG = {
 const translations = {
   pt: {
     nav: { home: "Início", about: "Sobre", skills: "Habilidades", projects: "Projetos", contact: "Contato" },
-    home: { 
-      welcome: "Bem Vindo ao meu Portfólio, eu sou o", 
-      role: "Desenvolvedor Full Stack", 
-      github: "Meu GitHub", 
-      linkedin: "Meu Linkedin", 
-      email: "Meu E-mail" 
+    home: {
+      welcome: "Bem Vindo ao meu Portfólio, eu sou o",
+      role: "Desenvolvedor Full Stack",
+      github: "Meu GitHub",
+      linkedin: "Meu Linkedin",
+      email: "Meu E-mail"
     },
-    about: { 
-      title: "Sobre", 
-      text: "Meu nome é Paulo Henrique, tenho 20 anos, e sou apaixonado por tecnologia, adoro desafios, aprender novas tecnologias e trabalhar em equipe. Sou Desenvolvedor Full Stack com formação técnica em Informática para Internet, trabalho com front-end, back-end, banco de dados e desenvolvimento mobile. Minha jornada começou com projetos pessoais como o \"Oishi\" e o \"SuperPizza\", onde aprendi a criar interfaces intuitivas e boas práticas de código, buscando sempre melhorar a experiência do usuário e garantir o funcionamento da aplicação. Fora do código, você me encontra jogando, assistindo filmes, lendo livros ou escutando música. Quer conhecer meu trabalho? Veja meus projetos abaixo ou", 
-      download: "baixe meu currículo!" 
+    about: {
+      title: "Sobre",
+      text: "Meu nome é Paulo Henrique, tenho 20 anos, e sou apaixonado por tecnologia, adoro desafios, aprender novas tecnologias e trabalhar em equipe. Sou Desenvolvedor Full Stack com formação técnica em Informática para Internet, trabalho com front-end, back-end, banco de dados e desenvolvimento mobile. Minha jornada começou com projetos pessoais como o \"Oishi\" e o \"SuperPizza\", onde aprendi a criar interfaces intuitivas e boas práticas de código, buscando sempre melhorar a experiência do usuário e garantir o funcionamento da aplicação. Fora do código, você me encontra jogando, assistindo filmes, lendo livros ou escutando música. Quer conhecer meu trabalho? Veja meus projetos abaixo ou",
+      download: "baixe meu currículo!"
     },
-    skills: { 
-      title: "Habilidades", 
-      "Front-end": "Front-end", 
-      "Back-end": "Back-end", 
-      "Mobile": "Mobile", 
+    skills: {
+      title: "Habilidades",
+      "Front-end": "Front-end",
+      "Back-end": "Back-end",
+      "Mobile": "Mobile",
       "Banco de Dados": "Banco de Dados",
       descriptions: {
         "Estrutura de páginas.": "Estrutura de páginas.",
@@ -80,9 +80,9 @@ const translations = {
         "Banco de dados não relacional.": "Banco de dados não relacional."
       }
     },
-    projects: { 
-      title: "Projetos", 
-      clickToSee: "Clique para ver mais", 
+    projects: {
+      title: "Projetos",
+      clickToSee: "Clique para ver mais",
       technologies: "Tecnologias: ",
       items: {
         project1: { titulo: "InvestCalcula", descricao: "Calculadora de juros compostos." },
@@ -99,34 +99,34 @@ const translations = {
         project12: { titulo: "Encontre Seu CEP", descricao: "Busca de endereços pelo CEP usando API pública." }
       }
     },
-    modal: { 
-      close: "Fechar", 
-      github: "GitHub", 
-      site: "Site", 
-      githubUnavailable: "O link do GitHub está indisponível.", 
-      siteUnavailable: "O link do site está indisponível." 
+    modal: {
+      close: "Fechar",
+      github: "GitHub",
+      site: "Site",
+      githubUnavailable: "O link do GitHub está indisponível.",
+      siteUnavailable: "O link do site está indisponível."
     },
     contact: { title: "Contato", email: "E-mail:", back: "Voltar ao Início" }
   },
   en: {
     nav: { home: "Home", about: "About", skills: "Skills", projects: "Projects", contact: "Contact" },
-    home: { 
-      welcome: "Welcome to my Portfolio, I am", 
-      role: "Full Stack Developer", 
-      github: "My GitHub", 
-      linkedin: "My Linkedin", 
-      email: "My E-mail" 
+    home: {
+      welcome: "Welcome to my Portfolio, I am",
+      role: "Full Stack Developer",
+      github: "My GitHub",
+      linkedin: "My Linkedin",
+      email: "My E-mail"
     },
-    about: { 
-      title: "About", 
-      text: "My name is Paulo Henrique, I'm 20 years old, and I'm passionate about technology, I love challenges, learning new technologies and working in a team. I'm a Full Stack Developer with a technical degree in Internet Computing, I work with front-end, back-end, databases and mobile development. My journey started with personal projects like \"Oishi\" and \"SuperPizza\", where I learned to create intuitive interfaces and good code practices, always seeking to improve the user experience and ensure the application works. Outside of code, you can find me gaming, watching movies, reading books or listening to music. Want to see my work? Check out my projects below or", 
-      download: "download my resume!" 
+    about: {
+      title: "About",
+      text: "My name is Paulo Henrique, I'm 20 years old, and I'm passionate about technology, I love challenges, learning new technologies and working in a team. I'm a Full Stack Developer with a technical degree in Internet Computing, I work with front-end, back-end, databases and mobile development. My journey started with personal projects like \"Oishi\" and \"SuperPizza\", where I learned to create intuitive interfaces and good code practices, always seeking to improve the user experience and ensure the application works. Outside of code, you can find me gaming, watching movies, reading books or listening to music. Want to see my work? Check out my projects below or",
+      download: "download my resume!"
     },
-    skills: { 
-      title: "Skills", 
-      "Front-end": "Front-end", 
-      "Back-end": "Back-end", 
-      "Mobile": "Mobile", 
+    skills: {
+      title: "Skills",
+      "Front-end": "Front-end",
+      "Back-end": "Back-end",
+      "Mobile": "Mobile",
       "Banco de Dados": "Database",
       descriptions: {
         "Estrutura de páginas.": "Page structure.",
@@ -147,9 +147,9 @@ const translations = {
         "Banco de dados não relacional.": "Non-relational database."
       }
     },
-    projects: { 
-      title: "Projects", 
-      clickToSee: "Click to see more", 
+    projects: {
+      title: "Projects",
+      clickToSee: "Click to see more",
       technologies: "Technologies: ",
       items: {
         project1: { titulo: "InvestCalcula", descricao: "Compound interest calculator." },
@@ -166,12 +166,12 @@ const translations = {
         project12: { titulo: "Find Your CEP", descricao: "Address search by CEP using public API." }
       }
     },
-    modal: { 
-      close: "Close", 
-      github: "GitHub", 
-      site: "Site", 
-      githubUnavailable: "The GitHub link is unavailable.", 
-      siteUnavailable: "The site link is unavailable." 
+    modal: {
+      close: "Close",
+      github: "GitHub",
+      site: "Site",
+      githubUnavailable: "The GitHub link is unavailable.",
+      siteUnavailable: "The site link is unavailable."
     },
     contact: { title: "Contact", email: "Email:", back: "Back to Top" }
   }
@@ -191,7 +191,7 @@ const Translation = {
     qsa("[data-translate]").forEach(el => {
       const key = el.getAttribute("data-translate");
       const translation = this.get(key);
-      
+
       if (el.tagName === "INPUT" && el.type === "text") {
         el.value = translation;
       } else {
@@ -205,9 +205,18 @@ const Translation = {
     });
 
     document.documentElement.lang = state.lang;
-    DOM.btnTranslate.title = state.lang === "pt" 
-      ? "Translate to English" 
+    DOM.btnTranslate.title = state.lang === "pt"
+      ? "Translate to English"
       : "Traduzir para Português";
+
+    const cvLink = qs('a[href*="cv"]');
+    if (cvLink) {
+      cvLink.href = state.lang === "pt" ? "imagens/cv.pdf" : "imagens/cv_EN.pdf";
+    }
+
+    document.title = state.lang === "pt"
+      ? "Paulo Henrique | Desenvolvedor Full Stack"
+      : "Paulo Henrique | Full Stack Developer";
   }
 };
 
@@ -218,7 +227,7 @@ const Skills = {
 
     Object.entries(state.skills).forEach(([categoria, itens]) => {
       const categoryTranslated = translations[state.lang].skills[categoria] || categoria;
-      
+
       section.innerHTML += `
         <h3 class="knowledge-title">${categoryTranslated}</h3>
         <div class="knowledge-grid">
@@ -243,7 +252,7 @@ const Skills = {
     try {
       const response = await fetch("js/habilidades.json");
       if (!response.ok) throw new Error("Failed to load skills");
-      
+
       state.skills = await response.json();
       this.render();
     } catch (error) {
@@ -256,7 +265,7 @@ const Skills = {
 const Projects = {
   render() {
     const clickToSee = translations[state.lang].projects.clickToSee;
-    
+
     DOM.container.innerHTML = state.projects.map(project => `
       <div class="galery-image" data-id="${project.id}" style="background-image:url('${project.imagem}')">
         <div class="overlay-text">${clickToSee}</div>
@@ -295,14 +304,14 @@ const Modal = {
     DOM.modalTechnologies.textContent = translations[state.lang].projects.technologies + project.tecnologias[0];
 
     this.configureLink(
-      DOM.modalGithub, 
-      project.github, 
+      DOM.modalGithub,
+      project.github,
       translations[state.lang].modal.githubUnavailable
     );
-    
+
     this.configureLink(
-      DOM.modalSite, 
-      project.site, 
+      DOM.modalSite,
+      project.site,
       translations[state.lang].modal.siteUnavailable
     );
 
@@ -375,7 +384,7 @@ const Theme = {
   toggle() {
     state.theme = state.theme === "light" ? "dark" : "light";
     localStorage.setItem("theme", state.theme);
-    
+
     DOM.body.classList.toggle("light-theme", state.theme === "light");
     this.updateIcon();
     this.updateTitle();
@@ -383,14 +392,14 @@ const Theme = {
 
   updateIcon() {
     const svgIcon = DOM.btnTheme.querySelector("svg");
-    svgIcon.innerHTML = state.theme === "light" 
-      ? CONFIG.SVG_ICONS.light 
+    svgIcon.innerHTML = state.theme === "light"
+      ? CONFIG.SVG_ICONS.light
       : CONFIG.SVG_ICONS.dark;
   },
 
   updateTitle() {
-    DOM.btnTheme.title = state.theme === "light" 
-      ? "Toggle Dark Theme" 
+    DOM.btnTheme.title = state.theme === "light"
+      ? "Toggle Dark Theme"
       : "Toggle Light Theme";
   },
 
@@ -452,7 +461,7 @@ const Events = {
     DOM.btnTranslate?.addEventListener("click", () => Language.toggle());
     DOM.closeBtn.onclick = () => Modal.close();
     DOM.alertClose.onclick = () => Alert.hide();
-    
+
     window.onclick = e => {
       if (e.target === DOM.modal) Modal.close();
       if (e.target === DOM.alertModal) Alert.hide();
@@ -470,10 +479,10 @@ const App = {
     Navigation.init();
     Events.init();
     Menu.adjust();
-    
+
     await Skills.load();
     await Projects.load();
-    
+
     AOS.init();
   }
 };
