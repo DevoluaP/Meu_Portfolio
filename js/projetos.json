@@ -99,11 +99,11 @@
   },
   {
     "id": "project12",
-    "titulo": "Encontre Seu CEP",
-    "descricao": "Busca de endereços pelo CEP usando API pública.",
-    "imagem": "imagens/cep.jpg",
-    "github": "https://github.com/DevoluaP/Projeto_EncontreSeuCEP",
-    "site": "https://devoluap.github.io/Projeto_EncontreSeuCEP/",
-    "tecnologias": ["HTML, CSS, JavaScript, jQuery."]
+    "titulo": "Minhas Conquistas",
+    "descricao": "Um website simples e elegante para guardar suas conquistas, elogios, aprendizados e momentos felizes.",
+    "imagem": "imagens/minhas-conquistas.png",
+    "github": "https://github.com/DevoluaP/Projeto_Conquistas",
+    "site": "https://devoluap.github.io/Projeto_Conquistas/",
+    "tecnologias": ["HTML, CSS, JavaScript, LocalStorage, Web Standards."]
   }
 ]

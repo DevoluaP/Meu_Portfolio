@@ -96,7 +96,7 @@ const translations = {
         project9: { titulo: "Mario Runs", descricao: "Jogo de navegador do Mario." },
         project10: { titulo: "Super Pizza", descricao: "Site para pizzaria." },
         project11: { titulo: "Calculadora", descricao: "Calculadora simples." },
-        project12: { titulo: "Encontre Seu CEP", descricao: "Busca de endereços pelo CEP usando API pública." }
+        project12: { titulo: "Minhas Conquistas", descricao: "Um website simples e elegante para guardar suas conquistas, elogios, aprendizados e momentos felizes." }
       }
     },
     modal: {
@@ -163,7 +163,7 @@ const translations = {
         project9: { titulo: "Mario Runs", descricao: "Browser-based Mario game." },
         project10: { titulo: "Super Pizza", descricao: "Pizzeria website." },
         project11: { titulo: "Calculator", descricao: "Simple calculator." },
-        project12: { titulo: "Find Your CEP", descricao: "Address search by CEP using public API." }
+        project12: { titulo: "My Achievements", descricao: "A simple and elegant website to save your achievements, compliments, learnings, and happy moments." }
       }
     },
     modal: {
