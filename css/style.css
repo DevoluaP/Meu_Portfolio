@@ -20,8 +20,18 @@ body.light-theme {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 *::-webkit-scrollbar {
@@ -82,8 +92,13 @@ body header nav #btn-close {
   display: none;
 }
 
-body header nav #btn-theme,
-body header nav #btn-translate {
+body header nav #header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+body header nav #btn-theme {
   background: none;
   border: none;
   padding: 5px;
@@ -93,28 +108,125 @@ body header nav #btn-translate {
   transition: transform 0.3s ease;
 }
 
-body header nav #btn-theme:hover,
-body header nav #btn-translate:hover {
+body header nav #btn-theme:hover {
   transform: scale(1.1);
 }
 
-body header nav #btn-theme:active,
-body header nav #btn-translate:active {
+body header nav #btn-theme:active {
   transform: scale(0.95);
 }
 
 body header nav #btn-theme svg,
-body header nav #btn-translate svg,
 body header nav #btn-menu,
 body header nav #btn-close {
   fill: var(--color-light-50);
   transition: fill 0.3s ease;
 }
 
-body header nav #btn-theme svg,
-body header nav #btn-translate svg {
+body header nav #btn-theme svg {
   width: 24px;
   height: 24px;
+}
+
+.lang-dropdown {
+  position: relative;
+}
+
+.lang-dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-light-50);
+  background-color: transparent;
+  border: 1px solid var(--color-light-100);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 7px 12px;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.lang-dropdown button:hover,
+.lang-dropdown button:focus-visible {
+  border-color: var(--color-light-50);
+  background-color: rgba(240, 237, 238, 0.08);
+}
+
+.lang-dropdown button img {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+
+.lang-dropdown .lang-caret {
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.lang-dropdown.open .lang-caret {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown-list {
+  list-style: none;
+  position: fixed;
+  min-width: 170px;
+  max-height: 0;
+  overflow: hidden auto;
+  background-color: var(--color-dark-800);
+  border: 1px solid var(--color-light-100);
+  border-radius: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    max-height 0.25s ease,
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+  z-index: 1000;
+}
+
+.lang-dropdown-list.open {
+  max-height: min(320px, calc(100vh - 100px));
+  opacity: 1;
+  visibility: visible;
+}
+
+.lang-dropdown-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: var(--color-light-50);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.lang-dropdown-list li:hover {
+  background-color: rgba(240, 237, 238, 0.1);
+}
+
+.lang-dropdown-list li[aria-selected="true"] {
+  background-color: rgba(240, 237, 238, 0.16);
+  font-weight: 500;
+}
+
+.lang-dropdown-list li img {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+body.light-theme .lang-dropdown-list {
+  background-color: var(--color-dark-800);
 }
 
 body header nav .menu {
@@ -376,7 +488,9 @@ body
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.9rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 body
@@ -403,7 +517,9 @@ body main .modal,
   background-color: rgba(10, 9, 12, 0.9);
   justify-content: center;
   align-items: center;
-  transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
+  transition:
+    opacity 0.5s ease-in,
+    visibility 0.5s ease-in;
 }
 
 body main .modal {
@@ -442,7 +558,9 @@ body main .modal .modal-content {
   position: relative;
   transform: scale(0.7);
   opacity: 0;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out,
+  transition:
+    transform 0.5s ease-out,
+    opacity 0.5s ease-out,
     background-color 0.3s ease;
 }
 
@@ -490,7 +608,9 @@ body main .modal .modal-content p,
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.9rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .alert-content button:hover {
@@ -611,32 +731,26 @@ body footer {
   body header nav #btn-menu,
   body header nav #btn-close,
   body header nav #btn-theme,
-  body header nav #btn-translate {
+  body header nav .lang-dropdown button {
     cursor: pointer;
   }
 
-  body header nav #btn-theme,
-  body header nav #btn-translate {
+  body header nav #header-controls {
     position: absolute;
-    right: 60px;
-    margin: 0;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 
-  body header nav #btn-translate {
-    right: 20px;
+  body header nav #btn-theme:hover {
+    transform: scale(1.1);
   }
 
-  body header nav #btn-theme:hover,
-  body header nav #btn-translate:hover {
-    transform: translateY(-50%) scale(1.1);
-  }
-
-  body header nav #btn-theme:active,
-  body header nav #btn-translate:active {
-    transform: translateY(-50%) scale(0.95);
+  body header nav #btn-theme:active {
+    transform: scale(0.95);
   }
 
   body header.ativo,

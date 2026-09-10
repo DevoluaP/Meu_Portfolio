@@ -18,7 +18,11 @@ const DOM = {
   btnMenu: el("btn-menu"),
   btnClose: el("btn-close"),
   btnTheme: el("btn-theme"),
-  btnTranslate: el("btn-translate"),
+  langDropdown: el("lang-dropdown"),
+  langDropdownBtn: el("lang-dropdown-btn"),
+  langDropdownList: el("lang-dropdown-list"),
+  langCurrentFlag: el("lang-current-flag"),
+  langCurrentLabel: el("lang-current-label"),
   alertModal: el("alert-modal"),
   alertMessage: el("alert-message"),
   alertClose: el("alert-close"),
@@ -38,210 +42,30 @@ const CONFIG = {
     light: `<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5"/>`,
     dark: `<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"/>`,
   },
+  LANGUAGES: {
+    pt: { label: "Português", country: "br" },
+    en: { label: "English", country: "us" },
+    es: { label: "Español", country: "es" },
+    fr: { label: "Français", country: "fr" },
+    de: { label: "Deutsch", country: "de" },
+    ja: { label: "日本語", country: "jp" },
+    it: { label: "Italiano", country: "it" },
+  },
+  FLAG_URL: (country) => `https://flagcdn.com/24x18/${country}.png`,
 };
 
-const translations = {
-  pt: {
-    nav: {
-      home: "Início",
-      about: "Sobre",
-      skills: "Habilidades",
-      projects: "Projetos",
-      contact: "Contato",
-    },
-    home: {
-      welcome: "Bem Vindo ao meu Portfólio, eu sou o",
-      role: "Desenvolvedor Full Stack",
-      github: "Meu GitHub",
-      linkedin: "Meu Linkedin",
-      email: "Meu E-mail",
-    },
-    about: {
-      title: "Sobre",
-      text: "Olá! Me chamo Paulo Henrique, tenho 21 anos e sou Desenvolvedor Full Stack com formação técnica em Informática para Internet pelo SENAC Lapa Tito. Também concluí o curso PROPROFISSÃO - Desenvolvimento Web com Python, pelo Instituto PROA, focado na preparação de jovens para o mercado de trabalho. Atualmente, curso técnico em Inteligência Artificial e já desenvolvi projetos utilizando tecnologias como Python, JavaScript, TypeScript, React.js, Node.js, MySQL e PostgreSQL. Também tive experiência atuando como Scrum Master e Desenvolvedor Full Stack no projeto DunDum, unindo desenvolvimento técnico e organização do time. Venho ainda aprofundando meus conhecimentos em Automação de Processos Robóticos (RPA) com a UiPath. Meu principal objetivo é continuar evoluindo na área de tecnologia, buscando novos desafios e oportunidades para contribuir e aprender. Quer conhecer meu trabalho? Veja meus projetos abaixo ou",
-      download: "baixe meu currículo!",
-    },
-    skills: {
-      title: "Habilidades",
-      "Front-end": "Front-end",
-      "Back-end": "Back-end",
-      Mobile: "Mobile",
-      "Banco de Dados": "Banco de Dados",
-      descriptions: {
-        "Estrutura de páginas.": "Estrutura de páginas.",
-        "Estilo e layout.": "Estilo e layout.",
-        "Interatividade em aplicações.": "Interatividade em aplicações.",
-        "Tipagem para JavaScript.": "Tipagem para JavaScript.",
-        "Manipulação de DOM.": "Manipulação de DOM.",
-        "Construção de interfaces.": "Construção de interfaces.",
-        "Framework para SPAs.": "Framework para SPAs.",
-        "Execução de JS no servidor.": "Execução de JS no servidor.",
-        "Desenvolvimento de APIs.": "Desenvolvimento de APIs.",
-        "APIs escaláveis e performáticas.": "APIs escaláveis e performáticas.",
-        "Conteinerização de ambientes.": "Conteinerização de ambientes.",
-        "Aplicações móveis nativas.": "Aplicações móveis nativas.",
-        "Desenvolvimento com React Native.":
-          "Desenvolvimento com React Native.",
-        "Desenvolvimento Android.": "Desenvolvimento Android.",
-        "Banco de dados relacional.": "Banco de dados relacional.",
-        "Banco de dados não relacional.": "Banco de dados não relacional.",
-      },
-    },
-    projects: {
-      title: "Projetos",
-      clickToSee: "Clique para ver mais",
-      technologies: "Tecnologias: ",
-      items: {
-        project1: {
-          titulo: "InvestCalcula",
-          descricao: "Calculadora de juros compostos.",
-        },
-        project2: {
-          titulo: "Lista de Tarefas",
-          descricao: "Aplicação simples para gerenciar tarefas diárias.",
-        },
-        project3: {
-          titulo: "Galleria",
-          descricao: "Galeria de imagens online com layout moderno.",
-        },
-        project4: {
-          titulo: "ERP Soul",
-          descricao: "Software de ERP corporativo.",
-        },
-        project5: {
-          titulo: "Seven Plus",
-          descricao: "Site para exibição de conteúdos.",
-        },
-        project6: {
-          titulo: "Seven Plus (Mobile)",
-          descricao: "Aplicativo para exibição de conteúdos.",
-        },
-        project7: { titulo: "Viajados", descricao: "Aplicativo de viagens." },
-        project8: {
-          titulo: "Oishi",
-          descricao: "Site de restaurante japonês.",
-        },
-        project9: {
-          titulo: "Mario Runs",
-          descricao: "Jogo de navegador do Mario.",
-        },
-        project10: { titulo: "Super Pizza", descricao: "Site para pizzaria." },
-        project11: { titulo: "Calculadora", descricao: "Calculadora simples." },
-        project12: {
-          titulo: "Minhas Conquistas",
-          descricao:
-            "Um website simples e elegante para guardar suas conquistas, elogios, aprendizados e momentos felizes.",
-        },
-      },
-    },
-    modal: {
-      close: "Fechar",
-      github: "GitHub",
-      site: "Site",
-      githubUnavailable: "O link do GitHub está indisponível.",
-      siteUnavailable: "O link do site está indisponível.",
-    },
-    contact: { title: "Contato", email: "E-mail:", back: "Voltar ao Início" },
-  },
-  en: {
-    nav: {
-      home: "Home",
-      about: "About",
-      skills: "Skills",
-      projects: "Projects",
-      contact: "Contact",
-    },
-    home: {
-      welcome: "Welcome to my Portfolio, I am",
-      role: "Full Stack Developer",
-      github: "My GitHub",
-      linkedin: "My Linkedin",
-      email: "My E-mail",
-    },
-    about: {
-      title: "About",
-      text: "Hello! My name is Paulo Henrique, I'm 21 years old, and I'm a Full Stack Developer with a technical degree in Web Development from SENAC Lapa Tito. I also completed the PROPROFISSÃO - Web Development with Python program at Instituto PROA, focused on preparing young people for the job market. I'm currently pursuing a technical degree in Artificial Intelligence and have developed projects using technologies such as Python, JavaScript, TypeScript, React.js, Node.js, MySQL, and PostgreSQL. I also have experience working as a Scrum Master and Full Stack Developer on the DunDum project, combining technical development with team organization. In addition, I'm expanding my knowledge of Robotic Process Automation (RPA) using UiPath. My main goal is to continue growing in the technology field, seeking new challenges and opportunities to contribute, learn, and develop professionally. Want to see my work? Check out my projects below or",
-      download: "download my resume!",
-    },
-    skills: {
-      title: "Skills",
-      "Front-end": "Front-end",
-      "Back-end": "Back-end",
-      Mobile: "Mobile",
-      "Banco de Dados": "Database",
-      descriptions: {
-        "Estrutura de páginas.": "Page structure.",
-        "Estilo e layout.": "Style and layout.",
-        "Interatividade em aplicações.": "Interactivity in applications.",
-        "Tipagem para JavaScript.": "Typing for JavaScript.",
-        "Manipulação de DOM.": "DOM manipulation.",
-        "Construção de interfaces.": "Interface building.",
-        "Framework para SPAs.": "Framework for SPAs.",
-        "Execução de JS no servidor.": "Server-side JS execution.",
-        "Desenvolvimento de APIs.": "API development.",
-        "APIs escaláveis e performáticas.": "Scalable and performant APIs.",
-        "Conteinerização de ambientes.": "Environment containerization.",
-        "Aplicações móveis nativas.": "Native mobile applications.",
-        "Desenvolvimento com React Native.": "React Native development.",
-        "Desenvolvimento Android.": "Android development.",
-        "Banco de dados relacional.": "Relational database.",
-        "Banco de dados não relacional.": "Non-relational database.",
-      },
-    },
-    projects: {
-      title: "Projects",
-      clickToSee: "Click to see more",
-      technologies: "Technologies: ",
-      items: {
-        project1: {
-          titulo: "InvestCalcula",
-          descricao: "Compound interest calculator.",
-        },
-        project2: {
-          titulo: "To-Do List",
-          descricao: "Simple application to manage daily tasks.",
-        },
-        project3: {
-          titulo: "Galleria",
-          descricao: "Online image gallery with modern layout.",
-        },
-        project4: { titulo: "ERP Soul", descricao: "Corporate ERP software." },
-        project5: {
-          titulo: "Seven Plus",
-          descricao: "Content streaming website.",
-        },
-        project6: {
-          titulo: "Seven Plus (Mobile)",
-          descricao: "Content streaming app.",
-        },
-        project7: { titulo: "Viajados", descricao: "Travel tracking app." },
-        project8: {
-          titulo: "Oishi",
-          descricao: "Japanese restaurant website.",
-        },
-        project9: {
-          titulo: "Mario Runs",
-          descricao: "Browser-based Mario game.",
-        },
-        project10: { titulo: "Super Pizza", descricao: "Pizzeria website." },
-        project11: { titulo: "Calculator", descricao: "Simple calculator." },
-        project12: {
-          titulo: "My Achievements",
-          descricao:
-            "A simple and elegant website to save your achievements, compliments, learnings, and happy moments.",
-        },
-      },
-    },
-    modal: {
-      close: "Close",
-      github: "GitHub",
-      site: "Site",
-      githubUnavailable: "The GitHub link is unavailable.",
-      siteUnavailable: "The site link is unavailable.",
-    },
-    contact: { title: "Contact", email: "Email:", back: "Back to Top" },
-  },
-};
+const translations = {};
+
+async function loadLanguage(lang) {
+  if (translations[lang]) return translations[lang];
+  
+  const res = await fetch(`js/lang/${lang}.json`);
+  if (!res.ok) throw new Error(`Falha ao carregar idioma: ${lang}`);
+  
+  const data = await res.json();
+  translations[lang] = data;
+  return data;
+}
 
 const Translation = {
   get(key) {
@@ -270,9 +94,15 @@ const Translation = {
       el.title = this.get(key);
     });
 
+    qsa("[data-translate-alt]").forEach((el) => {
+      const key = el.getAttribute("data-translate-alt");
+      el.alt = this.get(key);
+    });
+
+    Theme.updateTitle();
+
     document.documentElement.lang = state.lang;
-    DOM.btnTranslate.title =
-      state.lang === "pt" ? "Translate to English" : "Traduzir para Português";
+    Language.updateCurrentDisplay();
 
     const cvLink = qs('a[href*="cv"]');
     if (cvLink) {
@@ -280,10 +110,7 @@ const Translation = {
         state.lang === "pt" ? "imagens/cv.pdf" : "imagens/cv_EN.pdf";
     }
 
-    document.title =
-      state.lang === "pt"
-        ? "Paulo Henrique | Desenvolvedor Full Stack"
-        : "Paulo Henrique | Full Stack Developer";
+    document.title = `Paulo Henrique | ${this.get("home.role")}`;
   },
 };
 
@@ -327,7 +154,7 @@ const Skills = {
       this.render();
     } catch (error) {
       el("skills-section").innerHTML =
-        "<p>Não foi possível carregar as habilidades.</p>";
+        "<p>Unable to load skills.</p>";
       console.error("Erro ao carregar habilidades:", error);
     }
   },
@@ -376,6 +203,7 @@ const Modal = {
     };
 
     DOM.modalImg.src = project.imagem;
+    DOM.modalImg.alt = `${translations[state.lang].modal.projectImageAlt}: ${projectTrans.titulo}`;
     DOM.modalTitle.textContent = projectTrans.titulo;
     DOM.modalDesc.textContent = projectTrans.descricao;
     DOM.modalTechnologies.textContent =
@@ -476,8 +304,9 @@ const Theme = {
   },
 
   updateTitle() {
-    DOM.btnTheme.title =
-      state.theme === "light" ? "Toggle Dark Theme" : "Toggle Light Theme";
+    const key =
+      state.theme === "light" ? "theme.toggleDark" : "theme.toggleLight";
+    DOM.btnTheme.title = Translation.get(key);
   },
 
   init() {
@@ -485,17 +314,104 @@ const Theme = {
       DOM.body.classList.add("light-theme");
       this.updateIcon();
     }
-    this.updateTitle();
   },
 };
 
 const Language = {
-  toggle() {
-    state.lang = state.lang === "pt" ? "en" : "pt";
-    localStorage.setItem("lang", state.lang);
+  async set(lang) {
+    if (!CONFIG.LANGUAGES[lang] || lang === state.lang) return;
+    await loadLanguage(lang);
+    state.lang = lang;
+    localStorage.setItem("lang", lang);
     Translation.apply();
     Skills.render();
     Projects.render();
+  },
+
+  updateCurrentDisplay() {
+    const current = CONFIG.LANGUAGES[state.lang];
+    if (!current || !DOM.langCurrentFlag || !DOM.langCurrentLabel) return;
+    DOM.langCurrentFlag.src = CONFIG.FLAG_URL(current.country);
+    DOM.langCurrentFlag.alt = current.label;
+    DOM.langCurrentLabel.textContent = current.label;
+
+    qsa("#lang-dropdown-list li").forEach((li) => {
+      li.setAttribute("aria-selected", li.dataset.lang === state.lang);
+    });
+  },
+
+  populateDropdown() {
+    if (!DOM.langDropdownList) return;
+    DOM.langDropdownList.innerHTML = "";
+
+    Object.entries(CONFIG.LANGUAGES).forEach(([code, { label, country }]) => {
+      const li = document.createElement("li");
+      li.setAttribute("role", "option");
+      li.setAttribute("aria-selected", code === state.lang);
+      li.dataset.lang = code;
+      li.innerHTML = `
+        <img src="${CONFIG.FLAG_URL(country)}" alt="" />
+        <span>${label}</span>
+      `;
+      li.addEventListener("click", () => {
+        this.set(code);
+        this.close();
+      });
+      DOM.langDropdownList.appendChild(li);
+    });
+  },
+
+  open() {
+    this.positionList();
+    DOM.langDropdown.classList.add("open");
+    DOM.langDropdownList.classList.add("open");
+    DOM.langDropdownBtn.setAttribute("aria-expanded", "true");
+  },
+
+  positionList() {
+    if (!DOM.langDropdownBtn || !DOM.langDropdownList) return;
+    const rect = DOM.langDropdownBtn.getBoundingClientRect();
+    DOM.langDropdownList.style.top = `${rect.bottom + 8}px`;
+    DOM.langDropdownList.style.right = `${window.innerWidth - rect.right}px`;
+    DOM.langDropdownList.style.left = "auto";
+  },
+
+  close() {
+    DOM.langDropdown.classList.remove("open");
+    DOM.langDropdownList.classList.remove("open");
+    DOM.langDropdownBtn.setAttribute("aria-expanded", "false");
+  },
+
+  toggle() {
+    DOM.langDropdown.classList.contains("open") ? this.close() : this.open();
+  },
+
+  initEvents() {
+    DOM.langDropdownBtn?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      this.toggle();
+    });
+
+    document.addEventListener("click", (e) => {
+      const clickedInside =
+        DOM.langDropdown?.contains(e.target) ||
+        DOM.langDropdownList?.contains(e.target);
+      if (!clickedInside) this.close();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") this.close();
+    });
+
+    window.addEventListener("resize", () => this.close());
+  },
+
+  async init() {
+    this.populateDropdown();
+    if (DOM.langDropdownList) document.body.appendChild(DOM.langDropdownList);
+    this.initEvents();
+    await loadLanguage(state.lang);
+    Translation.apply();
   },
 };
 
@@ -535,7 +451,6 @@ const Events = {
     DOM.btnMenu.onclick = () => Menu.open();
     DOM.btnClose.onclick = () => Menu.close();
     DOM.btnTheme?.addEventListener("click", () => Theme.toggle());
-    DOM.btnTranslate?.addEventListener("click", () => Language.toggle());
     DOM.closeBtn.onclick = () => Modal.close();
     DOM.alertClose.onclick = () => Alert.hide();
 
@@ -552,7 +467,7 @@ const Events = {
 const App = {
   async init() {
     Theme.init();
-    Translation.apply();
+    await Language.init();
     Navigation.init();
     Events.init();
     Menu.adjust();

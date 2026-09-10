@@ -1,21 +1,23 @@
 [
   {
     "id": "project1",
+    "titulo": "DunDum",
+    "descricao": "Plataforma para monitoramento da saúde de cães.",
+    "imagem": "imagens/dundum.png",
+    "github": "https://github.com/dundumoficial",
+    "site": "https://www.dundum.com.br",
+    "tecnologias": [
+      "React, Node.js, Express.js, Python, PostgreSQL, PrismaORM."
+    ]
+  },
+  {
+    "id": "project2",
     "titulo": "InvestCalcula",
     "descricao": "Calculadora de juros compostos.",
     "imagem": "imagens/investcalcula.jpg",
     "github": "https://github.com/DevoluaP/Projeto_InvestCalcula",
     "site": "https://devoluap.github.io/Projeto_InvestCalcula/",
     "tecnologias": ["HTML, CSS, JavaScript."]
-  },
-  {
-    "id": "project2",
-    "titulo": "Lista de Tarefas",
-    "descricao": "Aplicação simples para gerenciar tarefas diárias.",
-    "imagem": "imagens/lista-tarefas.jpg",
-    "github": "https://github.com/DevoluaP/ListaDeTarefas",
-    "site": "#",
-    "tecnologias": ["Angular, TypeScript, Karma, JSON Server."]
   },
   {
     "id": "project3",
@@ -34,7 +36,8 @@
     "github": "https://github.com/DevoluaP/Projeto_ERPSoul",
     "site": "#",
     "tecnologias": ["HTML, CSS, JavaScript, React, Node.js, MySQL."]
-  },{
+  },
+  {
     "id": "project5",
     "titulo": "Seven Plus",
     "descricao": "Site para exibição de conteúdos.",
@@ -59,7 +62,9 @@
     "imagem": "imagens/viajados.png",
     "github": "https://github.com/DevoluaP/Projeto_Viajados",
     "site": "#",
-    "tecnologias": ["React Native, TypeScript, JavaScript, Node.js, Express.js, MySQL, JSON Web Token (JWT)."]
+    "tecnologias": [
+      "React Native, TypeScript, JavaScript, Node.js, Express.js, MySQL, JSON Web Token (JWT)."
+    ]
   },
   {
     "id": "project8",

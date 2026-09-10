@@ -10,45 +10,60 @@
       property="og:image"
       content="https://DevoluaP.github.io/Meu_Portfolio/imagens/logo.svg"
     />
+    <meta name="author" content="Paulo Henrique" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="canonical" href="https://DevoluaP.github.io/Meu_Portfolio/" />
     <link rel="shortcut icon" href="imagens/icon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://vlibras.gov.br" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <title>Paulo Henrique | Desenvolvedor Full Stack</title>
+    <title></title>
   </head>
   <body>
     <header>
       <nav>
-        <button id="btn-theme" title="Toggle Light Theme">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="#F0EDEE"
-            class="bi bi-lightbulb"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"
-            />
-          </svg>
-        </button>
-        <button id="btn-translate" title="Translate to English">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="#F0EDEE"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 6.028h-.049l-.09-.271-.064-.185-.065-.18h-.121l-.047.177L4.5 6.028H4.5l-.188.95h1.267z"
-            />
-            <path
-              d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.222 1.24-.468 1.722-.81.143.266.283.466.39.69q.06.15.094.269c.06.2.091.373.094.437a5.4 5.4 0 0 1-.012.01 5.5 5.5 0 0 1-.044.037q-.124.095-.313.188a8 8 0 0 1-.492.227c-.063.025-.128.05-.194.073-.104.035-.215.066-.33.093-.203.049-.417.084-.637.108-.03.003-.056.005-.082.007l-.05.002h-.002a1.2 1.2 0 0 1-.082-.007c-.22-.024-.434-.059-.637-.108a8 8 0 0 1-.33-.093c-.066-.023-.131-.048-.194-.073a8 8 0 0 1-.492-.227q-.189-.093-.313-.188a5.5 5.5 0 0 1-.044-.037 5.4 5.4 0 0 1-.012-.01c.003-.064.034-.237.094-.437q.034-.119.094-.269c.107-.224.247-.424.39-.69.482.342 1.041.588 1.722.81-.763.59-1.695 1.031-2.82 1.284Z"
-            />
-          </svg>
-        </button>
+        <div id="header-controls">
+          <button id="btn-theme">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#F0EDEE"
+              class="bi bi-lightbulb"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"
+              />
+            </svg>
+          </button>
+          <div id="lang-dropdown" class="lang-dropdown">
+            <button
+              id="lang-dropdown-btn"
+              type="button"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              data-translate-title="lang.select"
+            >
+              <img id="lang-current-flag" />
+              <span id="lang-current-label"></span>
+              <svg
+                class="lang-caret"
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="10"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+              >
+                <path d="M8 11 3 6h10z" />
+              </svg>
+            </button>
+            <ul
+              id="lang-dropdown-list"
+              class="lang-dropdown-list"
+              role="listbox"
+            ></ul>
+          </div>
+        </div>
         <svg
           id="btn-menu"
           xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +109,7 @@
         <img
           class="home-img"
           src="imagens/logo.svg"
-          alt="Meu Banner"
+          data-translate-alt="home.bannerAlt"
           title="/>aulo"
         />
         <div>
@@ -108,7 +123,6 @@
             target="_blank"
             rel="noopener noreferrer"
             data-translate-title="home.github"
-            title="Meu GitHub"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +142,6 @@
             target="_blank"
             rel="noopener noreferrer"
             data-translate-title="home.linkedin"
-            title="Meu Linkedin"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +161,6 @@
             target="_blank"
             rel="noopener noreferrer"
             data-translate-title="home.email"
-            title="Meu E-mail"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -202,7 +214,7 @@
       <div id="modal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <img id="modal-img" src="" alt="Imagem do projeto" />
+          <img id="modal-img" data-translate-alt="modal.projectImageAlt" />
           <h2 id="modal-title"></h2>
           <p id="modal-desc"></p>
           <p id="modal-technologies"></p>
@@ -218,17 +230,13 @@
               href="#"
               target="_blank"
               data-translate="modal.github"
-            >
-              GitHub
-            </a>
+            ></a>
             <a
               id="modal-site"
               href="#"
               target="_blank"
               data-translate="modal.site"
-            >
-              Site
-            </a>
+            ></a>
           </div>
         </div>
       </div>
@@ -244,7 +252,7 @@
               href="mailto:devoluap@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              title="Meu E-mail"
+              data-translate-title="home.email"
             >
               devoluap@gmail.com
             </a>
@@ -254,7 +262,7 @@
               href="https://github.com/DevoluaP"
               target="_blank"
               rel="noopener noreferrer"
-              title="Meu GitHub"
+              data-translate-title="home.github"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -273,7 +281,7 @@
               href="https://www.linkedin.com/in/devoluap"
               target="_blank"
               rel="noopener noreferrer"
-              title="Meu Linkedin"
+              data-translate-title="home.linkedin"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -302,8 +310,16 @@
     <footer>
       <p>© 2026 Paulo Henrique</p>
     </footer>
-    <noscript>Precisa do JavaScript</noscript>
+    <noscript>Requires JavaScript</noscript>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js"
+      defer
+    ></script>
   </body>
 </html>

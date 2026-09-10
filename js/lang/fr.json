@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Bienvenue sur mon Portfolio, je suis",
+    "role": "Développeur Full Stack",
+    "github": "Mon GitHub",
+    "linkedin": "Mon Linkedin",
+    "email": "Mon E-mail",
+    "bannerAlt": "Ma Bannière"
+  },
+  "theme": {
+    "toggleLight": "Passer au Thème Clair",
+    "toggleDark": "Passer au Thème Sombre"
+  },
+  "lang": {
+    "select": "Choisir la langue"
+  },
+  "about": {
+    "title": "À propos",
+    "text": "Bonjour ! Je m'appelle Paulo Henrique, j'ai 21 ans et je suis Développeur Full Stack avec une formation technique en Informatique pour Internet au SENAC Lapa Tito. J'ai également terminé le cours PROPROFISSÃO - Développement Web avec Python, à l'Instituto PROA, axé sur la préparation des jeunes au marché du travail. Je poursuis actuellement une formation technique en Intelligence Artificielle et j'ai déjà développé des projets utilisant des technologies telles que Python, JavaScript, TypeScript, React.js, Node.js, MySQL et PostgreSQL. J'ai également eu de l'expérience en tant que Scrum Master et Développeur Full Stack sur le projet DunDum, combinant développement technique et organisation d'équipe. Je continue par ailleurs à approfondir mes connaissances en Automatisation Robotisée des Processus (RPA) avec UiPath. Mon principal objectif est de continuer à évoluer dans le domaine de la technologie, en recherchant de nouveaux défis et opportunités pour contribuer et apprendre. Vous voulez découvrir mon travail ? Consultez mes projets ci-dessous ou",
+    "download": "téléchargez mon CV !"
+  },
+  "skills": {
+    "title": "Compétences",
+    "Front-end": "Front-end",
+    "Back-end": "Back-end",
+    "Mobile": "Mobile",
+    "Banco de Dados": "Base de Données",
+    "descriptions": {
+      "Estrutura de páginas.": "Structure des pages.",
+      "Estilo e layout.": "Style et mise en page.",
+      "Interatividade em aplicações.": "Interactivité dans les applications.",
+      "Tipagem para JavaScript.": "Typage pour JavaScript.",
+      "Manipulação de DOM.": "Manipulation du DOM.",
+      "Construção de interfaces.": "Construction d'interfaces.",
+      "Framework para SPAs.": "Framework pour SPA.",
+      "Execução de JS no servidor.": "Exécution de JS côté serveur.",
+      "Desenvolvimento de APIs.": "Développement d'API.",
+      "APIs escaláveis e performáticas.": "API évolutives et performantes.",
+      "Conteinerização de ambientes.": "Conteneurisation des environnements.",
+      "Aplicações móveis nativas.": "Applications mobiles natives.",
+      "Desenvolvimento com React Native.": "Développement avec React Native.",
+      "Desenvolvimento Android.": "Développement Android.",
+      "Banco de dados relacional.": "Base de données relationnelle.",
+      "Banco de dados não relacional.": "Base de données non relationnelle."
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "clickToSee": "Cliquez pour en savoir plus",
+    "technologies": "Technologies : ",
+    "items": {
+      "project1": {
+        "titulo": "DunDum",
+        "descricao": "Plateforme de suivi de la santé des chiens."
+      },
+      "project2": {
+        "titulo": "InvestCalcula",
+        "descricao": "Calculateur d'intérêts composés."
+      },
+      "project3": {
+        "titulo": "Galleria",
+        "descricao": "Galerie d'images en ligne au design moderne."
+      },
+      "project4": {
+        "titulo": "ERP Soul",
+        "descricao": "Logiciel ERP d'entreprise."
+      },
+      "project5": {
+        "titulo": "Seven Plus",
+        "descricao": "Site de diffusion de contenus."
+      },
+      "project6": {
+        "titulo": "Seven Plus (Mobile)",
+        "descricao": "Application de diffusion de contenus."
+      },
+      "project7": {
+        "titulo": "Viajados",
+        "descricao": "Application de voyage."
+      },
+      "project8": {
+        "titulo": "Oishi",
+        "descricao": "Site d'un restaurant japonais."
+      },
+      "project9": {
+        "titulo": "Mario Runs",
+        "descricao": "Jeu de navigateur inspiré de Mario."
+      },
+      "project10": {
+        "titulo": "Super Pizza",
+        "descricao": "Site pour une pizzeria."
+      },
+      "project11": {
+        "titulo": "Calculadora",
+        "descricao": "Calculatrice simple."
+      },
+      "project12": {
+        "titulo": "Minhas Conquistas",
+        "descricao": "Un site simple et élégant pour conserver vos réussites, compliments, apprentissages et moments heureux."
+      }
+    }
+  },
+  "modal": {
+    "close": "Fermer",
+    "github": "GitHub",
+    "site": "Site",
+    "githubUnavailable": "Le lien GitHub est indisponible.",
+    "siteUnavailable": "Le lien du site est indisponible.",
+    "projectImageAlt": "Image du projet"
+  },
+  "contact": {
+    "title": "Contact",
+    "email": "E-mail :",
+    "back": "Retour à l'accueil"
+  }
+}

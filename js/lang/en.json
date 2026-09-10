@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Welcome to my Portfolio, I am",
+    "role": "Full Stack Developer",
+    "github": "My GitHub",
+    "linkedin": "My Linkedin",
+    "email": "My E-mail",
+    "bannerAlt": "My Banner"
+  },
+  "theme": {
+    "toggleLight": "Switch to Light Theme",
+    "toggleDark": "Switch to Dark Theme"
+  },
+  "lang": {
+    "select": "Select language"
+  },
+  "about": {
+    "title": "About",
+    "text": "Hello! My name is Paulo Henrique, I'm 21 years old, and I'm a Full Stack Developer with a technical degree in Web Development from SENAC Lapa Tito. I also completed the PROPROFISSÃO - Web Development with Python program at Instituto PROA, focused on preparing young people for the job market. I'm currently pursuing a technical degree in Artificial Intelligence and have developed projects using technologies such as Python, JavaScript, TypeScript, React.js, Node.js, MySQL, and PostgreSQL. I also have experience working as a Scrum Master and Full Stack Developer on the DunDum project, combining technical development with team organization. In addition, I'm expanding my knowledge of Robotic Process Automation (RPA) using UiPath. My main goal is to continue growing in the technology field, seeking new challenges and opportunities to contribute, learn, and develop professionally. Want to see my work? Check out my projects below or",
+    "download": "download my resume!"
+  },
+  "skills": {
+    "title": "Skills",
+    "Front-end": "Front-end",
+    "Back-end": "Back-end",
+    "Mobile": "Mobile",
+    "Banco de Dados": "Database",
+    "descriptions": {
+      "Estrutura de páginas.": "Page structure.",
+      "Estilo e layout.": "Style and layout.",
+      "Interatividade em aplicações.": "Interactivity in applications.",
+      "Tipagem para JavaScript.": "Typing for JavaScript.",
+      "Manipulação de DOM.": "DOM manipulation.",
+      "Construção de interfaces.": "Interface building.",
+      "Framework para SPAs.": "Framework for SPAs.",
+      "Execução de JS no servidor.": "Server-side JS execution.",
+      "Desenvolvimento de APIs.": "API development.",
+      "APIs escaláveis e performáticas.": "Scalable and performant APIs.",
+      "Conteinerização de ambientes.": "Environment containerization.",
+      "Aplicações móveis nativas.": "Native mobile applications.",
+      "Desenvolvimento com React Native.": "React Native development.",
+      "Desenvolvimento Android.": "Android development.",
+      "Banco de dados relacional.": "Relational database.",
+      "Banco de dados não relacional.": "Non-relational database."
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "clickToSee": "Click to see more",
+    "technologies": "Technologies: ",
+    "items": {
+      "project1": {
+        "titulo": "DunDum",
+        "descricao": "Platform for monitoring dog's wealth."
+      },
+      "project2": {
+        "titulo": "InvestCalcula",
+        "descricao": "Compound interest calculator."
+      },
+      "project3": {
+        "titulo": "Galleria",
+        "descricao": "Online image gallery with modern layout."
+      },
+      "project4": {
+        "titulo": "ERP Soul",
+        "descricao": "Corporate ERP software."
+      },
+      "project5": {
+        "titulo": "Seven Plus",
+        "descricao": "Content streaming website."
+      },
+      "project6": {
+        "titulo": "Seven Plus (Mobile)",
+        "descricao": "Content streaming app."
+      },
+      "project7": {
+        "titulo": "Viajados",
+        "descricao": "Travel tracking app."
+      },
+      "project8": {
+        "titulo": "Oishi",
+        "descricao": "Japanese restaurant website."
+      },
+      "project9": {
+        "titulo": "Mario Runs",
+        "descricao": "Browser-based Mario game."
+      },
+      "project10": {
+        "titulo": "Super Pizza",
+        "descricao": "Pizzeria website."
+      },
+      "project11": {
+        "titulo": "Calculator",
+        "descricao": "Simple calculator."
+      },
+      "project12": {
+        "titulo": "My Achievements",
+        "descricao": "A simple and elegant website to save your achievements, compliments, learnings, and happy moments."
+      }
+    }
+  },
+  "modal": {
+    "close": "Close",
+    "github": "GitHub",
+    "site": "Site",
+    "githubUnavailable": "The GitHub link is unavailable.",
+    "siteUnavailable": "The site link is unavailable.",
+    "projectImageAlt": "Project image"
+  },
+  "contact": {
+    "title": "Contact",
+    "email": "Email:",
+    "back": "Back to Top"
+  }
+}

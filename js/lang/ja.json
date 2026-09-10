@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "自己紹介",
+    "skills": "スキル",
+    "projects": "プロジェクト",
+    "contact": "連絡先"
+  },
+  "home": {
+    "welcome": "私のポートフォリオへようこそ。私は",
+    "role": "フルスタック開発者",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "メール",
+    "bannerAlt": "私のバナー"
+  },
+  "theme": {
+    "toggleLight": "ライトテーマに切り替え",
+    "toggleDark": "ダークテーマに切り替え"
+  },
+  "lang": {
+    "select": "言語を選択"
+  },
+  "about": {
+    "title": "自己紹介",
+    "text": "こんにちは！パウロ・エンリケと申します。21歳で、SENAC Lapa Tito にてインターネット情報技術の専門教育を修了したフルスタック開発者です。また、Instituto PROA の PROPROFISSÃO（Python によるWeb開発）プログラムも修了しており、若者の就労準備を目的とした内容でした。現在は人工知能の専門課程に在籍しており、Python、JavaScript、TypeScript、React.js、Node.js、MySQL、PostgreSQL などの技術を用いたプロジェクト開発の経験があります。また、DunDum プロジェクトではスクラムマスター兼フルスタック開発者として、技術開発とチーム運営の両方に携わりました。さらに、UiPath を用いたロボティック・プロセス・オートメーション（RPA）の知識も深めています。技術分野で成長し続け、新たな挑戦や貢献・学びの機会を求めることが私の主な目標です。私の仕事に興味がありますか？下記のプロジェクトをご覧いただくか、",
+    "download": "履歴書をダウンロードしてください！"
+  },
+  "skills": {
+    "title": "スキル",
+    "Front-end": "フロントエンド",
+    "Back-end": "バックエンド",
+    "Mobile": "モバイル",
+    "Banco de Dados": "データベース",
+    "descriptions": {
+      "Estrutura de páginas.": "ページ構造。",
+      "Estilo e layout.": "スタイルとレイアウト。",
+      "Interatividade em aplicações.": "アプリケーションのインタラクティブ性。",
+      "Tipagem para JavaScript.": "JavaScript向けの型付け。",
+      "Manipulação de DOM.": "DOM操作。",
+      "Construção de interfaces.": "インターフェース構築。",
+      "Framework para SPAs.": "SPA向けフレームワーク。",
+      "Execução de JS no servidor.": "サーバーサイドでのJS実行。",
+      "Desenvolvimento de APIs.": "API開発。",
+      "APIs escaláveis e performáticas.": "スケーラブルで高性能なAPI。",
+      "Conteinerização de ambientes.": "環境のコンテナ化。",
+      "Aplicações móveis nativas.": "ネイティブモバイルアプリ。",
+      "Desenvolvimento com React Native.": "React Nativeによる開発。",
+      "Desenvolvimento Android.": "Android開発。",
+      "Banco de dados relacional.": "リレーショナルデータベース。",
+      "Banco de dados não relacional.": "非リレーショナルデータベース。"
+    }
+  },
+  "projects": {
+    "title": "プロジェクト",
+    "clickToSee": "クリックして詳細を見る",
+    "technologies": "使用技術: ",
+    "items": {
+      "project1": {
+        "titulo": "DunDum",
+        "descricao": "犬の健康状態を管理するプラットフォーム。"
+      },
+      "project2": {
+        "titulo": "InvestCalcula",
+        "descricao": "複利計算機。"
+      },
+      "project3": {
+        "titulo": "Galleria",
+        "descricao": "モダンなデザインのオンライン画像ギャラリー。"
+      },
+      "project4": {
+        "titulo": "ERP Soul",
+        "descricao": "企業向けERPソフトウェア。"
+      },
+      "project5": {
+        "titulo": "Seven Plus",
+        "descricao": "コンテンツ配信サイト。"
+      },
+      "project6": {
+        "titulo": "Seven Plus (Mobile)",
+        "descricao": "コンテンツ配信アプリ。"
+      },
+      "project7": {
+        "titulo": "Viajados",
+        "descricao": "旅行アプリ。"
+      },
+      "project8": {
+        "titulo": "Oishi",
+        "descricao": "和食レストランのサイト。"
+      },
+      "project9": {
+        "titulo": "Mario Runs",
+        "descricao": "マリオ風のブラウザゲーム。"
+      },
+      "project10": {
+        "titulo": "Super Pizza",
+        "descricao": "ピザ店のサイト。"
+      },
+      "project11": {
+        "titulo": "Calculadora",
+        "descricao": "シンプルな電卓。"
+      },
+      "project12": {
+        "titulo": "Minhas Conquistas",
+        "descricao": "自分の達成、褒め言葉、学び、幸せな瞬間を記録するシンプルで洗練されたウェブサイト。"
+      }
+    }
+  },
+  "modal": {
+    "close": "閉じる",
+    "github": "GitHub",
+    "site": "サイト",
+    "githubUnavailable": "GitHubのリンクは利用できません。",
+    "siteUnavailable": "サイトのリンクは利用できません。",
+    "projectImageAlt": "プロジェクト画像"
+  },
+  "contact": {
+    "title": "連絡先",
+    "email": "メール:",
+    "back": "トップに戻る"
+  }
+}
