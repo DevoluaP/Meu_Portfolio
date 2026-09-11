@@ -58,10 +58,10 @@ const translations = {};
 
 async function loadLanguage(lang) {
   if (translations[lang]) return translations[lang];
-  
+
   const res = await fetch(`js/lang/${lang}.json`);
   if (!res.ok) throw new Error(`Falha ao carregar idioma: ${lang}`);
-  
+
   const data = await res.json();
   translations[lang] = data;
   return data;
@@ -153,8 +153,7 @@ const Skills = {
       state.skills = await response.json();
       this.render();
     } catch (error) {
-      el("skills-section").innerHTML =
-        "<p>Unable to load skills.</p>";
+      el("skills-section").innerHTML = "<p>Unable to load skills.</p>";
       console.error("Erro ao carregar habilidades:", error);
     }
   },

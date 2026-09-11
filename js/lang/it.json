@@ -28,8 +28,8 @@
   },
   "skills": {
     "title": "Competenze",
-    "Front-end": "Front-end",
-    "Back-end": "Back-end",
+    "Front-end": "Front-End",
+    "Back-end": "Back-End",
     "Mobile": "Mobile",
     "Banco de Dados": "Database",
     "descriptions": {

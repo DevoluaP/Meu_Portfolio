@@ -28,9 +28,9 @@
   },
   "skills": {
     "title": "Fähigkeiten",
-    "Front-end": "Front-end",
-    "Back-end": "Back-end",
-    "Mobile": "Mobil",
+    "Front-end": "Front-End",
+    "Back-end": "Back-End",
+    "Mobile": "Mobile",
     "Banco de Dados": "Datenbank",
     "descriptions": {
       "Estrutura de páginas.": "Seitenstruktur.",
