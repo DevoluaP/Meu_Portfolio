@@ -2,93 +2,76 @@
   "Front-end": [
     {
       "nome": "HTML",
-      "descricao": "Estrutura de páginas.",
       "imagem": "imagens/html.png"
     },
     {
       "nome": "CSS",
-      "descricao": "Estilo e layout.",
       "imagem": "imagens/css.png"
     },
     {
       "nome": "JavaScript",
-      "descricao": "Interatividade em aplicações.",
       "imagem": "imagens/javascript.png"
     },
     {
       "nome": "TypeScript",
-      "descricao": "Tipagem para JavaScript.",
       "imagem": "imagens/typescript.png"
     },
     {
       "nome": "jQuery",
-      "descricao": "Manipulação de DOM.",
       "imagem": "imagens/jquery.png"
     },
     {
       "nome": "React",
-      "descricao": "Construção de interfaces.",
       "imagem": "imagens/react.png"
     },
     {
       "nome": "Angular",
-      "descricao": "Framework para SPAs.",
       "imagem": "imagens/angular.png"
     }
   ],
   "Back-end": [
     {
       "nome": "Node.js",
-      "descricao": "Execução de JS no servidor.",
       "imagem": "imagens/nodejs.png"
     },
     {
       "nome": "PHP",
-      "descricao": "Desenvolvimento de APIs.",
       "imagem": "imagens/php.png"
     },
     {
       "nome": "Python",
-      "descricao": "APIs escaláveis e performáticas.",
       "imagem": "imagens/python.png"
     },
     {
       "nome": "Docker",
-      "descricao": "Conteinerização de ambientes.",
       "imagem": "imagens/docker.png"
     }
   ],
   "Mobile": [
     {
       "nome": "React Native",
-      "descricao": "Aplicações móveis nativas.",
       "imagem": "imagens/react.png"
     },
     {
       "nome": "Expo",
-      "descricao": "Desenvolvimento com React Native.",
       "imagem": "imagens/expo.png"
     },
     {
       "nome": "Android Studio",
-      "descricao": "Desenvolvimento Android.",
       "imagem": "imagens/android-studio.png"
     }
   ],
   "Banco de Dados": [
     {
       "nome": "MySQL",
-      "descricao": "Banco de dados relacional.",
       "imagem": "imagens/mysql.png"
     },
     {
       "nome": "PostgreSQL",
-      "descricao": "Banco de dados relacional.",
       "imagem": "imagens/postgresql.png"
     },
     {
       "nome": "MongoDB",
-      "descricao": "Banco de dados não relacional.",
       "imagem": "imagens/mongodb.png"
     }
   ]

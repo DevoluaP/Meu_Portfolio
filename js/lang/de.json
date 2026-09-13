@@ -31,25 +31,7 @@
     "Front-end": "Front-End",
     "Back-end": "Back-End",
     "Mobile": "Mobile",
-    "Banco de Dados": "Datenbank",
-    "descriptions": {
-      "Estrutura de páginas.": "Seitenstruktur.",
-      "Estilo e layout.": "Stil und Layout.",
-      "Interatividade em aplicações.": "Interaktivität in Anwendungen.",
-      "Tipagem para JavaScript.": "Typisierung für JavaScript.",
-      "Manipulação de DOM.": "DOM-Manipulation.",
-      "Construção de interfaces.": "Erstellung von Oberflächen.",
-      "Framework para SPAs.": "Framework für SPAs.",
-      "Execução de JS no servidor.": "Serverseitige JS-Ausführung.",
-      "Desenvolvimento de APIs.": "API-Entwicklung.",
-      "APIs escaláveis e performáticas.": "Skalierbare und performante APIs.",
-      "Conteinerização de ambientes.": "Containerisierung von Umgebungen.",
-      "Aplicações móveis nativas.": "Native mobile Anwendungen.",
-      "Desenvolvimento com React Native.": "Entwicklung mit React Native.",
-      "Desenvolvimento Android.": "Android-Entwicklung.",
-      "Banco de dados relacional.": "Relationale Datenbank.",
-      "Banco de dados não relacional.": "Nicht-relationale Datenbank."
-    }
+    "Banco de Dados": "Datenbank"
   },
   "projects": {
     "title": "Projekte",

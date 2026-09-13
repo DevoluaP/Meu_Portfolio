@@ -31,25 +31,7 @@
     "Front-end": "Front-End",
     "Back-end": "Back-End",
     "Mobile": "Mobile",
-    "Banco de Dados": "Base de Datos",
-    "descriptions": {
-      "Estrutura de páginas.": "Estructura de páginas.",
-      "Estilo e layout.": "Estilo y diseño.",
-      "Interatividade em aplicações.": "Interactividad en aplicaciones.",
-      "Tipagem para JavaScript.": "Tipado para JavaScript.",
-      "Manipulação de DOM.": "Manipulación del DOM.",
-      "Construção de interfaces.": "Construcción de interfaces.",
-      "Framework para SPAs.": "Framework para SPAs.",
-      "Execução de JS no servidor.": "Ejecución de JS en el servidor.",
-      "Desenvolvimento de APIs.": "Desarrollo de APIs.",
-      "APIs escaláveis e performáticas.": "APIs escalables y de alto rendimiento.",
-      "Conteinerização de ambientes.": "Contenerización de entornos.",
-      "Aplicações móveis nativas.": "Aplicaciones móviles nativas.",
-      "Desenvolvimento com React Native.": "Desarrollo con React Native.",
-      "Desenvolvimento Android.": "Desarrollo Android.",
-      "Banco de dados relacional.": "Base de datos relacional.",
-      "Banco de dados não relacional.": "Base de datos no relacional."
-    }
+    "Banco de Dados": "Base de Datos"
   },
   "projects": {
     "title": "Proyectos",

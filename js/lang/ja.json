@@ -31,25 +31,7 @@
     "Front-end": "フロントエンド",
     "Back-end": "バックエンド",
     "Mobile": "モバイル",
-    "Banco de Dados": "データベース",
-    "descriptions": {
-      "Estrutura de páginas.": "ページ構造。",
-      "Estilo e layout.": "スタイルとレイアウト。",
-      "Interatividade em aplicações.": "アプリケーションのインタラクティブ性。",
-      "Tipagem para JavaScript.": "JavaScript向けの型付け。",
-      "Manipulação de DOM.": "DOM操作。",
-      "Construção de interfaces.": "インターフェース構築。",
-      "Framework para SPAs.": "SPA向けフレームワーク。",
-      "Execução de JS no servidor.": "サーバーサイドでのJS実行。",
-      "Desenvolvimento de APIs.": "API開発。",
-      "APIs escaláveis e performáticas.": "スケーラブルで高性能なAPI。",
-      "Conteinerização de ambientes.": "環境のコンテナ化。",
-      "Aplicações móveis nativas.": "ネイティブモバイルアプリ。",
-      "Desenvolvimento com React Native.": "React Nativeによる開発。",
-      "Desenvolvimento Android.": "Android開発。",
-      "Banco de dados relacional.": "リレーショナルデータベース。",
-      "Banco de dados não relacional.": "非リレーショナルデータベース。"
-    }
+    "Banco de Dados": "データベース"
   },
   "projects": {
     "title": "プロジェクト",

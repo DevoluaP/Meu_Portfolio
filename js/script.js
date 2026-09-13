@@ -133,14 +133,10 @@ const Skills = {
   },
 
   renderSkillItem(skill) {
-    const descTranslated =
-      translations[state.lang].skills.descriptions[skill.descricao] ||
-      skill.descricao;
     return `
       <div class="knowledge-item">
         <img src="${skill.imagem}" alt="${skill.nome}" title="${skill.nome}" />
         <p>${skill.nome}</p>
-        <p class="description">${descTranslated}</p>
       </div>
     `;
   },
@@ -176,6 +172,8 @@ const Projects = {
     qsa(".galery-image").forEach((img) => {
       img.addEventListener("click", () => Modal.open(img.dataset.id));
     });
+
+    TiltEffect.bind(qsa(".galery-image"));
   },
 
   async load() {
@@ -186,6 +184,46 @@ const Projects = {
     } catch (error) {
       console.error("Erro ao carregar projetos:", error);
     }
+  },
+};
+
+const TiltEffect = {
+  maxTilt: 8,
+
+  prefersReducedMotion() {
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  },
+
+  bind(elements) {
+    if (this.prefersReducedMotion() || window.matchMedia("(hover: none)").matches) {
+      return;
+    }
+
+    elements.forEach((el) => {
+      el.addEventListener("mousemove", (e) => this.handleMove(e, el));
+      el.addEventListener("mouseleave", () => this.reset(el));
+    });
+  },
+
+  handleMove(e, el) {
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const px = x / rect.width;
+    const py = y / rect.height;
+
+    const tiltY = (px - 0.5) * this.maxTilt * 2;
+    const tiltX = (0.5 - py) * this.maxTilt * 2;
+
+    el.style.setProperty("--tilt-x", `${tiltX}deg`);
+    el.style.setProperty("--tilt-y", `${tiltY}deg`);
+    el.style.setProperty("--spot-x", `${px * 100}%`);
+    el.style.setProperty("--spot-y", `${py * 100}%`);
+  },
+
+  reset(el) {
+    el.style.setProperty("--tilt-x", "0deg");
+    el.style.setProperty("--tilt-y", "0deg");
   },
 };
 
