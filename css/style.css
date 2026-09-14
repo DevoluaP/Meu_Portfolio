@@ -785,7 +785,7 @@ body footer {
   }
 
   body header {
-    height: 10vh !important;
+    height: 8vh;
     padding: 0 20px;
     transition: 0.4s;
     overflow: hidden;
