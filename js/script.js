@@ -4,26 +4,35 @@ const qsa = (selector) => document.querySelectorAll(selector);
 
 const DOM = {
   body: document.body,
-  container: el("projects-container"),
+  header: el("site-header"),
+  navLinks: el("nav-links"),
+  menuButton: el("btn-menu"),
+  themeButton: el("btn-theme"),
+  progress: el("scroll-progress"),
+  cursorGlow: qs(".cursor-glow"),
+  langDropdown: el("lang-dropdown"),
+  langButton: el("lang-dropdown-btn"),
+  langList: el("lang-dropdown-list"),
+  langFlag: el("lang-current-flag"),
+  langLabel: el("lang-current-label"),
+  skills: el("skills-section"),
+  projects: el("projects-container"),
+  projectFilter: el("projects-filter"),
+  experience: el("experience-list"),
+  education: el("education-list"),
   modal: el("modal"),
   modalImg: el("modal-img"),
   modalTitle: el("modal-title"),
   modalDesc: el("modal-desc"),
-  modalTechnologies: el("modal-technologies"),
+  modalTech: el("modal-technologies"),
   modalGithub: el("modal-github"),
   modalSite: el("modal-site"),
-  closeBtn: qs(".close"),
-  menu: qs(".menu"),
-  header: qs("header"),
-  btnMenu: el("btn-menu"),
-  btnClose: el("btn-close"),
-  btnTheme: el("btn-theme"),
-  langDropdown: el("lang-dropdown"),
-  langDropdownBtn: el("lang-dropdown-btn"),
-  langDropdownList: el("lang-dropdown-list"),
-  langCurrentFlag: el("lang-current-flag"),
-  langCurrentLabel: el("lang-current-label"),
-  alertModal: el("alert-modal"),
+  modalClose: el("modal-close"),
+  modalImageTrigger: el("modal-image-trigger"),
+  imageLightbox: el("image-lightbox"),
+  imageLightboxImg: el("image-lightbox-img"),
+  imageLightboxClose: el("image-lightbox-close"),
+  alert: el("alert-modal"),
   alertMessage: el("alert-message"),
   alertClose: el("alert-close"),
 };
@@ -33,16 +42,14 @@ const state = {
   lang: localStorage.getItem("lang") || "pt",
   skills: {},
   projects: [],
+  experience: [],
+  education: [],
+  projectFilter: "all",
 };
 
 const CONFIG = {
-  DESKTOP_WIDTH: 768,
-  MENU_HEIGHT: "92vh",
-  SVG_ICONS: {
-    light: `<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5"/>`,
-    dark: `<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"/>`,
-  },
-  LANGUAGES: {
+  desktop: 980,
+  languages: {
     pt: { label: "Português", country: "br" },
     en: { label: "English", country: "us" },
     es: { label: "Español", country: "es" },
@@ -51,469 +58,653 @@ const CONFIG = {
     ja: { label: "日本語", country: "jp" },
     it: { label: "Italiano", country: "it" },
   },
-  FLAG_URL: (country) => `https://flagcdn.com/24x18/${country}.png`,
+  icon: {
+    sun: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>`,
+    moon: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.5A8.8 8.8 0 0 1 8.5 3.6 8.8 8.8 0 1 0 20.4 15.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>`,
+  },
 };
 
 const translations = {};
-
 async function loadLanguage(lang) {
   if (translations[lang]) return translations[lang];
 
-  const res = await fetch(`js/lang/${lang}.json`);
-  if (!res.ok) throw new Error(`Falha ao carregar idioma: ${lang}`);
+  const response = await fetch(`js/lang/${lang}.json`);
+  if (!response.ok) throw new Error(`Falha ao carregar idioma: ${lang}`);
 
-  const data = await res.json();
-  translations[lang] = data;
-  return data;
+  translations[lang] = await response.json();
+  return translations[lang];
 }
 
 const Translation = {
   get(key) {
-    const keys = key.split(".");
-    let value = translations[state.lang];
-    for (const k of keys) {
-      value = value?.[k];
-    }
-    return value || key;
+    return (
+      key
+        .split(".")
+        .reduce((value, part) => value?.[part], translations[state.lang]) || key
+    );
   },
-
   apply() {
-    qsa("[data-translate]").forEach((el) => {
-      const key = el.getAttribute("data-translate");
-      const translation = this.get(key);
-
-      if (el.tagName === "INPUT" && el.type === "text") {
-        el.value = translation;
-      } else {
-        el.textContent = translation;
-      }
+    qsa("[data-translate]").forEach((node) => {
+      node.textContent = this.get(node.dataset.translate);
     });
-
-    qsa("[data-translate-title]").forEach((el) => {
-      const key = el.getAttribute("data-translate-title");
-      el.title = this.get(key);
+    qsa("[data-translate-title]").forEach((node) => {
+      node.title = this.get(node.dataset.translateTitle);
     });
-
-    qsa("[data-translate-alt]").forEach((el) => {
-      const key = el.getAttribute("data-translate-alt");
-      el.alt = this.get(key);
+    qsa("[data-translate-alt]").forEach((node) => {
+      node.alt = this.get(node.dataset.translateAlt);
     });
-
-    Theme.updateTitle();
 
     document.documentElement.lang = state.lang;
-    Language.updateCurrentDisplay();
-
-    const cvLink = qs('a[href*="cv"]');
-    if (cvLink) {
-      cvLink.href =
-        state.lang === "pt" ? "imagens/cv.pdf" : "imagens/cv_EN.pdf";
-    }
-
     document.title = `Paulo Henrique | ${this.get("home.role")}`;
+    const cv = state.lang === "pt" ? "imagens/cv.pdf" : "imagens/cv_EN.pdf";
+    [el("hero-cv"), el("about-cv")].forEach((node) => node && (node.href = cv));
+    Language.updateCurrent();
+    Theme.update();
+  },
+};
+
+const Language = {
+  init() {
+    DOM.langList.innerHTML = Object.entries(CONFIG.languages)
+      .map(
+        ([code, item]) => `
+          <li role="option" data-lang="${code}" aria-selected="${code === state.lang}">
+            <img src="https://flagcdn.com/24x18/${item.country}.png" alt="" />
+            <span>${item.label}</span>
+          </li>
+        `,
+      )
+      .join("");
+
+    DOM.langList.addEventListener("click", async (event) => {
+      const item = event.target.closest("li[data-lang]");
+      if (!item) return;
+      await this.set(item.dataset.lang);
+      this.close();
+    });
+
+    DOM.langButton.addEventListener("click", (event) => {
+      event.stopPropagation();
+      this.toggle();
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!DOM.langDropdown.contains(event.target)) this.close();
+    });
+  },
+  async set(lang) {
+    if (!CONFIG.languages[lang] || lang === state.lang) return;
+    state.lang = lang;
+
+    localStorage.setItem("lang", lang);
+    await loadLanguage(lang);
+    Translation.apply();
+    Skills.render();
+    Projects.render();
+    Experience.render();
+    Education.render();
+  },
+  updateCurrent() {
+    const current = CONFIG.languages[state.lang];
+    DOM.langFlag.src = `https://flagcdn.com/24x18/${current.country}.png`;
+    DOM.langLabel.textContent = current.label;
+    qsa("#lang-dropdown-list li").forEach((li) =>
+      li.setAttribute("aria-selected", li.dataset.lang === state.lang),
+    );
+  },
+  toggle() {
+    DOM.langList.classList.toggle("open");
+  },
+  close() {
+    DOM.langList.classList.remove("open");
+  },
+};
+
+const Theme = {
+  init() {
+    DOM.body.classList.toggle("light-theme", state.theme === "light");
+    this.update();
+  },
+  toggle() {
+    state.theme = state.theme === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", state.theme);
+    DOM.body.classList.toggle("light-theme", state.theme === "light");
+    this.update();
+  },
+  update() {
+    DOM.themeButton.innerHTML =
+      state.theme === "dark" ? CONFIG.icon.sun : CONFIG.icon.moon;
+    DOM.themeButton.title = Translation.get(
+      state.theme === "dark" ? "theme.toggleLight" : "theme.toggleDark",
+    );
+  },
+};
+
+const Menu = {
+  toggle() {
+    const open = DOM.navLinks.classList.toggle("open");
+    DOM.menuButton.setAttribute("aria-expanded", String(open));
+  },
+  close() {
+    DOM.navLinks.classList.remove("open");
+    DOM.menuButton.setAttribute("aria-expanded", "false");
   },
 };
 
 const Skills = {
-  render() {
-    const section = el("skills-section");
-    section.innerHTML = "";
-
-    Object.entries(state.skills).forEach(([categoria, itens]) => {
-      const categoryTranslated =
-        translations[state.lang].skills[categoria] || categoria;
-
-      section.innerHTML += `
-        <h3 class="knowledge-title">${categoryTranslated}</h3>
-        <div class="knowledge-grid">
-          ${itens.map((skill) => this.renderSkillItem(skill)).join("")}
-        </div>
-      `;
-    });
-  },
-
-  renderSkillItem(skill) {
-    return `
-      <div class="knowledge-item">
-        <img src="${skill.imagem}" alt="${skill.nome}" title="${skill.nome}" />
-        <p>${skill.nome}</p>
-      </div>
-    `;
-  },
-
   async load() {
     try {
-      const response = await fetch("js/habilidades.json");
-      if (!response.ok) throw new Error("Failed to load skills");
-
-      state.skills = await response.json();
+      state.skills = await fetch("js/habilidades.json").then((r) => r.json());
       this.render();
     } catch (error) {
-      el("skills-section").innerHTML = "<p>Unable to load skills.</p>";
-      console.error("Erro ao carregar habilidades:", error);
+      console.error(error);
     }
+  },
+  render() {
+    DOM.skills.innerHTML = Object.entries(state.skills)
+      .map(
+        ([category, items]) => `
+          <article class="skill-group glass-card spotlight-card">
+            <h3>${translations[state.lang]?.skills?.[category] || category}</h3>
+            <div class="skill-items">
+              ${items
+                .map(
+                  (skill) => `
+                  <div class="skill-item">
+                    <img src="${skill.imagem}" alt="" loading="lazy" />
+                    <span>${skill.nome}</span>
+                  </div>`,
+                )
+                .join("")}
+            </div>
+          </article>
+        `,
+      )
+      .join("");
+    bindSpotlights();
+  },
+};
+
+const Experience = {
+  async load() {
+    try {
+      state.experience = await fetch("js/experiencia.json").then((r) =>
+        r.json(),
+      );
+      this.render();
+    } catch (error) {
+      console.error(error);
+    }
+  },
+  render() {
+    const localizedItems = translations[state.lang]?.experience?.items || [];
+    DOM.experience.innerHTML = state.experience
+      .map((item, index) => {
+        const localized = localizedItems[index] || {};
+        const tags = localized.tags || item.tags;
+        const period = item.periodo.replace(
+          "PRESENTE",
+          translations[state.lang]?.experience?.present || "PRESENTE",
+        );
+        return `
+          <article class="timeline-item">
+            <div class="timeline-period">${period}</div>
+            <div class="timeline-main">
+              <img class="timeline-logo" src="${item.imagem}" alt="" loading="lazy" />
+              <div>
+                <h3 class="timeline-title">${localized.titulo || item.titulo}</h3>
+                <div class="timeline-company">${localized.empresa || item.empresa}</div>
+                <p class="timeline-desc">${localized.descricao || item.descricao}</p>
+              </div>
+              <div class="timeline-tags">
+                ${tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
+              </div>
+            </div>
+          </article>
+        `;
+      })
+      .join("");
+  },
+};
+
+const Education = {
+  async load() {
+    try {
+      state.education = await fetch("js/educacao.json").then((r) => r.json());
+      this.render();
+    } catch (error) {
+      console.error(error);
+    }
+  },
+  render() {
+    const localizedItems = translations[state.lang]?.education?.items || [];
+    DOM.education.innerHTML = state.education
+      .map((item, index) => {
+        const localized = localizedItems[index] || {};
+        return `
+          <article class="education-card glass-card spotlight-card">
+            <div class="education-top">
+              <img class="education-logo" src="${item.imagem}" alt="" loading="lazy" />
+              <span class="education-year">${item.ano}</span>
+            </div>
+            <div>
+              <h3>${localized.titulo || item.titulo}</h3>
+              <h4>${localized.instituicao || item.instituicao}</h4>
+              <p>${localized.descricao || item.descricao}</p>
+            </div>
+            <span class="education-badge">${localized.status ?? item.status}</span>
+          </article>
+        `;
+      })
+      .join("");
+    bindSpotlights();
+    UI.bindDynamicReveals();
   },
 };
 
 const Projects = {
-  render() {
-    const clickToSee = translations[state.lang].projects.clickToSee;
-
-    DOM.container.innerHTML = state.projects
-      .map(
-        (project) => `
-      <div class="galery-image" data-id="${project.id}" style="background-image:url('${project.imagem}')">
-        <div class="overlay-text">${clickToSee}</div>
-      </div>
-    `,
-      )
-      .join("");
-
-    qsa(".galery-image").forEach((img) => {
-      img.addEventListener("click", () => Modal.open(img.dataset.id));
-    });
-
-    TiltEffect.bind(qsa(".galery-image"));
-  },
-
   async load() {
     try {
-      const response = await fetch("js/projetos.json");
-      state.projects = await response.json();
+      state.projects = await fetch("js/projetos.json").then((r) => r.json());
       this.render();
     } catch (error) {
-      console.error("Erro ao carregar projetos:", error);
+      console.error(error);
     }
   },
-};
+  matches(project) {
+    if (state.projectFilter === "all") return true;
 
-const TiltEffect = {
-  maxTilt: 8,
+    const tech =
+      `${project.tecnologias?.join(" ")} ${project.titulo}`.toLowerCase();
 
-  prefersReducedMotion() {
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (state.projectFilter === "mobile")
+      return /react native|mobile|expo/.test(tech);
+
+    if (state.projectFilter === "automation")
+      return /uipath|rpa|autom/.test(tech);
+
+    return !/react native|mobile|expo|uipath|rpa|autom/.test(tech);
   },
+  render() {
+    const visible = state.projects.filter((project) => this.matches(project));
+    const localizedItems = translations[state.lang]?.projects?.items || {};
+    DOM.projects.innerHTML = visible
+      .map((project) => {
+        const localized = localizedItems[project.id] || {};
+        return `
+          <article class="project-card glass-card spotlight-card" data-id="${project.id}" tabindex="0" aria-label="${localized.titulo || project.titulo}">
+            <div class="project-image" style="background-image:url('${project.imagem}')"></div>
+            <div class="project-overlay"></div>
+            <div class="project-content">
+              <h3>${localized.titulo || project.titulo}</h3>
+              <p>${localized.descricao || project.descricao}</p>
+              <div class="project-footer"><div class="project-tags">${(
+                project.tecnologias?.[0] || ""
+              )
+                .split(/,\s*/)
+                .slice(0, 3)
+                .map((tag) => `<span class="tag">${tag}</span>`)
+                .join("")}</div><span class="project-arrow">↗</span></div>
+            </div>
+          </article>
+        `;
+      })
+      .join("");
 
-  bind(elements) {
-    if (this.prefersReducedMotion() || window.matchMedia("(hover: none)").matches) {
-      return;
-    }
-
-    elements.forEach((el) => {
-      el.addEventListener("mousemove", (e) => this.handleMove(e, el));
-      el.addEventListener("mouseleave", () => this.reset(el));
+    qsa(".project-card").forEach((card) => {
+      card.addEventListener("click", () => Modal.open(card.dataset.id));
+      card.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          Modal.open(card.dataset.id);
+        }
+      });
+      bindTilt(card);
     });
+    bindSpotlights();
   },
-
-  handleMove(e, el) {
-    const rect = el.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const px = x / rect.width;
-    const py = y / rect.height;
-
-    const tiltY = (px - 0.5) * this.maxTilt * 2;
-    const tiltX = (0.5 - py) * this.maxTilt * 2;
-
-    el.style.setProperty("--tilt-x", `${tiltX}deg`);
-    el.style.setProperty("--tilt-y", `${tiltY}deg`);
-    el.style.setProperty("--spot-x", `${px * 100}%`);
-    el.style.setProperty("--spot-y", `${py * 100}%`);
-  },
-
-  reset(el) {
-    el.style.setProperty("--tilt-x", "0deg");
-    el.style.setProperty("--tilt-y", "0deg");
+  initFilters() {
+    DOM.projectFilter.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-filter]");
+      if (!button) return;
+      state.projectFilter = button.dataset.filter;
+      qsa(".filter-button").forEach((node) =>
+        node.classList.toggle("active", node === button),
+      );
+      this.render();
+    });
   },
 };
 
 const Modal = {
   open(id) {
-    const project = state.projects.find((p) => p.id === id);
+    const project = state.projects.find((item) => item.id === id);
     if (!project) return;
 
-    const projectTrans = translations[state.lang].projects.items[
-      project.id
-    ] || {
-      titulo: project.titulo,
-      descricao: project.descricao,
-    };
-
+    const localized = translations[state.lang]?.projects?.items?.[id] || {};
     DOM.modalImg.src = project.imagem;
-    DOM.modalImg.alt = `${translations[state.lang].modal.projectImageAlt}: ${projectTrans.titulo}`;
-    DOM.modalTitle.textContent = projectTrans.titulo;
-    DOM.modalDesc.textContent = projectTrans.descricao;
-    DOM.modalTechnologies.textContent =
-      translations[state.lang].projects.technologies + project.tecnologias[0];
-
-    this.configureLink(
+    DOM.imageLightboxImg.src = project.imagem;
+    DOM.modalTitle.textContent = localized.titulo || project.titulo;
+    DOM.modalDesc.textContent = localized.descricao || project.descricao;
+    DOM.modalTech.textContent = `${Translation.get("projects.technologies")} ${project.tecnologias?.[0] || ""}`;
+    this.configure(
       DOM.modalGithub,
       project.github,
-      translations[state.lang].modal.githubUnavailable,
+      Translation.get("modal.githubUnavailable"),
     );
-
-    this.configureLink(
+    this.configure(
       DOM.modalSite,
       project.site,
-      translations[state.lang].modal.siteUnavailable,
+      Translation.get("modal.siteUnavailable"),
     );
-
-    DOM.modal.style.display = "flex";
     DOM.modal.classList.add("active");
+    DOM.modal.setAttribute("aria-hidden", "false");
+    DOM.body.classList.add("modal-open");
   },
-
-  close() {
-    DOM.modal.classList.remove("active");
-  },
-
-  configureLink(element, url, message) {
-    if (url === "#") {
-      element.href = "#";
-      element.onclick = (e) => {
-        e.preventDefault();
+  configure(node, url, message) {
+    node.onclick = null;
+    if (!url || url === "#") {
+      node.href = "#";
+      node.onclick = (event) => {
+        event.preventDefault();
         Alert.show(message);
       };
     } else {
-      element.href = url;
-      element.onclick = null;
+      node.href = url;
     }
+  },
+  close() {
+    DOM.modal.classList.remove("active");
+    DOM.modal.setAttribute("aria-hidden", "true");
+    DOM.body.classList.remove("modal-open");
+  },
+};
+
+const ImageLightbox = {
+  open() {
+    if (!DOM.modalImg.src) return;
+    DOM.imageLightboxImg.src = DOM.modalImg.src;
+    DOM.imageLightbox.classList.add("active");
+    DOM.imageLightbox.setAttribute("aria-hidden", "false");
+    DOM.body.classList.add("modal-open");
+  },
+  close() {
+    DOM.imageLightbox.classList.remove("active");
+    DOM.imageLightbox.setAttribute("aria-hidden", "true");
+    if (!DOM.modal.classList.contains("active"))
+      DOM.body.classList.remove("modal-open");
   },
 };
 
 const Alert = {
   show(message) {
     DOM.alertMessage.textContent = message;
-    DOM.alertModal.style.display = "flex";
+    DOM.alert.classList.add("active");
+    DOM.alert.setAttribute("aria-hidden", "false");
   },
-
   hide() {
-    DOM.alertModal.style.display = "none";
+    DOM.alert.classList.remove("active");
+    DOM.alert.setAttribute("aria-hidden", "true");
   },
 };
 
-const Menu = {
-  open() {
-    DOM.menu.style.display = "flex";
-    DOM.menu.style.height = "0";
-    setTimeout(() => (DOM.menu.style.height = CONFIG.MENU_HEIGHT), 10);
-    DOM.btnMenu.style.display = "none";
-    DOM.btnClose.style.display = "inline";
+function bindTilt(node) {
+  if (
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+    window.matchMedia("(hover: none)").matches
+  )
+    return;
+
+  node.addEventListener("pointermove", (event) => {
+    const rect = node.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    node.style.transform = `perspective(900px) rotateX(${y * -5}deg) rotateY(${x * 6}deg) translateY(-3px)`;
+    node.style.setProperty("--spot-x", `${(x + 0.5) * 100}%`);
+    node.style.setProperty("--spot-y", `${(y + 0.5) * 100}%`);
+  });
+  node.addEventListener("pointerleave", () => {
+    node.style.transform = "";
+  });
+}
+
+function bindSpotlights() {
+  qsa(".spotlight-card").forEach((node) => {
+    if (node.dataset.spotlightBound) return;
+    node.dataset.spotlightBound = "true";
+    node.addEventListener("pointermove", (event) => {
+      const rect = node.getBoundingClientRect();
+      node.style.setProperty("--spot-x", `${event.clientX - rect.left}px`);
+      node.style.setProperty("--spot-y", `${event.clientY - rect.top}px`);
+    });
+  });
+}
+
+const UI = {
+  lastScrollY: window.scrollY,
+  scrollDirection: "down",
+  revealObservers: [],
+  updateDirection() {
+    const current = window.scrollY;
+    if (Math.abs(current - this.lastScrollY) > 2)
+      this.scrollDirection = current >= this.lastScrollY ? "down" : "up";
+    this.lastScrollY = current;
   },
-
-  close() {
-    DOM.menu.style.height = "0";
-    setTimeout(() => (DOM.menu.style.display = "none"), 400);
-    DOM.btnMenu.style.display = "inline";
-    DOM.btnClose.style.display = "none";
-  },
-
-  adjust() {
-    const isDesktop = window.innerWidth >= CONFIG.DESKTOP_WIDTH;
-    DOM.btnMenu.style.display = isDesktop ? "none" : "inline";
-    DOM.btnClose.style.display = "none";
-    DOM.menu.style.display = isDesktop ? "flex" : "none";
-    DOM.menu.style.height = isDesktop ? "15vh" : "0";
-    this.updateScroll();
-  },
-
-  updateScroll() {
-    const isActive =
-      window.scrollY > 0 && window.innerWidth >= CONFIG.DESKTOP_WIDTH;
-    DOM.menu.classList.toggle("ativo", isActive);
-    DOM.header.classList.toggle("ativo", isActive);
-  },
-};
-
-const Theme = {
-  toggle() {
-    state.theme = state.theme === "light" ? "dark" : "light";
-    localStorage.setItem("theme", state.theme);
-
-    DOM.body.classList.toggle("light-theme", state.theme === "light");
-    this.updateIcon();
-    this.updateTitle();
-  },
-
-  updateIcon() {
-    const svgIcon = DOM.btnTheme.querySelector("svg");
-    svgIcon.innerHTML =
-      state.theme === "light" ? CONFIG.SVG_ICONS.light : CONFIG.SVG_ICONS.dark;
-  },
-
-  updateTitle() {
-    const key =
-      state.theme === "light" ? "theme.toggleDark" : "theme.toggleLight";
-    DOM.btnTheme.title = Translation.get(key);
-  },
-
-  init() {
-    if (state.theme === "light") {
-      DOM.body.classList.add("light-theme");
-      this.updateIcon();
+  initReveal() {
+    const nodes = qsa("main > .reveal");
+    if (!("IntersectionObserver" in window)) {
+      nodes.forEach((n) => n.classList.add("is-visible"));
+      return;
     }
+    const observer = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("is-visible");
+          else if (this.scrollDirection === "up")
+            entry.target.classList.remove("is-visible");
+        }),
+      { threshold: 0.12, rootMargin: "0px 0px -10% 0px" },
+    );
+    nodes.forEach((node) => observer.observe(node));
+    this.revealObservers.push(observer);
   },
-};
-
-const Language = {
-  async set(lang) {
-    if (!CONFIG.LANGUAGES[lang] || lang === state.lang) return;
-    await loadLanguage(lang);
-    state.lang = lang;
-    localStorage.setItem("lang", lang);
-    Translation.apply();
-    Skills.render();
-    Projects.render();
-  },
-
-  updateCurrentDisplay() {
-    const current = CONFIG.LANGUAGES[state.lang];
-    if (!current || !DOM.langCurrentFlag || !DOM.langCurrentLabel) return;
-    DOM.langCurrentFlag.src = CONFIG.FLAG_URL(current.country);
-    DOM.langCurrentFlag.alt = current.label;
-    DOM.langCurrentLabel.textContent = current.label;
-
-    qsa("#lang-dropdown-list li").forEach((li) => {
-      li.setAttribute("aria-selected", li.dataset.lang === state.lang);
+  initStaggeredReveal(containerSelector, itemSelector) {
+    const items = qsa(`${containerSelector} ${itemSelector}`);
+    if (!("IntersectionObserver" in window)) {
+      items.forEach((n) => n.classList.add("is-visible"));
+      return;
+    }
+    items.forEach((node, index) => {
+      node.style.setProperty("--reveal-delay", `${index * 110}ms`);
+      if (node.dataset.revealBound) return;
+      node.dataset.revealBound = "true";
+      const observer = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("is-visible");
+            else if (this.scrollDirection === "up")
+              entry.target.classList.remove("is-visible");
+          }),
+        { threshold: 0.15, rootMargin: "0px 0px -6% 0px" },
+      );
+      observer.observe(node);
+      this.revealObservers.push(observer);
     });
   },
-
-  populateDropdown() {
-    if (!DOM.langDropdownList) return;
-    DOM.langDropdownList.innerHTML = "";
-
-    Object.entries(CONFIG.LANGUAGES).forEach(([code, { label, country }]) => {
-      const li = document.createElement("li");
-      li.setAttribute("role", "option");
-      li.setAttribute("aria-selected", code === state.lang);
-      li.dataset.lang = code;
-      li.innerHTML = `
-        <img src="${CONFIG.FLAG_URL(country)}" alt="" />
-        <span>${label}</span>
-      `;
-      li.addEventListener("click", () => {
-        this.set(code);
-        this.close();
-      });
-      DOM.langDropdownList.appendChild(li);
-    });
+  initTyping() {
+    const node = qs(".typing-text");
+    if (!node) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const original = node.textContent.trim();
+    const text = original;
+    node.dataset.fullText = text;
+    node.textContent = "";
+    let i = 0;
+    const tick = () => {
+      node.textContent = text.slice(0, i++);
+      if (i <= text.length) window.setTimeout(tick, 17);
+    };
+    tick();
   },
-
-  open() {
-    this.positionList();
-    DOM.langDropdown.classList.add("open");
-    DOM.langDropdownList.classList.add("open");
-    DOM.langDropdownBtn.setAttribute("aria-expanded", "true");
-  },
-
-  positionList() {
-    if (!DOM.langDropdownBtn || !DOM.langDropdownList) return;
-    const rect = DOM.langDropdownBtn.getBoundingClientRect();
-    DOM.langDropdownList.style.top = `${rect.bottom + 8}px`;
-    DOM.langDropdownList.style.right = `${window.innerWidth - rect.right}px`;
-    DOM.langDropdownList.style.left = "auto";
-  },
-
-  close() {
-    DOM.langDropdown.classList.remove("open");
-    DOM.langDropdownList.classList.remove("open");
-    DOM.langDropdownBtn.setAttribute("aria-expanded", "false");
-  },
-
-  toggle() {
-    DOM.langDropdown.classList.contains("open") ? this.close() : this.open();
-  },
-
-  initEvents() {
-    DOM.langDropdownBtn?.addEventListener("click", (e) => {
-      e.stopPropagation();
-      this.toggle();
-    });
-
-    document.addEventListener("click", (e) => {
-      const clickedInside =
-        DOM.langDropdown?.contains(e.target) ||
-        DOM.langDropdownList?.contains(e.target);
-      if (!clickedInside) this.close();
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") this.close();
-    });
-
-    window.addEventListener("resize", () => this.close());
-  },
-
-  async init() {
-    this.populateDropdown();
-    if (DOM.langDropdownList) document.body.appendChild(DOM.langDropdownList);
-    this.initEvents();
-    await loadLanguage(state.lang);
-    Translation.apply();
-  },
-};
-
-const Navigation = {
-  init() {
-    qsa('.menu a[href^="#"]').forEach((link) => {
-      link.onclick = (e) => {
-        e.preventDefault();
-        const href = link.getAttribute("href");
-        const target = qs(href);
-
-        if (window.innerWidth < CONFIG.DESKTOP_WIDTH) Menu.close();
-
-        if (target) {
-          if (href === "#home") {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          } else if (href === "#contact" || href === "#knowledge") {
-            window.scrollTo({ top: target.offsetTop, behavior: "smooth" });
-          } else {
-            target.scrollIntoView({ behavior: "smooth", block: "center" });
-          }
+  initCounters() {
+    const counters = qsa(".metric-number");
+    if (!counters.length) return;
+    const run = (node) => {
+      if (node.dataset.counted === "true" || node.dataset.counting === "true")
+        return;
+      const target = Number(node.dataset.target);
+      node.dataset.counting = "true";
+      const start = performance.now();
+      const duration = 1200;
+      const step = (now) => {
+        const progress = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = Math.round(target * eased);
+        node.textContent = `${value}${target > 1 ? "+" : ""}`;
+        if (progress < 1) requestAnimationFrame(step);
+        else {
+          node.dataset.counting = "false";
+          node.dataset.counted = "true";
         }
       };
-    });
-
-    qsa(".voltar-inicio").forEach((btn) => {
-      btn.onclick = (e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      };
+      requestAnimationFrame(step);
+    };
+    const section = qs("#about");
+    if (!section || !("IntersectionObserver" in window)) {
+      counters.forEach(run);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          counters.forEach(run);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.28 },
+    );
+    observer.observe(section);
+    this.revealObservers.push(observer);
+  },
+  initCursor() {
+    if (
+      !DOM.cursorGlow ||
+      window.matchMedia("(hover: none)").matches ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    )
+      return;
+    window.addEventListener("pointermove", (event) => {
+      DOM.cursorGlow.style.left = `${event.clientX}px`;
+      DOM.cursorGlow.style.top = `${event.clientY}px`;
+      DOM.cursorGlow.style.opacity = "1";
     });
   },
+  initMagnetic() {
+    if (
+      window.matchMedia("(hover: none)").matches ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    )
+      return;
+    qsa(".magnetic").forEach((node) =>
+      node.addEventListener("pointermove", (event) => {
+        const rect = node.getBoundingClientRect();
+        const x = (event.clientX - rect.left - rect.width / 2) * 0.1;
+        const y = (event.clientY - rect.top - rect.height / 2) * 0.1;
+        node.style.transform = `translate(${x}px, ${y}px)`;
+      }),
+    );
+    qsa(".magnetic").forEach((node) =>
+      node.addEventListener("pointerleave", () => {
+        node.style.transform = "";
+      }),
+    );
+  },
+  initNavigation() {
+    qsa(".nav-links a").forEach((link) =>
+      link.addEventListener("click", () => Menu.close()),
+    );
+    const sections = qsa("main section[id]");
+    const observer = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((entry) => {
+          if (entry.isIntersecting)
+            qsa(".nav-links a").forEach((link) =>
+              link.classList.toggle(
+                "active",
+                link.getAttribute("href") === `#${entry.target.id}`,
+              ),
+            );
+        }),
+      { rootMargin: "-35% 0px -55%" },
+    );
+    sections.forEach((section) => observer.observe(section));
+  },
+  initScroll() {
+    const onScroll = () => {
+      this.updateDirection();
+      const max = document.documentElement.scrollHeight - innerHeight;
+      DOM.progress.style.width = `${Math.max(0, Math.min(100, (scrollY / max) * 100))}%`;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  },
+  bindDynamicReveals() {
+    this.initStaggeredReveal("#experience-list", ".timeline-item");
+    this.initStaggeredReveal("#education-list", ".education-card");
+  },
 };
-
 const Events = {
   init() {
-    DOM.btnMenu.onclick = () => Menu.open();
-    DOM.btnClose.onclick = () => Menu.close();
-    DOM.btnTheme?.addEventListener("click", () => Theme.toggle());
-    DOM.closeBtn.onclick = () => Modal.close();
-    DOM.alertClose.onclick = () => Alert.hide();
-
-    window.onclick = (e) => {
-      if (e.target === DOM.modal) Modal.close();
-      if (e.target === DOM.alertModal) Alert.hide();
-    };
-
-    window.onresize = () => Menu.adjust();
-    window.onscroll = () => Menu.updateScroll();
+    DOM.themeButton.addEventListener("click", () => Theme.toggle());
+    DOM.menuButton.addEventListener("click", () => Menu.toggle());
+    DOM.modalClose.addEventListener("click", () => Modal.close());
+    DOM.modalImageTrigger.addEventListener("click", () => ImageLightbox.open());
+    DOM.imageLightboxClose.addEventListener("click", () =>
+      ImageLightbox.close(),
+    );
+    DOM.alertClose.addEventListener("click", () => Alert.hide());
+    window.addEventListener("click", (event) => {
+      if (event.target === DOM.modal) Modal.close();
+      if (event.target === DOM.alert) Alert.hide();
+      if (event.target === DOM.imageLightbox) ImageLightbox.close();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        ImageLightbox.close();
+        Modal.close();
+        Alert.hide();
+        Language.close();
+        Menu.close();
+      }
+    });
+    window.addEventListener("resize", () => {
+      if (innerWidth > CONFIG.desktop) Menu.close();
+    });
   },
 };
 
-const App = {
-  async init() {
-    Theme.init();
-    await Language.init();
-    Navigation.init();
-    Events.init();
-    Menu.adjust();
+async function init() {
+  Theme.init();
+  Language.init();
+  await loadLanguage(state.lang);
+  Translation.apply();
+  await Promise.all([
+    Skills.load(),
+    Projects.load(),
+    Experience.load(),
+    Education.load(),
+  ]);
+  Projects.initFilters();
+  Events.init();
+  UI.initReveal();
+  UI.bindDynamicReveals();
+  UI.initTyping();
+  UI.initCounters();
+  UI.initCursor();
+  UI.initMagnetic();
+  UI.initNavigation();
+  UI.initScroll();
+  bindSpotlights();
+}
 
-    await Skills.load();
-    await Projects.load();
-
-    AOS.init();
-  },
-};
-
-document.addEventListener("DOMContentLoaded", () => App.init());
+document.addEventListener("DOMContentLoaded", init);

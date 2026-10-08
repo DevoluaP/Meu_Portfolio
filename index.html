@@ -4,41 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07070a" />
     <meta property="og:title" content="Paulo Henrique | Full Stack Developer" />
-    <meta property="og:description" content="Portfolio" />
+    <meta
+      property="og:description"
+      content="Portfólio de desenvolvimento, automação e inteligência artificial."
+    />
     <meta
       property="og:image"
       content="https://DevoluaP.github.io/Meu_Portfolio/imagens/logo.svg"
     />
     <meta name="author" content="Paulo Henrique" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="canonical" href="https://DevoluaP.github.io/Meu_Portfolio/" />
     <link rel="shortcut icon" href="imagens/icon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://vlibras.gov.br" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title></title>
   </head>
   <body>
-    <header>
-      <nav>
-        <div id="header-controls">
-          <button id="btn-theme">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="#F0EDEE"
-              class="bi bi-lightbulb"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"
-              />
-            </svg>
-          </button>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header" id="site-header">
+      <nav class="nav-shell" aria-label="Navegação principal">
+        <a href="#home" class="brand" aria-label="início">
+          <span class="brand-mark">/></span><span>aulo</span>
+        </a>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#about" data-translate="nav.about"></a>
+          <a href="#experience" data-translate="nav.experience"></a>
+          <a href="#knowledge" data-translate="nav.skills"></a>
+          <a href="#projects" data-translate="nav.projects"></a>
+          <a href="#contact" data-translate="nav.contact"></a>
+        </div>
+
+        <div class="nav-actions">
+          <button
+            id="btn-theme"
+            class="icon-button"
+            type="button"
+            aria-label="Alternar tema"
+          ></button>
           <div id="lang-dropdown" class="lang-dropdown">
             <button
               id="lang-dropdown-btn"
+              class="language-button"
               type="button"
               aria-haspopup="listbox"
               aria-expanded="false"
@@ -46,15 +63,15 @@
             >
               <img id="lang-current-flag" />
               <span id="lang-current-label"></span>
-              <svg
-                class="lang-caret"
-                xmlns="http://www.w3.org/2000/svg"
-                width="10"
-                height="10"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-              >
-                <path d="M8 11 3 6h10z" />
+              <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true">
+                <path
+                  d="m4 6 4 4 4-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </button>
             <ul
@@ -63,263 +80,319 @@
               role="listbox"
             ></ul>
           </div>
+          <button
+            id="btn-menu"
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span>
+          </button>
         </div>
-        <svg
-          id="btn-menu"
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          fill="#F0EDEE"
-          class="bi bi-list"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-          />
-        </svg>
-        <svg
-          id="btn-close"
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          fill="#F0EDEE"
-          class="bi bi-x"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-          />
-        </svg>
-        <ul class="menu">
-          <li><a href="#home" data-translate="nav.home"></a></li>
-          <li><a href="#about" data-translate="nav.about"></a></li>
-          <li>
-            <a href="#knowledge" data-translate="nav.skills"></a>
-          </li>
-          <li>
-            <a href="#projects" data-translate="nav.projects"></a>
-          </li>
-          <li><a href="#contact" data-translate="nav.contact"></a></li>
-        </ul>
       </nav>
     </header>
-    <main>
-      <article id="home">
-        <img
-          class="home-img"
-          src="imagens/logo.svg"
-          data-translate-alt="home.bannerAlt"
-          title="/>aulo"
-        />
-        <div>
-          <h2 data-translate="home.welcome"></h2>
-          <h1><span class="home-name">Paulo Henrique</span></h1>
-          <h1 data-translate="home.role"></h1>
-        </div>
-        <section>
-          <a
-            href="https://github.com/DevoluaP"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-translate-title="home.github"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="48"
-              height="48"
-              fill="#0A090C"
-              class="bi bi-github"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-              />
-            </svg>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/devoluap"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-translate-title="home.linkedin"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="48"
-              height="48"
-              fill="#0A090C"
-              class="bi bi-linkedin"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-              />
-            </svg>
-          </a>
-          <a
-            href="mailto:devoluap@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-translate-title="home.email"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="48"
-              height="48"
-              fill="#0A090C"
-              class="bi bi-envelope-fill"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
-              />
-            </svg>
-          </a>
-        </section>
-      </article>
 
-      <article id="about" data-aos="fade-up">
-        <div>
-          <h2 class="content-title" data-translate="about.title"></h2>
-        </div>
-        <section>
-          <p>
-            <span data-translate="about.text"></span>
+    <main>
+      <section id="home" class="hero section-shell">
+        <div class="hero-orb orb-a" aria-hidden="true"></div>
+        <div class="hero-orb orb-b" aria-hidden="true"></div>
+
+        <div class="hero-content hero-enter">
+          <p class="hero-kicker" data-translate="home.welcome"></p>
+          <h1>
+            <span>Paulo Henrique</span><br />
+            <em data-translate="home.role"></em>
+          </h1>
+          <p class="hero-description" data-translate="home.description"></p>
+
+          <div class="hero-actions">
             <a
+              class="primary-button magnetic"
+              href="#projects"
+              data-translate="home.ctaProjects"
+            ></a>
+            <a
+              class="ghost-button magnetic"
               href="imagens/cv.pdf"
               download
-              data-translate="about.download"
-            ></a>
-          </p>
-        </section>
-      </article>
-
-      <article id="knowledge" data-aos="fade-up">
-        <div>
-          <h2 class="content-title" data-translate="skills.title"></h2>
-        </div>
-        <section id="skills-section"></section>
-      </article>
-
-      <article id="projects" data-aos="fade-up">
-        <div>
-          <h2 class="content-title" data-translate="projects.title"></h2>
-        </div>
-        <div class="galery-pai">
-          <div class="galery-filho">
-            <div class="galery-neto" id="projects-container"></div>
-          </div>
-        </div>
-      </article>
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <img id="modal-img" data-translate-alt="modal.projectImageAlt" />
-          <h2 id="modal-title"></h2>
-          <p id="modal-desc"></p>
-          <p id="modal-technologies"></p>
-          <div id="alert-modal" class="alert-modal">
-            <div class="alert-content">
-              <p id="alert-message"></p>
-              <button id="alert-close" data-translate="modal.close"></button>
-            </div>
-          </div>
-          <div class="modal-links">
-            <a
-              id="modal-github"
-              href="#"
-              target="_blank"
-              data-translate="modal.github"
-            ></a>
-            <a
-              id="modal-site"
-              href="#"
-              target="_blank"
-              data-translate="modal.site"
+              id="hero-cv"
+              data-translate="home.ctaCv"
             ></a>
           </div>
-        </div>
-      </div>
 
-      <article id="contact">
-        <div>
-          <h2 class="content-title" data-translate="contact.title"></h2>
-        </div>
-        <section>
-          <p>
-            <span data-translate="contact.email"></span>
+          <div class="social-row" aria-label="Links profissionais">
             <a
-              href="mailto:devoluap@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-translate-title="home.email"
-            >
-              devoluap@gmail.com
-            </a>
-          </p>
-          <div>
-            <a
+              class="social-link magnetic"
               href="https://github.com/DevoluaP"
               target="_blank"
               rel="noopener noreferrer"
               data-translate-title="home.github"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="48"
-                height="48"
-                fill="#F0EDEE"
-                class="bi bi-github"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-                />
-              </svg>
+              GitHub ↗
             </a>
             <a
+              class="social-link magnetic"
               href="https://www.linkedin.com/in/devoluap"
               target="_blank"
               rel="noopener noreferrer"
               data-translate-title="home.linkedin"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="48"
-                height="48"
-                fill="#F0EDEE"
-                class="bi bi-linkedin"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-                />
-              </svg>
+              LinkedIn ↗
+            </a>
+            <a
+              class="social-link magnetic"
+              href="mailto:devoluap@gmail.com"
+              data-translate-title="home.email"
+            >
+              E-mail ↗
             </a>
           </div>
-        </section>
-        <p class="back">
-          <a
-            href="#home"
-            class="voltar-inicio"
-            data-translate="contact.back"
-          ></a>
-        </p>
-      </article>
+        </div>
+
+        <div class="hero-art hero-enter hero-enter-delay">
+          <div class="profile-orbit orbit-one"></div>
+          <div class="profile-orbit orbit-two"></div>
+          <div class="profile-orbit orbit-three"></div>
+          <div class="profile-photo-wrap">
+            <div class="profile-photo-ring"></div>
+            <img
+              class="profile-photo"
+              src="imagens/foto-perfil.jpg"
+              alt="Foto de Paulo Henrique"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section-shell content-section reveal">
+        <div class="section-heading-row">
+          <h2 class="section-heading" data-translate="about.title"></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy glass-card spotlight-card">
+            <p class="typing-text" data-translate="about.text"></p>
+            <a
+              class="inline-link"
+              href="imagens/cv.pdf"
+              download
+              id="about-cv"
+              data-translate="about.download"
+            ></a>
+          </div>
+          <div class="metrics-grid">
+            <div class="metric-card glass-card">
+              <span class="metric-number" data-target="13">0</span>
+              <span data-translate="about.metricProjects"></span>
+            </div>
+            <div class="metric-card glass-card">
+              <span class="metric-number" data-target="4">0</span>
+              <span data-translate="about.metricTracks"></span>
+            </div>
+            <div class="metric-card glass-card">
+              <span class="metric-number" data-target="17">0</span>
+              <span data-translate="about.metricTools"></span>
+            </div>
+            <div class="metric-card glass-card">
+              <span class="metric-number" data-target="3">0</span>
+              <span data-translate="about.metricLearning"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section-shell content-section reveal">
+        <div class="section-heading-row">
+          <h2 class="section-heading" data-translate="experience.title"></h2>
+        </div>
+        <div id="experience-list" class="timeline"></div>
+      </section>
+
+      <section id="knowledge" class="section-shell content-section reveal">
+        <div class="section-heading-row">
+          <h2 class="section-heading" data-translate="skills.title"></h2>
+        </div>
+        <div id="skills-section" class="skills-bento"></div>
+      </section>
+
+      <section id="education" class="section-shell content-section reveal">
+        <div class="section-heading-row">
+          <h2 class="section-heading" data-translate="education.title"></h2>
+        </div>
+        <div id="education-list" class="education-grid"></div>
+      </section>
+
+      <section id="projects" class="section-shell content-section reveal">
+        <div class="section-heading-row">
+          <h2 class="section-heading" data-translate="projects.title"></h2>
+        </div>
+        <div class="projects-toolbar">
+          <div
+            class="projects-filter"
+            id="projects-filter"
+            role="tablist"
+            aria-label="Filtro de projetos"
+          >
+            <button
+              class="filter-button active"
+              data-filter="all"
+              data-translate="projects.filters.all"
+            ></button>
+            <button
+              class="filter-button"
+              data-filter="web"
+              data-translate="projects.filters.web"
+            ></button>
+            <button
+              class="filter-button"
+              data-filter="mobile"
+              data-translate="projects.filters.mobile"
+            ></button>
+            <button
+              class="filter-button"
+              data-filter="automation"
+              data-translate="projects.filters.automation"
+            ></button>
+          </div>
+        </div>
+        <div id="projects-container" class="projects-grid"></div>
+      </section>
+
+      <section id="contact" class="contact-section section-shell reveal">
+        <div class="contact-panel glass-card spotlight-card">
+          <div class="contact-copy">
+            <h2 data-translate="contact.title"></h2>
+            <p data-translate="contact.text"></p>
+          </div>
+          <div class="contact-actions">
+            <a class="contact-email magnetic" href="mailto:devoluap@gmail.com">
+              devoluap@gmail.com <span>↗</span>
+            </a>
+            <div class="contact-socials">
+              <a
+                class="contact-social-link"
+                href="https://github.com/DevoluaP"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2.7a9.3 9.3 0 0 0-2.94 18.12c.46.08.63-.2.63-.45v-1.76c-2.57.56-3.11-1.09-3.11-1.09-.42-1.07-1.02-1.36-1.02-1.36-.84-.58.06-.57.06-.57.93.07 1.42.96 1.42.96.83 1.42 2.19 1.01 2.73.77.08-.6.33-1.01.6-1.25-2.05-.23-4.21-1.02-4.21-4.53 0-1 .36-1.81.95-2.45-.1-.23-.41-1.16.09-2.42 0 0 .78-.25 2.57.94a8.9 8.9 0 0 1 4.68 0c1.79-1.19 2.57-.94 2.57-.94.5 1.26.19 2.19.1 2.42.59.64.95 1.45.95 2.45 0 3.52-2.16 4.3-4.22 4.53.34.29.64.84.64 1.69v2.5c0 .25.17.53.64.45A9.3 9.3 0 0 0 12 2.7Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span>↗</span>
+              </a>
+              <a
+                class="contact-social-link"
+                href="https://www.linkedin.com/in/devoluap"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.1 20.45H3.54V8.99H7.1v11.46ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      <p>© 2026 Paulo Henrique</p>
+
+    <footer class="site-footer">
+      <span>© 2026 Paulo Henrique</span>
+      <a class="back-to-top" href="#home" aria-label="Voltar ao topo">↑</a>
     </footer>
-    <noscript>Requires JavaScript</noscript>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <div id="modal" class="modal" aria-hidden="true">
+      <div
+        class="modal-content glass-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button
+          class="modal-close"
+          id="modal-close"
+          type="button"
+          aria-label="Fechar"
+        >
+          ×
+        </button>
+        <button
+          class="modal-image-wrap image-expand-trigger"
+          id="modal-image-trigger"
+          type="button"
+          aria-label="Abrir imagem em tela cheia"
+        >
+          <img id="modal-img" data-translate-alt="modal.projectImageAlt" />
+          <span class="image-expand-hint"> ⤢ <span>expandir</span> </span>
+        </button>
+        <div class="modal-copy">
+          <h2 id="modal-title"></h2>
+          <p id="modal-desc"></p>
+          <p id="modal-technologies" class="modal-tech"></p>
+          <div class="modal-links">
+            <a
+              id="modal-github"
+              class="primary-button"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-translate="modal.github"
+            ></a>
+            <a
+              id="modal-site"
+              class="ghost-button"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-translate="modal.site"
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="image-lightbox" class="image-lightbox" aria-hidden="true">
+      <button
+        class="image-lightbox-close"
+        id="image-lightbox-close"
+        type="button"
+        aria-label="Fechar imagem"
+      >
+        ×
+      </button>
+      <div class="image-lightbox-stage">
+        <img id="image-lightbox-img" />
+      </div>
+    </div>
+
+    <div id="alert-modal" class="alert-modal" aria-hidden="true">
+      <div class="alert-content glass-card">
+        <p id="alert-message"></p>
+        <button
+          id="alert-close"
+          class="ghost-button"
+          data-translate="modal.close"
+        ></button>
+      </div>
+    </div>
+
+    <noscript>
+      Ative o JavaScript para visualizar o portfólio completo.
+    </noscript>
     <script src="js/script.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
       new window.VLibras.Widget("https://vlibras.gov.br/app");
     </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/sienna-accessibility@latest/dist/sienna-accessibility.umd.js"
-      defer
-    ></script>
   </body>
 </html>

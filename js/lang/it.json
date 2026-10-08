@@ -4,7 +4,8 @@
     "about": "Chi sono",
     "skills": "Competenze",
     "projects": "Progetti",
-    "contact": "Contatti"
+    "contact": "Contatti",
+    "experience": "Esperienza"
   },
   "home": {
     "welcome": "Benvenuto nel mio Portfolio, sono",
@@ -12,7 +13,12 @@
     "github": "Il mio GitHub",
     "linkedin": "Il mio Linkedin",
     "email": "La mia Email",
-    "bannerAlt": "Il mio Banner"
+    "bannerAlt": "Il mio Banner",
+    "status": "Disponibile a imparare e costruire",
+    "description": "Sviluppatore Full Stack focalizzato su automazione, dati e intelligenza artificiale.",
+    "ctaProjects": "Vedi progetti",
+    "ctaCv": "Scarica CV",
+    "scroll": "Esplora"
   },
   "theme": {
     "toggleLight": "Passa al Tema Chiaro",
@@ -23,15 +29,21 @@
   },
   "about": {
     "title": "Chi sono",
-    "text": "Ciao! Mi chiamo Paulo Henrique, ho 21 anni e sono uno Sviluppatore Full Stack con una formazione tecnica in Informatica per Internet presso il SENAC Lapa Tito. Ho anche completato il corso PROPROFISSÃO - Sviluppo Web con Python, presso l'Instituto PROA, incentrato sulla preparazione dei giovani al mercato del lavoro. Attualmente sto seguendo un corso tecnico in Intelligenza Artificiale e ho già sviluppato progetti utilizzando tecnologie come Python, JavaScript, TypeScript, React.js, Node.js, MySQL e PostgreSQL. Ho inoltre maturato esperienza come Scrum Master e Sviluppatore Full Stack nel progetto DunDum, unendo sviluppo tecnico e organizzazione del team. Sto inoltre approfondendo le mie conoscenze sull'Automazione Robotica dei Processi (RPA) con UiPath. Il mio obiettivo principale è continuare a crescere nel settore tecnologico, cercando nuove sfide e opportunità per contribuire e imparare. Vuoi conoscere il mio lavoro? Guarda i miei progetti qui sotto oppure",
-    "download": "scarica il mio curriculum!"
+    "text": "Ciao! Mi chiamo Paulo Henrique, ho 21 anni e sono uno Sviluppatore Full Stack, con una formazione tecnica in Informatica per Internet presso il SENAC Lapa Tito. Ho anche completato il corso PROPROFISSÃO - Sviluppo Web con Python, presso l’Instituto PROA, incentrato sulla preparazione dei giovani al mercato del lavoro. Attualmente frequento un corso tecnico in Intelligenza Artificiale presso il SENAC Lapa Tito e lavoro come apprendista presso Nubank, dove ho l’opportunità di imparare in un ambiente orientato alla tecnologia e all’innovazione. Ho esperienza con tecnologie come Python, JavaScript, TypeScript e SQL. Ho inoltre maturato esperienza come Scrum Master e Sviluppatore Full Stack nel progetto DunDum, unendo sviluppo tecnico e organizzazione del team. Il mio obiettivo principale è continuare a crescere nel settore tecnologico, affrontando nuove sfide, ampliando le mie conoscenze e contribuendo ai team e ai progetti di cui faccio parte. Vuoi conoscere il mio lavoro? Guarda i miei progetti qui sotto oppure",
+    "download": "scarica il mio curriculum!",
+    "label": "Chi sono",
+    "metricProjects": "progetti sviluppati",
+    "metricTracks": "aree tecniche",
+    "metricTools": "tecnologie e strumenti",
+    "metricLearning": "anni di studio della tecnologia"
   },
   "skills": {
     "title": "Competenze",
     "Front-end": "Front-End",
     "Back-end": "Back-End",
     "Mobile": "Mobile",
-    "Banco de Dados": "Database"
+    "Banco de Dados": "Database",
+    "label": "Stack"
   },
   "projects": {
     "title": "Progetti",
@@ -42,13 +54,17 @@
         "titulo": "DunDum",
         "descricao": "Piattaforma per il monitoraggio della salute dei cani."
       },
+      "project-rpa": {
+        "titulo": "BookPrice",
+        "descricao": "Automazione RPA per cercare e confrontare i prezzi dei libri negli e-commerce."
+      },
       "project2": {
         "titulo": "InvestCalcula",
-        "descricao": "Calcolatrice di interesse composto."
+        "descricao": "Calcolatore di interessi composti."
       },
       "project3": {
         "titulo": "Galleria",
-        "descricao": "Galleria di immagini online dal design moderno."
+        "descricao": "Galleria di immagini online con layout moderno."
       },
       "project4": {
         "titulo": "ERP Soul",
@@ -56,36 +72,43 @@
       },
       "project5": {
         "titulo": "Seven Plus",
-        "descricao": "Sito per la visualizzazione di contenuti."
+        "descricao": "Sito web per la visualizzazione di contenuti."
       },
       "project6": {
-        "titulo": "Seven Plus (Mobile)",
+        "titulo": "Seven Plus (App)",
         "descricao": "App per la visualizzazione di contenuti."
       },
       "project7": {
         "titulo": "Viajados",
-        "descricao": "App di viaggio."
+        "descricao": "App di viaggi."
       },
       "project8": {
         "titulo": "Oishi",
-        "descricao": "Sito di un ristorante giapponese."
+        "descricao": "Sito web di un ristorante giapponese."
       },
       "project9": {
         "titulo": "Mario Runs",
-        "descricao": "Gioco da browser in stile Mario."
+        "descricao": "Gioco di Mario per browser."
       },
       "project10": {
         "titulo": "Super Pizza",
-        "descricao": "Sito per una pizzeria."
+        "descricao": "Sito web per pizzeria."
       },
       "project11": {
-        "titulo": "Calculadora",
+        "titulo": "Calcolatrice",
         "descricao": "Calcolatrice semplice."
       },
       "project12": {
-        "titulo": "Minhas Conquistas",
-        "descricao": "Un sito web semplice ed elegante per conservare i tuoi successi, complimenti, apprendimenti e momenti felici."
+        "titulo": "I miei successi",
+        "descricao": "Un sito web semplice ed elegante per salvare successi, complimenti, apprendimenti e momenti felici."
       }
+    },
+    "label": "Progetti",
+    "filters": {
+      "all": "Tutti",
+      "web": "Web",
+      "mobile": "Mobile",
+      "automation": "Automazione"
     }
   },
   "modal": {
@@ -94,11 +117,54 @@
     "site": "Sito",
     "githubUnavailable": "Il link di GitHub non è disponibile.",
     "siteUnavailable": "Il link del sito non è disponibile.",
-    "projectImageAlt": "Immagine del progetto"
+    "projectImageAlt": "Immagine del progetto",
+    "featured": "Progetto in evidenza"
   },
   "contact": {
     "title": "Contatti",
     "email": "Email:",
-    "back": "Torna all'inizio"
+    "back": "Torna all'inizio",
+    "label": "Contatti",
+    "text": "Hai un’idea, un’opportunità o un progetto di cui parlare? Sentiamoci."
+  },
+  "experience": {
+    "label": "Esperienza",
+    "title": "Dove sto costruendo esperienza",
+    "items": [
+      {
+        "titulo": "Apprendista di Tecnologia",
+        "empresa": "Nubank",
+        "descricao": "Partecipazione a progetti di tecnologia, automazione e innovazione, collaborando con il team, imparando nuovi strumenti e supportando la creazione di soluzioni digitali.",
+        "tags": ["Tecnologia", "Automazione", "Apprendimento"]
+      }
+    ],
+    "present": "Presente"
+  },
+  "education": {
+    "label": "Formazione",
+    "title": "Apprendimento in movimento",
+    "items": [
+      {
+        "titulo": "Intelligenza Artificiale",
+        "instituicao": "SENAC Lapa Tito",
+        "descricao": "Focus sulla gestione dei dati, Business Intelligence e sviluppo di soluzioni intelligenti. Include raccolta, trattamento e analisi dei dati, machine learning, deep learning, analisi predittiva, sistemi di raccomandazione, chatbot e automazione dei processi con l’IA.",
+        "status": "IN CORSO"
+      },
+      {
+        "titulo": "PROPROFISSÃO - Python",
+        "instituicao": "Instituto PROA",
+        "descricao": "Sviluppo web con Python, comprendendo logica di programmazione, buone pratiche di sviluppo e creazione di applicazioni. Sviluppo anche di competenze trasversali come comunicazione, lavoro di squadra, problem solving e metodologie agili.",
+        "status": ""
+      },
+      {
+        "titulo": "Sviluppo Web",
+        "instituicao": "SENAC Lapa Tito",
+        "descricao": "Sviluppo software focalizzato su applicazioni web e mobile. Sviluppo di interfacce responsive, API REST, integrazione con database relazionali, utilizzo di framework moderni, versionamento con Git/GitHub e metodologie agili come Scrum e Kanban.",
+        "status": ""
+      }
+    ]
+  },
+  "footer": {
+    "text": "Costruito con curiosità + codice."
   }
 }

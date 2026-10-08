@@ -1,0 +1,26 @@
+[
+  {
+    "ano": "01/2026 — 08/2027",
+    "titulo": "Inteligência Artificial",
+    "instituicao": "SENAC Lapa Tito",
+    "descricao": "Foco em gestão de dados, Business Intelligence e desenvolvimento de soluções inteligentes. Aborda coleta, tratamento e análise de dados, machine learning, deep learning, análise preditiva, sistemas de recomendação, chatbots e automação de processos utilizando IA.",
+    "imagem": "imagens/senac_logo.jpg",
+    "status": "EM ANDAMENTO"
+  },
+  {
+    "ano": "01/2026 — 07/2026",
+    "titulo": "PROPROFISSÃO - Python",
+    "instituicao": "Instituto PROA",
+    "descricao": "Desenvolvimento web com Python, abordando lógica de programação, boas práticas de desenvolvimento e criação de aplicações. Também desenvolve habilidades comportamentais como comunicação, trabalho em equipe, resolução de problemas e utilização de metodologias ágeis.",
+    "imagem": "imagens/proa_logo.jpg",
+    "status": ""
+  },
+  {
+    "ano": "01/2024 — 05/2025",
+    "titulo": "Informática para Internet",
+    "instituicao": "SENAC Lapa Tito",
+    "descricao": "Desenvolvimento de software com foco em aplicações web e mobile. Desenvolvimento de interfaces responsivas, APIs REST, integração com bancos de dados relacionais, uso de frameworks modernos, versionamento com Git/GitHub e metodologias ágeis como Scrum e Kanban.",
+    "imagem": "imagens/senac_logo.jpg",
+    "status": ""
+  }
+]

@@ -3,7 +3,7 @@
     "id": "project1",
     "titulo": "DunDum",
     "descricao": "Plataforma para monitoramento da saúde de cães.",
-    "imagem": "imagens/dundum.png",
+    "imagem": "imagens/projetos/dundum.png",
     "github": "https://github.com/dundumoficial",
     "site": "https://www.dundum.com.br",
     "tecnologias": [
@@ -11,10 +11,19 @@
     ]
   },
   {
+    "id": "project-rpa",
+    "titulo": "BookPrice",
+    "descricao": "Automação RPA para pesquisa e comparação de preços de livros em e-commerces.",
+    "imagem": "imagens/projetos/bookprice.png",
+    "github": "https://github.com/DevoluaP",
+    "site": "#",
+    "tecnologias": ["UiPath, Excel, RPA, Data Analysis."]
+  },
+  {
     "id": "project2",
     "titulo": "InvestCalcula",
     "descricao": "Calculadora de juros compostos.",
-    "imagem": "imagens/investcalcula.jpg",
+    "imagem": "imagens/projetos/investcalcula.jpg",
     "github": "https://github.com/DevoluaP/Projeto_InvestCalcula",
     "site": "https://devoluap.github.io/Projeto_InvestCalcula/",
     "tecnologias": ["HTML, CSS, JavaScript."]
@@ -23,7 +32,7 @@
     "id": "project3",
     "titulo": "Galleria",
     "descricao": "Galeria de imagens online com layout moderno.",
-    "imagem": "imagens/galleria.jpg",
+    "imagem": "imagens/projetos/galleria.jpg",
     "github": "https://github.com/DevoluaP/Projeto_Galleria",
     "site": "https://devoluap.github.io/Projeto_Galleria/",
     "tecnologias": ["HTML, CSS, Sass."]
@@ -32,7 +41,7 @@
     "id": "project4",
     "titulo": "ERP Soul",
     "descricao": "Software de ERP corporativo.",
-    "imagem": "imagens/erpsoul.jpg",
+    "imagem": "imagens/projetos/erpsoul.jpg",
     "github": "https://github.com/DevoluaP/Projeto_ERPSoul",
     "site": "#",
     "tecnologias": ["HTML, CSS, JavaScript, React, Node.js, MySQL."]
@@ -41,16 +50,16 @@
     "id": "project5",
     "titulo": "Seven Plus",
     "descricao": "Site para exibição de conteúdos.",
-    "imagem": "imagens/seven-plus.jpg",
+    "imagem": "imagens/projetos/seven-plus.jpg",
     "github": "https://github.com/DevoluaP/Projeto_SevenPlus",
     "site": "#",
     "tecnologias": ["HTML, CSS, JavaScript, PHP, XAMPP."]
   },
   {
     "id": "project6",
-    "titulo": "Seven Plus (Mobile)",
+    "titulo": "Seven Plus (App)",
     "descricao": "Aplicativo para exibição de conteúdos.",
-    "imagem": "imagens/seven-plus-mobile.png",
+    "imagem": "imagens/projetos/seven-plus-mobile.png",
     "github": "https://github.com/DevoluaP/Projeto_AppSevenPlus",
     "site": "#",
     "tecnologias": ["React Native, TypeScript."]
@@ -59,7 +68,7 @@
     "id": "project7",
     "titulo": "Viajados",
     "descricao": "Aplicativo de viagens.",
-    "imagem": "imagens/viajados.png",
+    "imagem": "imagens/projetos/viajados.png",
     "github": "https://github.com/DevoluaP/Projeto_Viajados",
     "site": "#",
     "tecnologias": [
@@ -70,7 +79,7 @@
     "id": "project8",
     "titulo": "Oishi",
     "descricao": "Site de restaurante japonês.",
-    "imagem": "imagens/oishi.jpg",
+    "imagem": "imagens/projetos/oishi.jpg",
     "github": "https://github.com/DevoluaP/Projeto_Oishi",
     "site": "https://devoluap.github.io/Projeto_Oishi/",
     "tecnologias": ["HTML, CSS, JavaScript, jQuery, Slick."]
@@ -79,7 +88,7 @@
     "id": "project9",
     "titulo": "Mario Runs",
     "descricao": "Jogo de navegador do Mario.",
-    "imagem": "imagens/mario.jpg",
+    "imagem": "imagens/projetos/mario.jpg",
     "github": "https://github.com/DevoluaP/Projeto_MarioRuns",
     "site": "https://devoluap.github.io/Projeto_MarioRuns/",
     "tecnologias": ["HTML, CSS, JavaScript."]
@@ -88,7 +97,7 @@
     "id": "project10",
     "titulo": "Super Pizza",
     "descricao": "Site para pizzaria.",
-    "imagem": "imagens/super-pizza.jpg",
+    "imagem": "imagens/projetos/super-pizza.jpg",
     "github": "https://github.com/DevoluaP/Projeto_SuperPizza",
     "site": "https://devoluap.github.io/Projeto_SuperPizza/",
     "tecnologias": ["HTML, CSS."]
@@ -97,7 +106,7 @@
     "id": "project11",
     "titulo": "Calculadora",
     "descricao": "Calculadora simples.",
-    "imagem": "imagens/calculadora.jpg",
+    "imagem": "imagens/projetos/calculadora.jpg",
     "github": "https://github.com/DevoluaP/Projeto_Calculadora",
     "site": "https://devoluap.github.io/Projeto_Calculadora/",
     "tecnologias": ["HTML, CSS, JavaScript."]
@@ -106,7 +115,7 @@
     "id": "project12",
     "titulo": "Minhas Conquistas",
     "descricao": "Um website simples e elegante para guardar suas conquistas, elogios, aprendizados e momentos felizes.",
-    "imagem": "imagens/minhas-conquistas.png",
+    "imagem": "imagens/projetos/minhas-conquistas.png",
     "github": "https://github.com/DevoluaP/Projeto_Conquistas",
     "site": "https://devoluap.github.io/Projeto_Conquistas/",
     "tecnologias": ["HTML, CSS, JavaScript, LocalStorage, Web Standards."]

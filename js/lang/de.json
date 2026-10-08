@@ -4,7 +4,8 @@
     "about": "Über mich",
     "skills": "Fähigkeiten",
     "projects": "Projekte",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "experience": "Erfahrung"
   },
   "home": {
     "welcome": "Willkommen auf meinem Portfolio, ich bin",
@@ -12,7 +13,12 @@
     "github": "Mein GitHub",
     "linkedin": "Mein LinkedIn",
     "email": "Meine E-Mail",
-    "bannerAlt": "Mein Banner"
+    "bannerAlt": "Mein Banner",
+    "status": "Bereit zu lernen und zu bauen",
+    "description": "Full-Stack-Entwickler mit Fokus auf Automatisierung, Daten und künstliche Intelligenz.",
+    "ctaProjects": "Projekte ansehen",
+    "ctaCv": "Lebenslauf laden",
+    "scroll": "Entdecken"
   },
   "theme": {
     "toggleLight": "Zu Hellem Design wechseln",
@@ -23,15 +29,21 @@
   },
   "about": {
     "title": "Über mich",
-    "text": "Hallo! Ich heiße Paulo Henrique, bin 21 Jahre alt und Full-Stack-Entwickler mit einer technischen Ausbildung in Informatik für das Internet am SENAC Lapa Tito. Außerdem habe ich das Programm PROPROFISSÃO - Webentwicklung mit Python am Instituto PROA abgeschlossen, das junge Menschen auf den Arbeitsmarkt vorbereitet. Derzeit absolviere ich eine technische Ausbildung im Bereich Künstliche Intelligenz und habe bereits Projekte mit Technologien wie Python, JavaScript, TypeScript, React.js, Node.js, MySQL und PostgreSQL entwickelt. Ich habe außerdem Erfahrung als Scrum Master und Full-Stack-Entwickler im Projekt DunDum gesammelt, wobei ich technische Entwicklung mit Teamorganisation verbunden habe. Zudem vertiefe ich mein Wissen im Bereich Robotic Process Automation (RPA) mit UiPath. Mein Hauptziel ist es, mich im Technologiebereich weiterzuentwickeln und neue Herausforderungen und Möglichkeiten zu suchen, um beizutragen und zu lernen. Möchten Sie meine Arbeit kennenlernen? Schauen Sie sich unten meine Projekte an oder",
-    "download": "laden Sie meinen Lebenslauf herunter!"
+    "text": "Hallo! Ich heiße Paulo Henrique, bin 21 Jahre alt und Full-Stack-Entwickler mit einer technischen Ausbildung in Informatik für das Internet am SENAC Lapa Tito. Außerdem habe ich den Kurs PROPROFISSÃO - Webentwicklung mit Python am Instituto PROA abgeschlossen, der auf die Vorbereitung junger Menschen auf den Arbeitsmarkt ausgerichtet ist. Derzeit absolviere ich eine technische Ausbildung im Bereich Künstliche Intelligenz am SENAC Lapa Tito und arbeite als Auszubildender bei Nubank, wo ich die Möglichkeit habe, in einem technologie- und innovationsorientierten Umfeld zu lernen. Ich habe Erfahrung mit Technologien wie Python, JavaScript, TypeScript und SQL. Außerdem habe ich als Scrum Master und Full-Stack-Entwickler im Projekt DunDum gearbeitet und dabei technische Entwicklung mit Teamorganisation verbunden. Mein Hauptziel ist es, mich im Technologiebereich weiterzuentwickeln, neue Herausforderungen anzunehmen, mein Wissen zu erweitern und zu den Teams und Projekten beizutragen, an denen ich beteiligt bin. Möchten Sie meine Arbeit kennenlernen? Sehen Sie sich unten meine Projekte an oder",
+    "download": "laden Sie meinen Lebenslauf herunter!",
+    "label": "Über mich",
+    "metricProjects": "entwickelte Projekte",
+    "metricTracks": "technische Bereiche",
+    "metricTools": "Technologien und Tools",
+    "metricLearning": "Jahre mit dem Lernen von Technologie"
   },
   "skills": {
     "title": "Fähigkeiten",
     "Front-end": "Front-End",
     "Back-end": "Back-End",
     "Mobile": "Mobile",
-    "Banco de Dados": "Datenbank"
+    "Banco de Dados": "Datenbank",
+    "label": "Stack"
   },
   "projects": {
     "title": "Projekte",
@@ -41,6 +53,10 @@
       "project1": {
         "titulo": "DunDum",
         "descricao": "Plattform zur Überwachung der Gesundheit von Hunden."
+      },
+      "project-rpa": {
+        "titulo": "BookPrice",
+        "descricao": "RPA-Automatisierung zur Recherche und zum Vergleich von Buchpreisen in Online-Shops."
       },
       "project2": {
         "titulo": "InvestCalcula",
@@ -52,15 +68,15 @@
       },
       "project4": {
         "titulo": "ERP Soul",
-        "descricao": "Unternehmens-ERP-Software."
+        "descricao": "Unternehmenssoftware für ERP."
       },
       "project5": {
         "titulo": "Seven Plus",
-        "descricao": "Website zur Anzeige von Inhalten."
+        "descricao": "Website zur Darstellung von Inhalten."
       },
       "project6": {
-        "titulo": "Seven Plus (Mobile)",
-        "descricao": "App zur Anzeige von Inhalten."
+        "titulo": "Seven Plus (App)",
+        "descricao": "App zur Darstellung von Inhalten."
       },
       "project7": {
         "titulo": "Viajados",
@@ -68,24 +84,31 @@
       },
       "project8": {
         "titulo": "Oishi",
-        "descricao": "Website eines japanischen Restaurants."
+        "descricao": "Website für ein japanisches Restaurant."
       },
       "project9": {
         "titulo": "Mario Runs",
-        "descricao": "Browserspiel im Mario-Stil."
+        "descricao": "Mario-Browserspiel."
       },
       "project10": {
         "titulo": "Super Pizza",
         "descricao": "Website für eine Pizzeria."
       },
       "project11": {
-        "titulo": "Calculadora",
-        "descricao": "Einfacher Taschenrechner."
+        "titulo": "Rechner",
+        "descricao": "Einfacher Rechner."
       },
       "project12": {
-        "titulo": "Minhas Conquistas",
-        "descricao": "Eine einfache und elegante Website, um Ihre Erfolge, Komplimente, Erkenntnisse und glücklichen Momente festzuhalten."
+        "titulo": "Meine Erfolge",
+        "descricao": "Eine einfache und elegante Website zum Speichern von Erfolgen, Lob, Lernerfahrungen und schönen Momenten."
       }
+    },
+    "label": "Projekte",
+    "filters": {
+      "all": "Alle",
+      "web": "Web",
+      "mobile": "Mobile",
+      "automation": "Automation"
     }
   },
   "modal": {
@@ -94,11 +117,54 @@
     "site": "Website",
     "githubUnavailable": "Der GitHub-Link ist nicht verfügbar.",
     "siteUnavailable": "Der Website-Link ist nicht verfügbar.",
-    "projectImageAlt": "Projektbild"
+    "projectImageAlt": "Projektbild",
+    "featured": "Ausgewähltes Projekt"
   },
   "contact": {
     "title": "Kontakt",
     "email": "E-Mail:",
-    "back": "Zurück zum Anfang"
+    "back": "Zurück zum Anfang",
+    "label": "Kontakt",
+    "text": "Eine Idee, Gelegenheit oder ein Projekt zu besprechen? Lass uns reden."
+  },
+  "experience": {
+    "label": "Erfahrung",
+    "title": "Wo ich Erfahrung aufbaue",
+    "items": [
+      {
+        "titulo": "Auszubildender im Bereich Technologie",
+        "empresa": "Nubank",
+        "descricao": "Mitarbeit an Technologie-, Automatisierungs- und Innovationsprojekten, Zusammenarbeit im Team, Erlernen neuer Tools und Unterstützung bei der Entwicklung digitaler Lösungen.",
+        "tags": ["Technologie", "Automatisierung", "Lernen"]
+      }
+    ],
+    "present": "Heute"
+  },
+  "education": {
+    "label": "Ausbildung",
+    "title": "Lernen in Bewegung",
+    "items": [
+      {
+        "titulo": "Künstliche Intelligenz",
+        "instituicao": "SENAC Lapa Tito",
+        "descricao": "Schwerpunkt auf Datenmanagement, Business Intelligence und der Entwicklung intelligenter Lösungen. Behandelt Datenerfassung, -aufbereitung und -analyse, Machine Learning, Deep Learning, prädiktive Analysen, Empfehlungssysteme, Chatbots und Prozessautomatisierung mit KI.",
+        "status": "IN BEARBEITUNG"
+      },
+      {
+        "titulo": "PROPROFISSÃO - Python",
+        "instituicao": "Instituto PROA",
+        "descricao": "Webentwicklung mit Python, einschließlich Programmierlogik, Best Practices und Entwicklung von Anwendungen. Zusätzlich werden Soft Skills wie Kommunikation, Teamarbeit, Problemlösung und agile Methoden gefördert.",
+        "status": ""
+      },
+      {
+        "titulo": "Webentwicklung",
+        "instituicao": "SENAC Lapa Tito",
+        "descricao": "Softwareentwicklung mit Fokus auf Web- und Mobile-Anwendungen. Entwicklung responsiver Oberflächen, REST-APIs, Integration relationaler Datenbanken, Nutzung moderner Frameworks, Versionskontrolle mit Git/GitHub und agile Methoden wie Scrum und Kanban.",
+        "status": ""
+      }
+    ]
+  },
+  "footer": {
+    "text": "Mit Neugier + Code gebaut."
   }
 }

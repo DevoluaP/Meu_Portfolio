@@ -4,7 +4,8 @@
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "experience": "Experience"
   },
   "home": {
     "welcome": "Welcome to my Portfolio, I am",
@@ -12,7 +13,12 @@
     "github": "My GitHub",
     "linkedin": "My Linkedin",
     "email": "My E-mail",
-    "bannerAlt": "My Banner"
+    "bannerAlt": "My Banner",
+    "status": "Available to learn and build",
+    "description": "Full Stack Developer focused on automation, data and artificial intelligence.",
+    "ctaProjects": "View projects",
+    "ctaCv": "Download resume",
+    "scroll": "Explore"
   },
   "theme": {
     "toggleLight": "Switch to Light Theme",
@@ -23,15 +29,21 @@
   },
   "about": {
     "title": "About",
-    "text": "Hello! My name is Paulo Henrique, I'm 21 years old, and I'm a Full Stack Developer with a technical degree in Web Development from SENAC Lapa Tito. I also completed the PROPROFISSÃO - Web Development with Python program at Instituto PROA, focused on preparing young people for the job market. I'm currently pursuing a technical degree in Artificial Intelligence and have developed projects using technologies such as Python, JavaScript, TypeScript, React.js, Node.js, MySQL, and PostgreSQL. I also have experience working as a Scrum Master and Full Stack Developer on the DunDum project, combining technical development with team organization. In addition, I'm expanding my knowledge of Robotic Process Automation (RPA) using UiPath. My main goal is to continue growing in the technology field, seeking new challenges and opportunities to contribute, learn, and develop professionally. Want to see my work? Check out my projects below or",
-    "download": "download my resume!"
+    "text": "Hello! My name is Paulo Henrique, I’m 21 years old, and I’m a Full Stack Developer with a technical degree in Web Development from SENAC Lapa Tito. I also completed the PROPROFISSÃO - Web Development with Python program at Instituto PROA, focused on preparing young people for the job market. Currently, I’m pursuing a technical degree in Artificial Intelligence at SENAC Lapa Tito and working as an Apprentice at Nubank, where I have the opportunity to learn in an environment driven by technology and innovation. I have experience with technologies such as Python, JavaScript, TypeScript, and SQL. I also have experience working as a Scrum Master and Full Stack Developer on the DunDum project, combining technical development with team organization. My main goal is to continue growing in the technology field, taking on new challenges, expanding my knowledge, and contributing to the teams and projects I am part of. Want to see my work? Check out my projects below or",
+    "download": "download my resume!",
+    "label": "About me",
+    "metricProjects": "projects developed",
+    "metricTracks": "technical areas",
+    "metricTools": "technologies & tools",
+    "metricLearning": "years studying technology"
   },
   "skills": {
     "title": "Skills",
     "Front-end": "Front-End",
     "Back-end": "Back-End",
     "Mobile": "Mobile",
-    "Banco de Dados": "Database"
+    "Banco de Dados": "Database",
+    "label": "Stack"
   },
   "projects": {
     "title": "Projects",
@@ -40,7 +52,11 @@
     "items": {
       "project1": {
         "titulo": "DunDum",
-        "descricao": "Platform for monitoring dog's wealth."
+        "descricao": "Platform for monitoring dog health."
+      },
+      "project-rpa": {
+        "titulo": "BookPrice",
+        "descricao": "RPA automation for researching and comparing book prices across e-commerce stores."
       },
       "project2": {
         "titulo": "InvestCalcula",
@@ -48,7 +64,7 @@
       },
       "project3": {
         "titulo": "Galleria",
-        "descricao": "Online image gallery with modern layout."
+        "descricao": "Online image gallery with a modern layout."
       },
       "project4": {
         "titulo": "ERP Soul",
@@ -56,15 +72,15 @@
       },
       "project5": {
         "titulo": "Seven Plus",
-        "descricao": "Content streaming website."
+        "descricao": "Website for displaying content."
       },
       "project6": {
-        "titulo": "Seven Plus (Mobile)",
-        "descricao": "Content streaming app."
+        "titulo": "Seven Plus (App)",
+        "descricao": "App for displaying content."
       },
       "project7": {
         "titulo": "Viajados",
-        "descricao": "Travel tracking app."
+        "descricao": "Travel app."
       },
       "project8": {
         "titulo": "Oishi",
@@ -72,7 +88,7 @@
       },
       "project9": {
         "titulo": "Mario Runs",
-        "descricao": "Browser-based Mario game."
+        "descricao": "Mario browser game."
       },
       "project10": {
         "titulo": "Super Pizza",
@@ -84,8 +100,15 @@
       },
       "project12": {
         "titulo": "My Achievements",
-        "descricao": "A simple and elegant website to save your achievements, compliments, learnings, and happy moments."
+        "descricao": "A simple and elegant website to store achievements, compliments, learnings and happy moments."
       }
+    },
+    "label": "Projects",
+    "filters": {
+      "all": "All",
+      "web": "Web",
+      "mobile": "Mobile",
+      "automation": "Automation"
     }
   },
   "modal": {
@@ -94,11 +117,54 @@
     "site": "Site",
     "githubUnavailable": "The GitHub link is unavailable.",
     "siteUnavailable": "The site link is unavailable.",
-    "projectImageAlt": "Project image"
+    "projectImageAlt": "Project image",
+    "featured": "Featured project"
   },
   "contact": {
     "title": "Contact",
     "email": "Email:",
-    "back": "Back to Top"
+    "back": "Back to Top",
+    "label": "Contact",
+    "text": "Have an idea, opportunity or project to discuss? Let’s talk."
+  },
+  "experience": {
+    "label": "Experience",
+    "title": "Where I am building experience",
+    "items": [
+      {
+        "titulo": "Technology Apprentice",
+        "empresa": "Nubank",
+        "descricao": "Working on technology, automation and innovation projects, collaborating with the team, learning new tools and supporting the development of digital solutions.",
+        "tags": ["Technology", "Automation", "Learning"]
+      }
+    ],
+    "present": "Present"
+  },
+  "education": {
+    "label": "Education",
+    "title": "Learning in motion",
+    "items": [
+      {
+        "titulo": "Artificial Intelligence",
+        "instituicao": "SENAC Lapa Tito",
+        "descricao": "Focus on data management, Business Intelligence and development of intelligent solutions. Covers data collection, processing and analysis, machine learning, deep learning, predictive analytics, recommendation systems, chatbots and process automation using AI.",
+        "status": "IN PROGRESS"
+      },
+      {
+        "titulo": "PROPROFISSÃO - Python",
+        "instituicao": "Instituto PROA",
+        "descricao": "Web development with Python, covering programming logic, development best practices and application creation. It also develops soft skills such as communication, teamwork, problem solving and the use of agile methodologies.",
+        "status": ""
+      },
+      {
+        "titulo": "Web Development",
+        "instituicao": "SENAC Lapa Tito",
+        "descricao": "Software development focused on web and mobile applications. Development of responsive interfaces, REST APIs, integration with relational databases, use of modern frameworks, Git/GitHub version control and agile methodologies such as Scrum and Kanban.",
+        "status": ""
+      }
+    ]
+  },
+  "footer": {
+    "text": "Built with curiosity + code."
   }
 }

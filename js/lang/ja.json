@@ -4,7 +4,8 @@
     "about": "自己紹介",
     "skills": "スキル",
     "projects": "プロジェクト",
-    "contact": "連絡先"
+    "contact": "連絡先",
+    "experience": "経験"
   },
   "home": {
     "welcome": "私のポートフォリオへようこそ。私は",
@@ -12,7 +13,12 @@
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "email": "メール",
-    "bannerAlt": "私のバナー"
+    "bannerAlt": "私のバナー",
+    "status": "学び、つくることに前向きです",
+    "description": "自動化、データ、人工知能に関心を持つフルスタック開発者です。",
+    "ctaProjects": "プロジェクトを見る",
+    "ctaCv": "履歴書をダウンロード",
+    "scroll": "探索する"
   },
   "theme": {
     "toggleLight": "ライトテーマに切り替え",
@@ -23,15 +29,21 @@
   },
   "about": {
     "title": "自己紹介",
-    "text": "こんにちは！パウロ・エンリケと申します。21歳で、SENAC Lapa Tito にてインターネット情報技術の専門教育を修了したフルスタック開発者です。また、Instituto PROA の PROPROFISSÃO（Python によるWeb開発）プログラムも修了しており、若者の就労準備を目的とした内容でした。現在は人工知能の専門課程に在籍しており、Python、JavaScript、TypeScript、React.js、Node.js、MySQL、PostgreSQL などの技術を用いたプロジェクト開発の経験があります。また、DunDum プロジェクトではスクラムマスター兼フルスタック開発者として、技術開発とチーム運営の両方に携わりました。さらに、UiPath を用いたロボティック・プロセス・オートメーション（RPA）の知識も深めています。技術分野で成長し続け、新たな挑戦や貢献・学びの機会を求めることが私の主な目標です。私の仕事に興味がありますか？下記のプロジェクトをご覧いただくか、",
-    "download": "履歴書をダウンロードしてください！"
+    "text": "こんにちは！パウロ・エンリケと申します。21歳で、SENAC Lapa Tito にてインターネット情報技術の専門教育を修了したフルスタック開発者です。また、Instituto PROA の PROPROFISSÃO（Python によるWeb開発）コースも修了しており、若者の就職準備を目的とした内容でした。現在は SENAC Lapa Tito で人工知能の専門課程を学びながら、Nubank で見習いとして働いており、テクノロジーとイノベーションにあふれた環境で学ぶ機会を得ています。Python、JavaScript、TypeScript、SQL などの技術を扱った経験があります。また、DunDum プロジェクトではスクラムマスター兼フルスタック開発者として、技術開発とチーム運営の両方に携わりました。私の主な目標は、技術分野で成長し続け、新たな課題に挑戦し、知識を広げながら、自分が関わるチームやプロジェクトに貢献していくことです。私の仕事に興味がありますか？下記のプロジェクトをご覧いただくか、",
+    "download": "履歴書をダウンロードしてください！",
+    "label": "自己紹介",
+    "metricProjects": "開発したプロジェクト",
+    "metricTracks": "技術分野",
+    "metricTools": "テクノロジーとツール",
+    "metricLearning": "テクノロジーを学んだ年数"
   },
   "skills": {
     "title": "スキル",
     "Front-end": "フロントエンド",
     "Back-end": "バックエンド",
     "Mobile": "モバイル",
-    "Banco de Dados": "データベース"
+    "Banco de Dados": "データベース",
+    "label": "Stack"
   },
   "projects": {
     "title": "プロジェクト",
@@ -40,7 +52,11 @@
     "items": {
       "project1": {
         "titulo": "DunDum",
-        "descricao": "犬の健康状態を管理するプラットフォーム。"
+        "descricao": "犬の健康をモニタリングするプラットフォーム。"
+      },
+      "project-rpa": {
+        "titulo": "BookPrice",
+        "descricao": "ECサイトで書籍価格を検索・比較するRPA自動化。"
       },
       "project2": {
         "titulo": "InvestCalcula",
@@ -48,7 +64,7 @@
       },
       "project3": {
         "titulo": "Galleria",
-        "descricao": "モダンなデザインのオンライン画像ギャラリー。"
+        "descricao": "モダンなレイアウトのオンライン画像ギャラリー。"
       },
       "project4": {
         "titulo": "ERP Soul",
@@ -56,11 +72,11 @@
       },
       "project5": {
         "titulo": "Seven Plus",
-        "descricao": "コンテンツ配信サイト。"
+        "descricao": "コンテンツ表示用Webサイト。"
       },
       "project6": {
-        "titulo": "Seven Plus (Mobile)",
-        "descricao": "コンテンツ配信アプリ。"
+        "titulo": "Seven Plus (App)",
+        "descricao": "コンテンツ表示用アプリ。"
       },
       "project7": {
         "titulo": "Viajados",
@@ -68,24 +84,31 @@
       },
       "project8": {
         "titulo": "Oishi",
-        "descricao": "和食レストランのサイト。"
+        "descricao": "日本食レストランのWebサイト。"
       },
       "project9": {
         "titulo": "Mario Runs",
-        "descricao": "マリオ風のブラウザゲーム。"
+        "descricao": "ブラウザで遊べるMarioゲーム。"
       },
       "project10": {
         "titulo": "Super Pizza",
-        "descricao": "ピザ店のサイト。"
+        "descricao": "ピザ店のWebサイト。"
       },
       "project11": {
-        "titulo": "Calculadora",
+        "titulo": "電卓",
         "descricao": "シンプルな電卓。"
       },
       "project12": {
-        "titulo": "Minhas Conquistas",
-        "descricao": "自分の達成、褒め言葉、学び、幸せな瞬間を記録するシンプルで洗練されたウェブサイト。"
+        "titulo": "My Achievements",
+        "descricao": "実績、称賛、学び、幸せな思い出を保存できるシンプルでエレガントなWebサイト。"
       }
+    },
+    "label": "プロジェクト",
+    "filters": {
+      "all": "すべて",
+      "web": "Web",
+      "mobile": "Mobile",
+      "automation": "自動化"
     }
   },
   "modal": {
@@ -94,11 +117,54 @@
     "site": "サイト",
     "githubUnavailable": "GitHubのリンクは利用できません。",
     "siteUnavailable": "サイトのリンクは利用できません。",
-    "projectImageAlt": "プロジェクト画像"
+    "projectImageAlt": "プロジェクト画像",
+    "featured": "注目プロジェクト"
   },
   "contact": {
     "title": "連絡先",
     "email": "メール:",
-    "back": "トップに戻る"
+    "back": "トップに戻る",
+    "label": "連絡先",
+    "text": "アイデア、機会、プロジェクトについて話したいですか？ お気軽にご連絡ください。"
+  },
+  "experience": {
+    "label": "経験",
+    "title": "経験を積んでいる場所",
+    "items": [
+      {
+        "titulo": "テクノロジー・アプレンティス",
+        "empresa": "Nubank",
+        "descricao": "テクノロジー、オートメーション、イノベーションに関するプロジェクトに携わり、チームと協力しながら新しいツールを学び、デジタルソリューションの開発を支援しています。",
+        "tags": ["テクノロジー", "自動化", "学習"]
+      }
+    ],
+    "present": "現在"
+  },
+  "education": {
+    "label": "学歴・学習",
+    "title": "学び続ける",
+    "items": [
+      {
+        "titulo": "人工知能",
+        "instituicao": "SENAC Lapa Tito",
+        "descricao": "データ管理、ビジネスインテリジェンス、知的ソリューション開発を中心に学習。データ収集・処理・分析、機械学習、ディープラーニング、予測分析、推薦システム、チャットボット、AIを活用した業務自動化などを扱います。",
+        "status": "受講中"
+      },
+      {
+        "titulo": "PROPROFISSÃO - Python",
+        "instituicao": "Instituto PROA",
+        "descricao": "PythonによるWeb開発を学び、プログラミングロジック、開発のベストプラクティス、アプリケーション作成に取り組みました。コミュニケーション、チームワーク、問題解決、アジャイル手法などのソフトスキルも学習しています。",
+        "status": ""
+      },
+      {
+        "titulo": "Web開発",
+        "instituicao": "SENAC Lapa Tito",
+        "descricao": "Webおよびモバイルアプリケーションを中心としたソフトウェア開発。レスポンシブUI、REST API、リレーショナルデータベースとの連携、モダンなフレームワーク、Git/GitHubによるバージョン管理、ScrumやKanbanなどのアジャイル手法を学びました。",
+        "status": ""
+      }
+    ]
+  },
+  "footer": {
+    "text": "好奇心 + コードで構築。"
   }
 }

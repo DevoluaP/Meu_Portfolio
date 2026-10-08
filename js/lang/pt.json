@@ -4,7 +4,8 @@
     "about": "Sobre",
     "skills": "Habilidades",
     "projects": "Projetos",
-    "contact": "Contato"
+    "contact": "Contato",
+    "experience": "Experiência"
   },
   "home": {
     "welcome": "Bem Vindo ao meu Portfólio, eu sou o",
@@ -12,7 +13,12 @@
     "github": "Meu GitHub",
     "linkedin": "Meu Linkedin",
     "email": "Meu E-mail",
-    "bannerAlt": "Meu Banner"
+    "bannerAlt": "Meu Banner",
+    "status": "Disponível para aprender e construir",
+    "description": "Desenvolvedor Full Stack com foco em automação, dados e inteligência artificial.",
+    "ctaProjects": "Ver projetos",
+    "ctaCv": "Baixar currículo",
+    "scroll": "Explorar"
   },
   "theme": {
     "toggleLight": "Alternar para Tema Claro",
@@ -23,15 +29,21 @@
   },
   "about": {
     "title": "Sobre",
-    "text": "Olá! Me chamo Paulo Henrique, tenho 21 anos e sou Desenvolvedor Full Stack com formação técnica em Informática para Internet pelo SENAC Lapa Tito. Também concluí o curso PROPROFISSÃO - Desenvolvimento Web com Python, pelo Instituto PROA, focado na preparação de jovens para o mercado de trabalho. Atualmente, curso técnico em Inteligência Artificial e já desenvolvi projetos utilizando tecnologias como Python, JavaScript, TypeScript, React.js, Node.js, MySQL e PostgreSQL. Também tive experiência atuando como Scrum Master e Desenvolvedor Full Stack no projeto DunDum, unindo desenvolvimento técnico e organização do time. Venho ainda aprofundando meus conhecimentos em Automação de Processos Robóticos (RPA) com a UiPath. Meu principal objetivo é continuar evoluindo na área de tecnologia, buscando novos desafios e oportunidades para contribuir e aprender. Quer conhecer meu trabalho? Veja meus projetos abaixo ou",
-    "download": "baixe meu currículo!"
+    "text": "Olá! Me chamo Paulo Henrique, tenho 21 anos e sou Desenvolvedor Full Stack, com formação técnica em Informática para Internet pelo SENAC Lapa Tito. Também concluí o curso PROPROFISSÃO - Desenvolvimento Web com Python, pelo Instituto PROA, focado na preparação de jovens para o mercado de trabalho. Atualmente, curso técnico em Inteligência Artificial no SENAC Lapa Tito e atuo como Jovem Aprendiz no Nubank, tendo a oportunidade de aprender em um ambiente de tecnologia e inovação. Tenho experiência com tecnologias como Python, JavaScript, TypeScript e SQL. Também tive experiência como Scrum Master e Desenvolvedor Full Stack no projeto DunDum, unindo desenvolvimento técnico e organização do time. Meu principal objetivo é continuar evoluindo na área de tecnologia, buscando novos desafios, ampliando meus conhecimentos e contribuindo com os times e projetos dos quais faço parte. Quer conhecer meu trabalho? Veja meus projetos abaixo ou",
+    "download": "baixe meu currículo!",
+    "label": "Sobre mim",
+    "metricProjects": "projetos desenvolvidos",
+    "metricTracks": "frentes técnicas",
+    "metricTools": "tecnologias e ferramentas",
+    "metricLearning": "anos estudando tecnologia"
   },
   "skills": {
     "title": "Habilidades",
     "Front-end": "Front-End",
     "Back-end": "Back-End",
     "Mobile": "Mobile",
-    "Banco de Dados": "Banco de Dados"
+    "Banco de Dados": "Banco de Dados",
+    "label": "Stack"
   },
   "projects": {
     "title": "Projetos",
@@ -86,6 +98,13 @@
         "titulo": "Minhas Conquistas",
         "descricao": "Um website simples e elegante para guardar suas conquistas, elogios, aprendizados e momentos felizes."
       }
+    },
+    "label": "Projetos",
+    "filters": {
+      "all": "Todos",
+      "web": "Web",
+      "mobile": "Mobile",
+      "automation": "Automação"
     }
   },
   "modal": {
@@ -94,11 +113,26 @@
     "site": "Site",
     "githubUnavailable": "O link do GitHub está indisponível.",
     "siteUnavailable": "O link do site está indisponível.",
-    "projectImageAlt": "Imagem do projeto"
+    "projectImageAlt": "Imagem do projeto",
+    "featured": "Projeto em destaque"
   },
   "contact": {
     "title": "Contato",
     "email": "E-mail:",
-    "back": "Voltar ao Início"
+    "back": "Voltar ao Início",
+    "label": "Contato",
+    "text": "Tem uma ideia, oportunidade ou projeto para conversar? Vamos bater um papo!"
+  },
+  "experience": {
+    "label": "Experiência",
+    "title": "Onde estou construindo experiência",
+    "present": "Presente"
+  },
+  "education": {
+    "label": "Formação",
+    "title": "Aprendizado em movimento"
+  },
+  "footer": {
+    "text": "Construído com curiosidade + código."
   }
 }

@@ -2,77 +2,81 @@
   "Front-end": [
     {
       "nome": "HTML",
-      "imagem": "imagens/html.png"
+      "imagem": "imagens/tecnologias/html.png"
     },
     {
       "nome": "CSS",
-      "imagem": "imagens/css.png"
+      "imagem": "imagens/tecnologias/css.png"
     },
     {
       "nome": "JavaScript",
-      "imagem": "imagens/javascript.png"
+      "imagem": "imagens/tecnologias/javascript.png"
     },
     {
       "nome": "TypeScript",
-      "imagem": "imagens/typescript.png"
+      "imagem": "imagens/tecnologias/typescript.png"
     },
     {
       "nome": "jQuery",
-      "imagem": "imagens/jquery.png"
+      "imagem": "imagens/tecnologias/jquery.png"
     },
     {
       "nome": "React",
-      "imagem": "imagens/react.png"
+      "imagem": "imagens/tecnologias/react.png"
     },
     {
       "nome": "Angular",
-      "imagem": "imagens/angular.png"
+      "imagem": "imagens/tecnologias/angular.png"
     }
   ],
   "Back-end": [
     {
+      "nome": "Python",
+      "imagem": "imagens/tecnologias/python.png"
+    },
+    {
       "nome": "Node.js",
-      "imagem": "imagens/nodejs.png"
+      "imagem": "imagens/tecnologias/nodejs.png"
     },
     {
       "nome": "PHP",
-      "imagem": "imagens/php.png"
+      "imagem": "imagens/tecnologias/php.png"
     },
     {
-      "nome": "Python",
-      "imagem": "imagens/python.png"
+      "nome": "Clojure",
+      "imagem": "imagens/tecnologias/clojure.png"
     },
     {
       "nome": "Docker",
-      "imagem": "imagens/docker.png"
+      "imagem": "imagens/tecnologias/docker.png"
     }
   ],
   "Mobile": [
     {
       "nome": "React Native",
-      "imagem": "imagens/react.png"
+      "imagem": "imagens/tecnologias/react.png"
     },
     {
       "nome": "Expo",
-      "imagem": "imagens/expo.png"
+      "imagem": "imagens/tecnologias/expo.png"
     },
     {
       "nome": "Android Studio",
-      "imagem": "imagens/android-studio.png"
+      "imagem": "imagens/tecnologias/android-studio.png"
     }
   ],
   "Banco de Dados": [
     {
       "nome": "MySQL",
-      "imagem": "imagens/mysql.png"
+      "imagem": "imagens/tecnologias/mysql.png"
     },
     {
       "nome": "PostgreSQL",
-      "imagem": "imagens/postgresql.png"
+      "imagem": "imagens/tecnologias/postgresql.png"
     },
     {
       "nome": "MongoDB",
-      "imagem": "imagens/mongodb.png"
+      "imagem": "imagens/tecnologias/mongodb.png"
     }
   ]
 }
